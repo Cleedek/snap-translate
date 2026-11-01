@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Translate the text in pictures right where they are: right-click a picture or drag over any part of the page."
+  },
+  "cmdSelect": {
+    "message": "Select an area to translate"
+  }
+}

@@ -1,0 +1,1 @@
+tesseract.js 7.0.0, tesseract.js-core 7.0.0 (simd-lstm build), language data from @tesseract.js-data/vie and /eng 1.0.0 (4.0.0_best_int). All from npm, unmodified. Apache-2.0.

@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Dịch chữ trong ảnh ngay trên trang: nhấp chuột phải vào ảnh hoặc kéo chọn bất kỳ vùng nào."
+  },
+  "cmdSelect": {
+    "message": "Chọn vùng cần dịch"
+  }
+}

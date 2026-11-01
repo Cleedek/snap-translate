@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Překládá text v obrázcích přímo na stránce: klikněte pravým tlačítkem na obrázek nebo přetáhněte přes kteroukoli část stránky."
+  },
+  "cmdSelect": {
+    "message": "Vybrat oblast k překladu"
+  }
+}

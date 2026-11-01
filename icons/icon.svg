@@ -1,0 +1,10 @@
+<!-- Source of icon128/48/32.png. Same violet, corner radius and square-ended white shapes as Subtitle Overlay. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="27" fill="#7c3aed"/>
+  <g fill="none" stroke="#fff" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M30 47V30H47"/><path d="M81 30H98V47"/><path d="M98 81V98H81"/><path d="M47 98H30V81"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4">
+    <path d="M48 82L61 48H67L80 82"/><path d="M54.4 71H73.6"/>
+  </g>
+</svg>

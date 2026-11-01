@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "直接在网页上翻译图片中的文字：右键点击图片，或拖动框选页面任意区域。"
+  },
+  "cmdSelect": {
+    "message": "选择要翻译的区域"
+  }
+}
