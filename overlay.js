@@ -64,7 +64,9 @@
     .links path.halo { stroke: oklch(0.1 0.01 290 / .5); stroke-width: 4; }
     .links circle { fill: var(--thumb); stroke: oklch(0.1 0.01 290 / .5); stroke-width: 1; }
     .callout {
-      position: absolute; max-width: 240px; padding: 6px 9px; pointer-events: auto; cursor: default;
+      /* max-content: the same size wherever it goes. Left to the browser, a bubble near or past the
+         picture's right edge gets narrower and taller than the size it was placed by. */
+      position: absolute; width: max-content; max-width: 240px; padding: 6px 9px; pointer-events: auto; cursor: default;
       background: var(--bg); color: var(--text); border: 1px solid var(--line-strong); border-radius: 8px;
       box-shadow: 0 6px 18px oklch(0.1 0.01 290 / .45); font-size: 13px; line-height: 1.35; font-weight: 500;
       white-space: pre-wrap; overflow-wrap: break-word; animation: fade .2s var(--ease);
@@ -109,6 +111,7 @@
     .tr { margin: 0; font-size: 14px; line-height: 1.45; white-space: pre-wrap; }
     .block.copied .tr::after { content: "  " attr(data-copied); color: var(--success); font-size: 11px; font-weight: 600; }
     .empty { margin: 10px 0; color: var(--muted); }
+    .note { margin: 9px 0 0; padding-bottom: 9px; border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); }
     .error { margin: 10px 0 8px; color: var(--danger); }
     .actions { display: flex; gap: 6px; margin-bottom: 10px; }
 
@@ -364,10 +367,21 @@
       const seg = $('.segmented');
       seg.hidden = false;
       const colours = await sampler(img).catch(() => null);
+      // Positions the model only guessed would put translations in the wrong places: the list
+      // stays, with a word on why. On picture is still one click away.
+      const unsure = colours && guessed(blocks, colours);
+      if (unsure) {
+        body.prepend(el('p', 'note', esc(t('This model only guesses where the text is, so on the picture the translations would sit in the wrong places. Quick or Gemini put them in the right place.'))));
+        place();
+      }
       const rectOf = ([y1, x1, y2, x2]) => ({ x: (x1 / 1000) * pos.w, y: (y1 / 1000) * pos.h, w: ((x2 - x1) / 1000) * pos.w, h: ((y2 - y1) / 1000) * pos.h });
-      // Painted over the original. Null (and removed again) when it would only fit at an unreadable size.
+      const shared = (a, b) => Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+      const painted = []; // where translations are painted over the picture
+      // Painted over the original. Null (and removed again) when it would only fit at an unreadable size,
+      // or would cover most of a translation painted before it (weaker models give two texts one place).
       const label = (box, text, original, lines) => {
         const r = rectOf(box);
+        if (painted.some((p) => shared(p, r) > 0.5 * Math.min(p.w * p.h, r.w * r.h))) return null;
         // 2 px more on each side, so no antialiased edge of the original peeks out.
         const w = r.w + 4, h = r.h + 4;
         const c = colours ? colours(box) : { bg: 'var(--bg)', text: 'var(--text)' };
@@ -381,12 +395,16 @@
           boxShadow: `0 0 4px 3px ${c.bg}`,
         });
         frame.append(n);
-        if (fit(n, h / lines)) return n;
+        if (fit(n, h / lines)) {
+          painted.push(r);
+          return n;
+        }
         n.remove();
         return null;
       };
       const paint = () => {
         const tooLong = [];
+        painted.length = 0;
         for (const b of blocks.filter((x) => x.box)) {
           const tr = b.translation.split('\n');
           // Line by line when the translation kept the original's line breaks (Quick does).
@@ -403,15 +421,18 @@
         callouts(tooLong);
       };
       // A translation too long for its spot goes in a bubble next to it, with a line to the
-      // original, which stays visible and outlined. Each bubble takes the nearest free place.
+      // original, which stays visible and outlined. Each bubble takes the nearest place where it
+      // covers nothing else: no other bubble, painted translation, outline or the card.
       const callouts = (list) => {
         if (!list.length) return;
         const taken = [...frame.querySelectorAll('.label')].map((n) => ({ x: n.offsetLeft, y: n.offsetTop, w: n.offsetWidth, h: n.offsetHeight }));
         taken.push({ x: card.offsetLeft - frame.offsetLeft, y: card.offsetTop - frame.offsetTop, w: card.offsetWidth, h: card.offsetHeight });
         list.forEach((b) => b.spots.forEach((s) => taken.push(rectOf(s))));
-        const shared = (a, b) => Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+        const pad = 6; // the least room between two things
+        const free = (a) => taken.every((o) => a.x + a.w + pad <= o.x || o.x + o.w + pad <= a.x || a.y + a.h + pad <= o.y || o.y + o.h + pad <= a.y);
         // What's on screen right now, in the frame's own coordinates.
-        const minX = scrollX - pos.x + 8, maxX = scrollX - pos.x + document.documentElement.clientWidth - 8, minY = -pos.y + 8;
+        const minX = scrollX - pos.x + 8, maxX = scrollX - pos.x + document.documentElement.clientWidth - 8;
+        const minY = scrollY - pos.y + 8, maxY = scrollY - pos.y + innerHeight - 8;
         const links = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         links.setAttribute('class', 'links onpic');
         frame.append(links);
@@ -427,16 +448,22 @@
           bubble.title = b.text;
           frame.append(bubble);
           const w = bubble.offsetWidth, h = bubble.offsetHeight, gap = 14, cx = r.x + r.w / 2, cy = r.y + r.h / 2;
-          const tries = [
-            [cx - w / 2, r.y + r.h + gap], [cx - w / 2, r.y - gap - h],
-            [r.x + r.w + gap, cy - h / 2], [r.x - gap - w, cy - h / 2],
-            [pos.w + gap, cy - h / 2], [-gap - w, cy - h / 2],
-          ].map(([x, y]) => {
-            const at = { x: Math.min(Math.max(x, minX), maxX - w), y: Math.max(y, minY), w, h };
-            const clash = taken.reduce((sum, o) => sum + shared(at, o), 0);
-            return { at, score: clash * 100 + Math.hypot(at.x + w / 2 - cx, at.y + h / 2 - cy) };
-          });
-          const { at } = tries.reduce((best, c) => (c.score < best.score ? c : best));
+          // Places to try: around the original, beside the picture, and right next to everything
+          // already placed. One of them is always free: below all the rest.
+          const xs = [cx - w / 2, r.x + r.w + gap, r.x - gap - w, pos.w + gap, -gap - w];
+          const ys = [r.y + r.h + gap, r.y - gap - h, cy - h / 2];
+          for (const o of taken) {
+            xs.push(o.x + o.w + pad, o.x - pad - w);
+            ys.push(o.y + o.h + pad, o.y - pad - h);
+          }
+          const tries = [];
+          for (const x of new Set(xs.map((v) => Math.max(minX, Math.min(v, maxX - w))))) {
+            for (const y of new Set(ys.map((v) => Math.max(v, minY)))) {
+              // Below the bottom of the screen only when there is no room left on it.
+              tries.push({ x, y, w, h, score: Math.hypot(x + w / 2 - cx, y + h / 2 - cy) + (y + h > maxY ? 1e6 : 0) });
+            }
+          }
+          const at = tries.sort((p, q) => p.score - q.score).find(free);
           Object.assign(bubble.style, { left: at.x + 'px', top: at.y + 'px' });
           taken.push(at);
           // From the edge of the original to the nearest edge of the bubble.
@@ -463,7 +490,7 @@
         chrome.storage.local.set({ view: btn.dataset.view }).catch(() => {});
       }));
       const { view } = await chrome.storage.local.get('view').catch(() => ({}));
-      if (view === 'picture' && current && current.card === card) choose('picture');
+      if (view === 'picture' && !unsure && current && current.card === card) choose('picture');
     };
 
     return { ask, error };
@@ -521,12 +548,31 @@
         const c = at(x1 + ((x2 - x1) * i) / 40, y1 + ((y2 - y1) * j) / 16);
         if (dist(c, bg) > 60) ink.push(c);
       }
+      const inked = ink.length / (39 * 15); // how much of the box differs from its background
       ink.sort((a, b) => dist(b, bg) - dist(a, bg));
       let text = ink.length ? median(ink.slice(0, Math.max(1, ink.length >> 1))) : null;
       // Too little contrast to read: plain black or white, whichever suits the background.
       if (!text || contrast(text, bg) < 3) text = lum(bg) > 0.4 ? [17, 17, 17] : [250, 250, 250];
-      return { bg: rgb(bg), fill: `linear-gradient(to right, ${rgb(bgL)}, ${rgb(bgR)})`, text: rgb(text) };
+      return { bg: rgb(bg), fill: `linear-gradient(to right, ${rgb(bgL)}, ${rgb(bgR)})`, text: rgb(text), inked, height: y2 - y1 };
     };
+  }
+
+  // Some models read a picture well but only guess where its text is (gemma3 put made-up boxes
+  // in one corner, or stepped them across the picture). Such a box gives itself away: too small
+  // for letters the model could have read (under 6 px of the picture per line), blank inside,
+  // or mostly on the same place as another piece of text. When most boxes look like that,
+  // none can be trusted.
+  function guessed(blocks, colours) {
+    if (blocks.some((b) => b.lines)) return false; // Quick measures every line it reads
+    const placed = blocks.filter((b) => b.box);
+    const area = (x) => (x[2] - x[0]) * (x[3] - x[1]);
+    const shared = (a, b) => Math.max(0, Math.min(a[2], b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[3], b[3]) - Math.max(a[1], b[1]));
+    const wrong = placed.filter((b) => {
+      const c = colours(b.box);
+      return c.height / b.text.split('\n').length < 6 || c.inked < 0.03
+        || placed.some((o) => o !== b && shared(o.box, b.box) > 0.4 * Math.min(area(o.box), area(b.box)));
+    });
+    return wrong.length * 2 > placed.length;
   }
 
   async function copy(text) {
