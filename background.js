@@ -27,7 +27,7 @@ chrome.commands.onCommand.addListener((command, tab) => {
 
 // The page script is added only when asked for (activeTab), never to every site.
 async function start(tabId, msg) {
-  await chrome.scripting.executeScript({ target: { tabId }, files: ['lib/i18n.js', 'lib/locales.js', 'overlay.js'] });
+  await chrome.scripting.executeScript({ target: { tabId }, files: ['lib/i18n.js', 'lib/locales.js', 'lib/theme.js', 'overlay.js'] });
   await chrome.tabs.sendMessage(tabId, msg);
 }
 
@@ -57,12 +57,18 @@ chrome.runtime.onMessage.addListener((msg, sender, reply) => {
   return false;
 });
 
+// Subtitle Overlay, the creator's other extension, asks whether Snap Translate is
+// installed, so it doesn't suggest it. That is the only thing answered to other extensions.
+chrome.runtime.onMessageExternal.addListener((msg, sender, reply) => {
+  if (msg && msg.type === 'hello') reply({ app: 'snap-translate' });
+});
+
 // ---------- screenshot, cropped to the area ----------
 
 async function capture(windowId, rect, vw) {
   const shot = await chrome.tabs.captureVisibleTab(windowId, { format: 'png' });
   const bmp = await createImageBitmap(await (await fetch(shot)).blob());
-  const k = bmp.width / vw; // screen pixels per CSS pixel (Retina, page zoom)
+  const k = bmp.width / vw; // screen pixels per CSS pixel (Retina, page zoom, trackpad zoom)
   const sx = Math.max(0, Math.round(rect.x * k));
   const sy = Math.max(0, Math.round(rect.y * k));
   const sw = Math.min(bmp.width - sx, Math.round(rect.w * k));

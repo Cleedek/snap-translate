@@ -25,10 +25,34 @@
       --thumb: oklch(0.97 0.004 290);
       --success: oklch(0.86 0.13 150);
       --danger: oklch(0.72 0.16 22);
+      --shadow: oklch(0.1 0.01 290 / .45);
+      --shadow-strong: oklch(0.1 0.01 290 / .55);
+      --shadow-thumb: 0 1px 2px oklch(0.1 0.01 290 / .4);
       --ease: cubic-bezier(.25, 1, .5, 1);
       font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
       -webkit-font-smoothing: antialiased;
       color: var(--text);
+    }
+    /* Same light look as the popup (popup.css). Only our panels change: the dimmed page while
+       picking and the marks drawn on the picture stay white with a dark edge, to read on any picture. */
+    .ui[data-theme="light"] {
+      color-scheme: light;
+      --bg: oklch(0.99 0.003 290);
+      --panel: oklch(0.96 0.006 290);
+      --panel-hover: oklch(0.935 0.008 290);
+      --line: oklch(0.90 0.008 290);
+      --line-strong: oklch(0.83 0.012 290);
+      --text: oklch(0.22 0.015 290);
+      --muted: oklch(0.46 0.018 290);
+      --faint: oklch(0.55 0.016 290);
+      --accent-hover: oklch(0.48 0.23 293);
+      --accent-soft: oklch(0.54 0.23 293 / .18);
+      --success: oklch(0.52 0.14 150);
+      --danger: oklch(0.55 0.19 25);
+      --thumb: oklch(1 0 0);
+      --shadow: oklch(0.25 0.03 290 / .16);
+      --shadow-strong: oklch(0.25 0.03 290 / .2);
+      --shadow-thumb: 0 1px 2px oklch(0.25 0.02 290 / .16), 0 0 0 1px oklch(0.25 0.02 290 / .06);
     }
 
     /* ---------- picking an area ---------- */
@@ -43,7 +67,7 @@
     .tip {
       position: fixed; top: 16px; left: 50%; transform: translateX(-50%); padding: 7px 12px;
       background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
-      box-shadow: 0 8px 24px oklch(0.1 0.01 290 / .45); white-space: nowrap; pointer-events: none;
+      box-shadow: 0 8px 24px var(--shadow); white-space: nowrap; pointer-events: none;
     }
     .tip kbd { font: 600 11px/1 system-ui, sans-serif; padding: 2px 5px; border-radius: 5px; background: var(--panel); border: 1px solid var(--line-strong); }
 
@@ -68,14 +92,14 @@
          picture's right edge gets narrower and taller than the size it was placed by. */
       position: absolute; width: max-content; max-width: 240px; padding: 6px 9px; pointer-events: auto; cursor: default;
       background: var(--bg); color: var(--text); border: 1px solid var(--line-strong); border-radius: 8px;
-      box-shadow: 0 6px 18px oklch(0.1 0.01 290 / .45); font-size: 13px; line-height: 1.35; font-weight: 500;
+      box-shadow: 0 6px 18px var(--shadow); font-size: 13px; line-height: 1.35; font-weight: 500;
       white-space: pre-wrap; overflow-wrap: break-word; animation: fade .2s var(--ease);
     }
 
     .card {
       position: absolute; width: 340px; max-height: min(60vh, 520px); display: flex; flex-direction: column;
       background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
-      box-shadow: 0 12px 36px oklch(0.1 0.01 290 / .55);
+      box-shadow: 0 12px 36px var(--shadow-strong);
       animation: in .18s var(--ease);
     }
     @keyframes in { from { opacity: 0; transform: translateY(4px); } }
@@ -102,7 +126,7 @@
     .segmented { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 2px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; }
     .segmented button { border: 0; border-radius: 999px; background: transparent; color: var(--muted); padding: 3px 9px; font-size: 11.5px; white-space: nowrap; }
     .segmented button:hover { background: var(--panel-hover); color: var(--text); }
-    .segmented button[aria-pressed="true"] { background: var(--thumb); color: oklch(0.2 0.012 290); font-weight: 600; box-shadow: 0 1px 2px oklch(0.1 0.01 290 / .4); }
+    .segmented button[aria-pressed="true"] { background: var(--thumb); color: oklch(0.2 0.012 290); font-weight: 600; box-shadow: var(--shadow-thumb); }
 
     .block { padding: 9px 0; cursor: copy; }
     .block + .block { border-top: 1px solid var(--line); }
@@ -139,6 +163,7 @@
     const root = host.attachShadow({ mode: 'closed' });
     root.innerHTML = `<style>${CSS}</style><div class="ui"></div>`;
     ui = root.querySelector('.ui');
+    SnapTheme.apply(ui);
     document.documentElement.appendChild(host);
   }
 
@@ -155,7 +180,7 @@
   const t = SnapI18n.t;
 
   chrome.runtime.onMessage.addListener(async (msg) => {
-    await SnapI18n.load();
+    await Promise.all([SnapI18n.load(), SnapTheme.load()]);
     if (msg.type === 'pick') pick();
     if (msg.type === 'image') image(msg.src);
   });
@@ -190,7 +215,8 @@
     layer.addEventListener('pointerup', () => {
       if (!from) return;
       stop();
-      if (rect && rect.w >= 8 && rect.h >= 8) run(rect);
+      const area = rect && visible(rect);
+      if (area) run(area);
     });
     const onKey = (e) => { if (e.key === 'Escape') { e.stopPropagation(); stop(); } };
     window.addEventListener('keydown', onKey, true);
@@ -210,8 +236,9 @@
     const area = (i) => { const r = i.getBoundingClientRect(); return r.width * r.height; };
     // How much of it is on screen: the right-clicked copy always is.
     const onScreen = (i) => {
-      const r = i.getBoundingClientRect();
-      return Math.max(0, Math.min(innerWidth, r.right) - Math.max(0, r.left)) * Math.max(0, Math.min(innerHeight, r.bottom) - Math.max(0, r.top));
+      const r = i.getBoundingClientRect(), v = visualViewport;
+      return Math.max(0, Math.min(v.offsetLeft + v.width, r.right) - Math.max(v.offsetLeft, r.left))
+        * Math.max(0, Math.min(v.offsetTop + v.height, r.bottom) - Math.max(v.offsetTop, r.top));
     };
     const same = [...document.images].filter((i) => i.currentSrc === src || i.src === src);
     // Pages can hold invisible copies of the same picture, e.g. in a hidden tab, so prefer the ones the user can see.
@@ -219,16 +246,31 @@
     const img = (seen.length ? seen : same).sort((a, b) => onScreen(b) - onScreen(a) || area(b) - area(a))[0];
     if (!img) return pick(t('Couldn’t find that picture. Drag over it instead'));
     let r = img.getBoundingClientRect();
-    if ((r.top < 0 || r.bottom > innerHeight) && r.height <= innerHeight) {
+    const v = visualViewport;
+    if ((r.top < v.offsetTop || r.bottom > v.offsetTop + v.height) && r.height <= v.height) {
       img.scrollIntoView({ block: 'center', behavior: 'instant' });
       await frames();
       r = img.getBoundingClientRect();
     }
-    // Only the part on screen can be captured.
-    const x = Math.max(0, r.left), y = Math.max(0, r.top);
-    const rect = { x, y, w: Math.min(innerWidth, r.right) - x, h: Math.min(innerHeight, r.bottom) - y };
-    if (rect.w < 8 || rect.h < 8) return pick();
+    const rect = visible({ x: r.left, y: r.top, w: r.width, h: r.height });
+    if (!rect) return pick();
     run(rect);
+  }
+
+  // Only what is on screen can be captured. A page pinch-zoomed with the trackpad shows just part
+  // of the window, which clientX and getBoundingClientRect measure from, so visualViewport says
+  // which part. The area that is on screen, or null when too little is.
+  function visible(r) {
+    const v = visualViewport;
+    const x = Math.max(r.x, v.offsetLeft), y = Math.max(r.y, v.offsetTop);
+    const w = Math.min(r.x + r.w, v.offsetLeft + v.width) - x, h = Math.min(r.y + r.h, v.offsetTop + v.height) - y;
+    return w >= 8 && h >= 8 ? { x, y, w, h } : null;
+  }
+
+  // The same, in page coordinates: where the card and the bubbles can go.
+  function viewport() {
+    const v = visualViewport;
+    return { x: v.pageLeft, y: v.pageTop, w: v.width, h: v.height };
   }
 
   // ---------- capture, ask, show ----------
@@ -240,7 +282,15 @@
     // Our own picker and old results must not be in the screenshot.
     host.style.visibility = 'hidden';
     await frames();
-    const shot = await send({ type: 'capture', rect, vw: innerWidth });
+    // The screenshot is of the zoomed-in part only, so the area is measured from its corner and
+    // the screenshot's width is that part's width (a scrollbar doesn't zoom). Measured from the
+    // window instead, a zoomed page gave translations bigger than the text and off to one side.
+    const v = visualViewport;
+    const shot = await send({
+      type: 'capture',
+      rect: { x: rect.x - v.offsetLeft, y: rect.y - v.offsetTop, w: rect.w, h: rect.h },
+      vw: v.width + (innerWidth - document.documentElement.clientWidth) / v.scale,
+    });
     host.style.visibility = '';
     // Page position, so the result stays on the picture when the page scrolls.
     const pos = { x: rect.x + scrollX, y: rect.y + scrollY, w: rect.w, h: rect.h };
@@ -288,7 +338,7 @@
     // Beside the picture if there is room, otherwise below or above it, always on screen.
     const place = () => {
       const W = 340, gap = 10, m = 8, h = card.offsetHeight;
-      const vx = scrollX, vy = scrollY, vw = document.documentElement.clientWidth, vh = innerHeight;
+      const { x: vx, y: vy, w: vw, h: vh } = viewport();
       let left, top;
       if (pos.x + pos.w + gap + W <= vx + vw - m) { left = pos.x + pos.w + gap; top = pos.y; }
       else if (pos.x - gap - W >= vx + m) { left = pos.x - gap - W; top = pos.y; }
@@ -340,7 +390,16 @@
         return place();
       }
       body.innerHTML = '';
-      for (const b of blocks) {
+      // The same text in several places (a product name on every card) is listed once;
+      // "On picture" still shows it in each place.
+      const shown = new Set();
+      const listed = blocks.filter((b) => {
+        const key = (b.text || b.translation).replace(/\s+/g, ' ').trim();
+        if (shown.has(key)) return false;
+        shown.add(key);
+        return true;
+      });
+      for (const b of listed) {
         const row = el('div', 'block', `${b.text && b.text !== b.translation ? `<p class="src">${esc(b.text)}</p>` : ''}<p class="tr" data-copied="${esc(t('Copied'))}">${esc(b.translation)}</p>`);
         row.title = t('Click to copy');
         row.addEventListener('click', () => copy(b.translation).then(() => {
@@ -351,7 +410,7 @@
       }
       const copyAll = $('.copy');
       copyAll.hidden = false;
-      copyAll.onclick = () => copy(blocks.map((b) => b.translation).join('\n\n')).then(() => {
+      copyAll.onclick = () => copy(listed.map((b) => b.translation).join('\n\n')).then(() => {
         copyAll.innerHTML = ICON.check;
         copyAll.classList.add('done');
         setTimeout(() => { copyAll.innerHTML = ICON.copy; copyAll.classList.remove('done'); }, 1200);
@@ -377,6 +436,7 @@
       const rectOf = ([y1, x1, y2, x2]) => ({ x: (x1 / 1000) * pos.w, y: (y1 / 1000) * pos.h, w: ((x2 - x1) / 1000) * pos.w, h: ((y2 - y1) / 1000) * pos.h });
       const shared = (a, b) => Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
       const painted = []; // where translations are painted over the picture
+      const texts = blocks.flatMap((b) => (b.lines ? b.lines.map((l) => l.box) : b.box ? [b.box] : [])); // where the originals are
       // Painted over the original. Null (and removed again) when it would only fit at an unreadable size,
       // or would cover most of a translation painted before it (weaker models give two texts one place).
       const label = (box, text, original, lines) => {
@@ -399,9 +459,26 @@
           painted.push(r);
           return n;
         }
+        // A little longer than the original ("90.000 đ" -> "90,000 VND"): wider by up to 0.7 of a
+        // line on each side, when that covers no other text. Only the middle of the line is
+        // checked, as the lines above and below often reach a little into it.
+        const more = 0.7 * (h / lines), wide = { x: r.x - more, y: r.y, w: r.w + 2 * more, h: r.h };
+        const band = { x: wide.x, y: r.y + r.h / 4, w: wide.w, h: r.h / 2 };
+        if (texts.every((o) => String(o) === String(box) || !shared(rectOf(o), band)) && !painted.some((p) => shared(p, band))) {
+          Object.assign(n.style, { left: wide.x - 2 + 'px', width: wide.w + 4 + 'px' });
+          if (fit(n, h / lines)) {
+            painted.push(wide);
+            return n;
+          }
+        }
         n.remove();
         return null;
       };
+      // Text the translation leaves as it was (names, prices, text already in your language)
+      // stays as it is on the picture: a copy painted over it only hides the original.
+      // Accents don't count: misread lettering often comes back the same with them dropped.
+      const plain = (s) => s.normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim().toLowerCase();
+      const unchanged = (a, b) => plain(a) === plain(b);
       const paint = () => {
         const tooLong = [];
         painted.length = 0;
@@ -410,7 +487,9 @@
           // Line by line when the translation kept the original's line breaks (Quick does).
           // Never the whole paragraph then: its box can span other text between its lines.
           if (b.lines && b.lines.length > 1 && tr.length === b.lines.length) {
-            b.lines.forEach((l, i) => label(l.box, tr[i], l.text, 1) || tooLong.push({ text: l.text, translation: tr[i], box: l.box, spots: [l.box] }));
+            b.lines.forEach((l, i) => unchanged(l.text, tr[i]) || label(l.box, tr[i], l.text, 1) || tooLong.push({ text: l.text, translation: tr[i], box: l.box, spots: [l.box] }));
+          } else if (unchanged(b.text, b.translation)) {
+            continue;
           } else if (b.lines && b.lines.length > 1) {
             // Line breaks lost: one bubble for the paragraph, each of its lines outlined.
             tooLong.push({ text: b.text, translation: b.translation, box: b.lines[0].box, spots: b.lines.map((l) => l.box) });
@@ -431,8 +510,9 @@
         const pad = 6; // the least room between two things
         const free = (a) => taken.every((o) => a.x + a.w + pad <= o.x || o.x + o.w + pad <= a.x || a.y + a.h + pad <= o.y || o.y + o.h + pad <= a.y);
         // What's on screen right now, in the frame's own coordinates.
-        const minX = scrollX - pos.x + 8, maxX = scrollX - pos.x + document.documentElement.clientWidth - 8;
-        const minY = scrollY - pos.y + 8, maxY = scrollY - pos.y + innerHeight - 8;
+        const seen = viewport();
+        const minX = seen.x - pos.x + 8, maxX = seen.x - pos.x + seen.w - 8;
+        const minY = seen.y - pos.y + 8, maxY = seen.y - pos.y + seen.h - 8;
         const links = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         links.setAttribute('class', 'links onpic');
         frame.append(links);

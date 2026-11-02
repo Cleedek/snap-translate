@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Snap Translate</title>
   <link rel="stylesheet" href="popup.css">
+  <!-- In the head, so the popup opens in the chosen look instead of flashing dark first. -->
+  <script src="lib/theme.js"></script>
 </head>
 <body>
   <div id="supportView" class="support" hidden>
@@ -160,9 +162,24 @@
   </section>
 
   <footer class="credit">
-    <div class="setting-head ui-lang">
+    <div class="setting-head ui-pref">
       <label for="uiLang" class="setting-label">Interface language</label>
       <select id="uiLang" class="compact"></select>
+    </div>
+    <div class="setting-head ui-pref">
+      <label for="theme" class="setting-label">Appearance</label>
+      <select id="theme" class="compact"></select>
+    </div>
+    <!-- The creator's other extension. popup.js shows it unless it is installed or was closed. -->
+    <div id="sister" class="sister" hidden>
+      <a class="sister-link" href="https://chromewebstore.google.com/detail/subtitle-overlay/kfiihdconjdcclppmdhopeejkbmkkalo" target="_blank" rel="noopener">
+        <img src="icons/subtitle-overlay.png" width="32" height="32" alt="">
+        <span class="sister-text">
+          <span class="sister-name">Subtitle Overlay <svg width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="sister-tagline">Subtitles on any video, in your language</span>
+        </span>
+      </a>
+      <button id="sisterClose" class="sister-close" title="Hide" aria-label="Hide"><svg width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
     <button id="supportOpen" class="ghost wide support-open"><svg class="heart" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13.5S2 10 2 6a3 3 0 0 1 6-1 3 3 0 0 1 6 1c0 4-6 7.5-6 7.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Support the creator <svg class="chev" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <p id="credit"></p>

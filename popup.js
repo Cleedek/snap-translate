@@ -44,7 +44,9 @@ async function init() {
   showProvider();
   loadModels();
   setupSupport();
+  setupSister();
   setupUiLang();
+  setupTheme();
 }
 
 // ---------- interface language (same as Subtitle Overlay) ----------
@@ -57,6 +59,15 @@ async function setupUiLang() {
     await chrome.storage.local.set({ uiLang: $('uiLang').value });
     location.reload();
   });
+}
+
+// ---------- light or dark (lib/theme.js repaints everything when it changes) ----------
+
+async function setupTheme() {
+  await SnapTheme.load();
+  $('theme').replaceChildren(...SnapTheme.CHOICES.map(([code, name]) => new Option(t(name), code)));
+  $('theme').value = SnapTheme.choice;
+  $('theme').addEventListener('change', () => chrome.storage.local.set({ theme: $('theme').value }));
 }
 
 // ---------- footer and the "support the creator" screen (same as Subtitle Overlay) ----------
@@ -105,6 +116,25 @@ function setupSupport() {
       setTimeout(() => { btn.textContent = label; }, 1500);
     });
   }
+}
+
+// ---------- Subtitle Overlay, the creator's other extension ----------
+
+const SUBTITLE_OVERLAY_ID = 'kfiihdconjdcclppmdhopeejkbmkkalo';
+
+// A card in the footer, hidden for good once closed. Not shown when Subtitle Overlay is
+// already installed: it answers a "hello" from another extension, and nothing else is asked.
+async function setupSister() {
+  const { sisterClosed } = await chrome.storage.local.get('sisterClosed');
+  if (sisterClosed) return;
+  const installed = await chrome.runtime.sendMessage(SUBTITLE_OVERLAY_ID, { type: 'hello' }).then(Boolean, () => false);
+  if (installed) return;
+  $('sister').hidden = false;
+  $('sisterClose').addEventListener('click', () => {
+    $('sister').hidden = true;
+    chrome.storage.local.set({ sisterClosed: true });
+    $('supportOpen').focus();
+  });
 }
 
 function save() { snapSaveSettings(s); }
