@@ -36,3 +36,7 @@ The page script is added only to the tab where you start a translation (`activeT
 ## Third-party code
 
 `vendor/tesseract/` holds [Tesseract.js](https://github.com/naptha/tesseract.js) 7.0.0 and its engine and Vietnamese and English language data, unmodified from npm, under the Apache 2.0 licence. See `vendor/tesseract/VERSIONS.txt`.
+
+## License
+
+[GNU General Public License v3.0](LICENSE). You may use, study, change and share this code; if you publish a changed version, it has to stay open under the same license. The bundled Tesseract.js files keep their own Apache 2.0 licence.
