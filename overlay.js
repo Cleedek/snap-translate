@@ -205,7 +205,15 @@
   async function image(src) {
     ensureHost();
     const area = (i) => { const r = i.getBoundingClientRect(); return r.width * r.height; };
-    const img = [...document.images].filter((i) => i.currentSrc === src || i.src === src).sort((a, b) => area(b) - area(a))[0];
+    // How much of it is on screen: the right-clicked copy always is.
+    const onScreen = (i) => {
+      const r = i.getBoundingClientRect();
+      return Math.max(0, Math.min(innerWidth, r.right) - Math.max(0, r.left)) * Math.max(0, Math.min(innerHeight, r.bottom) - Math.max(0, r.top));
+    };
+    const same = [...document.images].filter((i) => i.currentSrc === src || i.src === src);
+    // Pages can hold invisible copies of the same picture, e.g. in a hidden tab, so prefer the ones the user can see.
+    const seen = same.filter((i) => i.checkVisibility({ opacityProperty: true, visibilityProperty: true }));
+    const img = (seen.length ? seen : same).sort((a, b) => onScreen(b) - onScreen(a) || area(b) - area(a))[0];
     if (!img) return pick(t('Couldn’t find that picture. Drag over it instead'));
     let r = img.getBoundingClientRect();
     if ((r.top < 0 || r.bottom > innerHeight) && r.height <= innerHeight) {
