@@ -158,18 +158,26 @@
 
   <section>
     <p class="small first">Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.</p>
-    <button id="shortcuts" class="ghost link">Change the shortcut</button>
+    <!-- The arrow says this opens somewhere else (the › on Support the creator stays inside the popup). Same arrow as on Subtitle Overlay below. -->
+    <button id="shortcuts" class="ghost link">Change the shortcut <svg width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </section>
+
+  <!-- How the popup itself looks and speaks, apart from how pictures are translated. -->
+  <section>
+    <h2>Interface</h2>
+    <div class="prefs">
+      <div class="setting-head">
+        <label for="uiLang" class="setting-label">Language</label>
+        <select id="uiLang" class="compact"></select>
+      </div>
+      <div class="setting-head">
+        <label for="theme" class="setting-label">Appearance</label>
+        <select id="theme" class="compact"></select>
+      </div>
+    </div>
   </section>
 
   <footer class="credit">
-    <div class="setting-head ui-pref">
-      <label for="uiLang" class="setting-label">Interface language</label>
-      <select id="uiLang" class="compact"></select>
-    </div>
-    <div class="setting-head ui-pref">
-      <label for="theme" class="setting-label">Appearance</label>
-      <select id="theme" class="compact"></select>
-    </div>
     <!-- The creator's other extension. popup.js shows it unless it is installed or was closed. -->
     <div id="sister" class="sister" hidden>
       <a class="sister-link" href="https://chromewebstore.google.com/detail/subtitle-overlay/kfiihdconjdcclppmdhopeejkbmkkalo" target="_blank" rel="noopener">
