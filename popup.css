@@ -220,3 +220,51 @@ a.btn.primary:hover { background: var(--accent-hover); border-color: var(--accen
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ---------- write to me (a second level of the popup, lib/feedback.js) ---------- */
+
+body.feedback > :not(#feedbackView, script, style) { display: none !important; }
+body.feedback #feedbackView { display: block !important; }
+.feedback-open { display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600; border-color: var(--line-strong); margin-bottom: 8px; }
+.feedback-open .chev { color: var(--faint); }
+[dir="rtl"] #feedbackBack svg, [dir="rtl"] .feedback-open .chev { transform: scaleX(-1); }
+.fb-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 3px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; margin-bottom: 12px; }
+.fb-types button { border: 0; border-radius: 999px; background: transparent; color: var(--muted); padding: 6px 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fb-types button:hover { background: var(--panel-hover); color: var(--text); }
+.fb-types button[aria-checked="true"] { background: var(--thumb); color: oklch(0.2 0.012 290); font-weight: 600; box-shadow: 0 1px 2px var(--shadow); }
+.fb-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+#fbMessage, #fbEmail {
+  font: inherit; color: var(--text); background-color: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; padding: 7px 9px; width: 100%;
+  transition: background-color .15s var(--ease), border-color .15s var(--ease);
+}
+#fbMessage { display: block; resize: vertical; min-height: 96px; max-height: 240px; }
+#fbMessage::placeholder, #fbEmail::placeholder { color: var(--faint); }
+#fbMessage:hover, #fbEmail:hover { border-color: var(--line-strong); }
+#fbMessage:focus-visible, #fbEmail:focus-visible { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.fb-tech { display: flex; flex-direction: column; gap: 4px; padding: 10px 0; margin-bottom: 12px; border-block: 1px solid var(--line); }
+.fb-note { margin-bottom: 12px; }
+.fb-state { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; padding: 28px 12px 16px; }
+.fb-state h1, .fb-state p { margin: 0; }
+.fb-state p.muted { max-width: 280px; margin-bottom: 10px; }
+.fb-badge { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--link); }
+.fb-badge.fail { background: color-mix(in oklch, var(--danger) 16%, transparent); color: var(--danger); }
+.fb-mail { display: block; width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--text); text-decoration: none; transition: background-color .15s var(--ease), border-color .15s var(--ease); }
+.fb-mail:hover { background: var(--panel-hover); border-color: var(--line-strong); }
+.fb-state .fb-address { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 6px; margin-top: 6px; font-size: 11.5px; color: var(--muted); }
+.fb-address button { padding: 1px 7px; font-size: 11px; }
+
+/* ---------- what's new, once after an update (lib/whats-new.js) ---------- */
+
+.news-card { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 12px; margin-bottom: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+.news-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 7px; padding-inline-end: 22px; }
+.news-head strong { font-size: 14px; font-weight: 650; letter-spacing: -.01em; }
+.news-head span { font-size: 12px; color: var(--muted); }
+.news-close { position: absolute; top: 8px; inset-inline-end: 8px; width: 24px; height: 24px; padding: 0; border-radius: 50%; display: grid; place-items: center; background: transparent; border-color: transparent; color: var(--muted); }
+.news-close:hover { background: var(--panel-hover); color: var(--text); border-color: transparent; }
+.news-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.news-list li { position: relative; padding-inline-start: 14px; }
+.news-list li::before { content: ""; position: absolute; inset-inline-start: 1px; top: .5lh; translate: 0 -50%; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.news-more { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--line-strong); border-radius: 8px; color: var(--text); font-weight: 600; text-decoration: none; transition: background-color .15s var(--ease); }
+.news-more:hover { background: var(--panel-hover); }
+.has-news #sister { display: none !important; } /* one card at a time, news first */

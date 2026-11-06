@@ -44,6 +44,8 @@ async function init() {
   showProvider();
   loadModels();
   setupSupport();
+  setupFeedback({ ext: 'snap-translate', name: 'Snap Translate', i18n: SnapI18n });
+  setupWhatsNew({ slug: 'snap-translate', i18n: SnapI18n });
   setupSister();
   setupUiLang();
   setupTheme();

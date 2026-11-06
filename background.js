@@ -1,7 +1,7 @@
 // Snap Translate: the background worker. It starts the picker on the page,
 // takes the screenshot, crops it to the chosen area and asks the chosen model.
 
-importScripts('lib/i18n.js', 'lib/settings.js');
+importScripts('lib/i18n.js', 'lib/settings.js', 'lib/whats-new.js');
 const t = SnapI18n.t;
 
 // ---------- ways in: right-click menu, shortcut, popup button ----------
@@ -14,6 +14,7 @@ async function createMenus() {
   chrome.contextMenus.create({ id: 'area', title: t('Translate an area…'), contexts: ['page', 'selection', 'link', 'video', 'frame'] });
 }
 chrome.runtime.onInstalled.addListener(createMenus);
+chrome.runtime.onInstalled.addListener(rememberUpdate);
 chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && changes.uiLang) createMenus(); });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
