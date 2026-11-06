@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Lefordítja a képeken lévő szöveget ott, ahol van: kattints jobb gombbal egy képre, vagy húzz az oldal bármely része fölött."
+  },
+  "cmdSelect": {
+    "message": "Terület kijelölése fordításhoz"
+  }
+}

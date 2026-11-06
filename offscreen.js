@@ -39,20 +39,59 @@ async function read(img) {
   const bmp = await createImageBitmap(await (await fetch(src)).blob());
   const at = (k) => ({ w: Math.round(bmp.width * k), h: Math.round(bmp.height * k) });
   const pass = async (worker, pic, size) => paragraphs(await worker.recognize(pic, {}, { blocks: true }), size);
-  // Light text on a dark background (signs, banners) often goes unread: when the picture
-  // has dark areas, it's read again with them flipped to dark-on-light (and the rest in grey).
-  // Small lettering loses its accents: a title on a shop's product picture, at its size on
-  // screen, came out as "THUNG NUGC EP TRAI CAY", and at twice that size as "THÙNG NƯỚC ÉP
-  // TRÁI CÂY". Big lettering does better at its own size, so the grey copy is also read at
-  // twice the size, by the second reader at the same time.
-  const grey = await greyCopy(bmp, at(1)), big = await greyCopy(bmp, at(2));
-  const [found, small] = await Promise.all([
-    pass(one, src, at(1)).then(async (first) => (grey.flipped ? merge(first, await pass(one, grey.pic, at(1))) : first)),
-    pass(two, big.pic, at(2)),
-  ]);
-  return merge(found, small)
-    .map((p) => blockOf(p.lines.map(({ text, box }) => ({ text, box }))))
+  // Two readings at once. The picture as it is, at its own size, reads big lettering best. The
+  // other is a copy at twice the size with the background taken out (see cleanCopy): it reads
+  // small lettering with its accents ("THÙNG NƯỚC" where the first had "THUNG NUGC"), light text
+  // on dark, and white text on a colour, which the first misses.
+  const clean = await cleanCopy(bmp, at(2));
+  const [found, small] = await Promise.all([pass(one, src, at(1)), pass(two, clean, at(2))]);
+  const ratio = bmp.height / bmp.width;
+  return regroup(merge(found, small), ratio)
+    .flatMap((lines) => flows(lines.map(({ text, box }) => ({ text, box })), ratio).map(blockOf))
     .sort((a, b) => a.box[0] - b.box[0] || a.box[1] - b.box[1]);
+}
+
+// The two readings cut one text into paragraphs differently, so a headline's two lines can
+// arrive apart. Paragraphs that follow closely, same size and one under the other, go together
+// here; flows then decides what really belongs together.
+function regroup(paragraphs, ratio) {
+  const high = (l) => (l.box[2] - l.box[0]) * ratio;
+  const groups = [];
+  for (const p of [...paragraphs].sort((a, b) => a.lines[0].box[0] - b.lines[0].box[0])) {
+    const follows = groups.find((g) => {
+      const up = g.at(-1), l = p.lines[0], tall = Math.max(high(up), high(l));
+      return Math.abs(high(up) - high(l)) < 0.35 * tall && l.box[0] >= up.box[2] - 0.2 * (up.box[2] - up.box[0])
+        && (l.box[0] - up.box[2]) * ratio < 0.9 * tall && l.box[1] < up.box[3] && up.box[1] < l.box[3];
+    });
+    if (follows) follows.push(...p.lines);
+    else groups.push([...p.lines]);
+  }
+  return groups;
+}
+
+// A paragraph as the reader sees it can be running text wrapped at the end of each line, or
+// separate lines stacked up (a menu, a title with a subtitle). Running text is translated and
+// set as one, so its meaning isn't cut at the old line ends and it can wrap anew in the other
+// language. A line continues the one above when it is close and the same size, and its first
+// word wouldn't have fitted on the line above, the way wrapping works. A short centred stack
+// is a headline. "ratio" turns a height into the width units of the boxes.
+function flows(lines, ratio) {
+  const high = (l) => (l.box[2] - l.box[0]) * ratio, wide = (l) => l.box[3] - l.box[1];
+  const column = Math.max(...lines.map(wide));
+  const caps = (s) => s === s.toLocaleUpperCase();
+  const out = [[lines[0]]];
+  for (let i = 1; i < lines.length; i++) {
+    const up = lines[i - 1], l = lines[i], tall = Math.max(high(up), high(l));
+    const close = Math.abs(high(up) - high(l)) < 0.35 * tall && (l.box[0] - up.box[2]) * ratio < 0.9 * tall;
+    const firstWord = (wide(l) * (l.text.split(' ')[0].length + 1)) / Math.max(1, l.text.length);
+    const fellOff = wide(up) + firstWord > column * 0.97;
+    const finished = /[.!?:;…]$/.test(up.text);
+    const startsNew = /^\p{Lu}/u.test(l.text) && !caps(l.text);
+    const centred = Math.abs(up.box[1] + up.box[3] - l.box[1] - l.box[3]) / 2 < 0.5 * tall && Math.abs(up.box[1] - l.box[1]) > 0.5 * tall;
+    if (close && ((fellOff && !finished && !startsNew) || (centred && lines.length <= 3 && !finished))) out.at(-1).push(l);
+    else out.push([l]);
+  }
+  return out;
 }
 
 // Two readings of one picture, compared line by line: one paragraph's box can span lines that
@@ -72,7 +111,16 @@ function merge(found, again) {
       same[0].text = say(same[0].words);
       return false;
     }
-    if (same.some((f) => f.confidence >= l.confidence)) return false;
+    // The same letters with a space lost ("ISHERE" for "IS HERE"): the one with more words.
+    const joined = (x) => plain(x).replace(/\s+/g, '');
+    if (same.length === 1 && joined(same[0].text) === joined(l.text)) {
+      if (l.words.length <= same[0].words.length) return false;
+      worse.add(same[0]);
+      return true;
+    }
+    // Otherwise the reading with more letters ("Fresh orange juice" over "orange juice"), or the surer one.
+    const letters = (x) => (x.text.match(/\p{L}/gu) || []).length;
+    if (same.some((f) => letters(f) > letters(l) * 1.1 || (letters(f) * 1.1 >= letters(l) && f.confidence >= l.confidence))) return false;
     same.forEach((f) => worse.add(f));
     return true;
   }) }));
@@ -147,38 +195,56 @@ function paragraphs({ data }, img) {
   return out;
 }
 
-// Greyscale copy, at the given size, where every area with a dark background is
-// inverted, so all text ends up dark on light. The background of each tile is its
-// median brightness (letters are the minority, so they don't skew it), blended between
-// tiles so the flip has no hard steps. "flipped" says whether anything was dark.
-async function greyCopy(bmp, { w: W, h: H }) {
+// A copy, at the given size, showing only thin strokes, as dark on white: lettering in any colour,
+// light or dark, on any colour or gradient. What letters are made of is thinner than a set width,
+// and backgrounds, buttons and cards are wider. So: spread the bright pixels by that width, then the
+// dark ones back, and thin dark strokes are gone (the same the other way round for light ones),
+// while flat areas keep their sharp edges. The difference from the original is the strokes.
+async function cleanCopy(bmp, { w: W, h: H }) {
   const g = new OffscreenCanvas(W, H).getContext('2d', { willReadFrequently: true });
   g.filter = 'grayscale(1)';
   g.imageSmoothingQuality = 'high';
   g.drawImage(bmp, 0, 0, W, H);
   const pic = g.getImageData(0, 0, W, H), d = pic.data;
-  const T = Math.max(24, Math.round(Math.max(W, H) / 24)), cols = Math.ceil(W / T), rows = Math.ceil(H / T);
-  const bg = new Float32Array(cols * rows);
-  for (let ty = 0; ty < rows; ty++) for (let tx = 0; tx < cols; tx++) {
-    const v = [];
-    for (let y = ty * T; y < Math.min(H, (ty + 1) * T); y += 2) for (let x = tx * T; x < Math.min(W, (tx + 1) * T); x += 2) v.push(d[(y * W + x) * 4]);
-    v.sort((a, b) => a - b);
-    bg[ty * cols + tx] = v[v.length >> 1];
-  }
-  const flipped = bg.some((v) => v < DARK);
-  if (flipped) for (let y = 0; y < H; y++) {
-    const fy = Math.min(rows - 1, Math.max(0, y / T - 0.5)), y0 = Math.floor(fy), y1 = Math.min(rows - 1, y0 + 1), wy = fy - y0;
-    for (let x = 0; x < W; x++) {
-      const fx = Math.min(cols - 1, Math.max(0, x / T - 0.5)), x0 = Math.floor(fx), x1 = Math.min(cols - 1, x0 + 1), wx = fx - x0;
-      const here = (bg[y0 * cols + x0] * (1 - wx) + bg[y0 * cols + x1] * wx) * (1 - wy) + (bg[y1 * cols + x0] * (1 - wx) + bg[y1 * cols + x1] * wx) * wy;
-      const i = (y * W + x) * 4;
-      if (here < DARK) d[i] = d[i + 1] = d[i + 2] = 255 - d[i];
+  const grey = new Uint8ClampedArray(W * H);
+  for (let i = 0; i < W * H; i++) grey[i] = d[i * 4];
+  const R = Math.max(8, Math.round(Math.max(W, H) / 110));
+  const brighter = (a, b) => (a > b ? a : b), darker = (a, b) => (a < b ? a : b);
+  const lightGone = spread(spread(grey, W, H, R, darker), W, H, R, brighter);
+  const darkGone = spread(spread(grey, W, H, R, brighter), W, H, R, darker);
+  // Between dense letters the background looks like thin strokes of the other kind, so each small
+  // spot has to say which kind its letters are: those on the side away from the usual brightness
+  // around it. The spots overlap, so the choice doesn't jump at the edge of a button.
+  for (let ty = 0; ty < H; ty += R) for (let tx = 0; tx < W; tx += R) {
+    const seen = [];
+    const top = Math.max(0, ty - R), bottom = Math.min(H, ty + 2 * R), left = Math.max(0, tx - R), right = Math.min(W, tx + 2 * R);
+    for (let y = top; y < bottom; y += 3) for (let x = left; x < right; x += 3) seen.push(grey[y * W + x]);
+    seen.sort((a, b) => a - b);
+    const usual = seen[seen.length >> 1], lightText = usual - seen[0] < seen[seen.length - 1] - usual;
+    for (let y = ty; y < Math.min(H, ty + R); y++) for (let x = tx; x < Math.min(W, tx + R); x++) {
+      const i = y * W + x, stroke = lightText ? grey[i] - lightGone[i] : darkGone[i] - grey[i];
+      // Stretched: white on orange is only about 60 levels apart.
+      d[i * 4] = d[i * 4 + 1] = d[i * 4 + 2] = Math.max(0, 255 - stroke * 3);
     }
   }
   g.putImageData(pic, 0, 0);
-  return { pic: await g.canvas.convertToBlob({ type: 'image/png' }), flipped };
+  return g.canvas.convertToBlob({ type: 'image/png' });
 }
-const DARK = 120; // background brightness (0 to 255) below which an area counts as dark
+
+// Every pixel takes the brightest (or darkest) value within R pixels, across and then up and down.
+// Running over blocks of the window's size keeps it quick, however wide the window is.
+function spread(src, W, H, R, pick) {
+  const line = (from, get, set, n) => {
+    const size = 2 * R + 1, head = new Uint8Array(n), tail = new Uint8Array(n);
+    for (let i = 0; i < n; i++) head[i] = i % size === 0 ? get(from, i) : pick(head[i - 1], get(from, i));
+    for (let i = n - 1; i >= 0; i--) tail[i] = i === n - 1 || (i + 1) % size === 0 ? get(from, i) : pick(tail[i + 1], get(from, i));
+    for (let i = 0; i < n; i++) set(from, i, i < R ? head[Math.min(n - 1, i + R)] : i + R >= n ? tail[i - R] : pick(tail[i - R], head[i + R]));
+  };
+  const across = new Uint8ClampedArray(W * H), out = new Uint8ClampedArray(W * H);
+  for (let y = 0; y < H; y++) line(y * W, (o, i) => src[o + i], (o, i, v) => { across[o + i] = v; }, W);
+  for (let x = 0; x < W; x++) line(x, (o, i) => across[o + i * W], (o, i, v) => { out[o + i * W] = v; }, H);
+  return out;
+}
 
 // How much of the smaller box the two boxes share (0 to 1).
 function overlap(a, b) {

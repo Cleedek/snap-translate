@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Resimlerdeki metni olduğu yerde çevirir: bir resme sağ tıklayın veya sayfanın herhangi bir bölümü üzerinde sürükleyin."
+  },
+  "cmdSelect": {
+    "message": "Çevrilecek bir alan seçin"
+  }
+}

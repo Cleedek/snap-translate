@@ -11,7 +11,9 @@ Plain JavaScript, no build step, no dependencies.
 - **Right-click a picture → Translate picture.**
 - **Or drag over any part of the page:** press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> (<kbd>⌥</kbd><kbd>⇧</kbd><kbd>T</kbd> on a Mac), right-click → *Translate an area…*, or use the button in the popup. This also works on video frames, backgrounds and canvases.
 
-The translation appears in a card next to the picture. *On picture* lays each translation over the text it replaces. Click a line to copy it.
+*On picture* (the default) wipes the original text from the picture and sets the translation in its place, with the colour, size, weight and alignment measured from the picture, so it reads as if made in that language. This all happens on your computer and adds no cost. A translation that can't fit gets a small bubble instead. *List* shows the translations in a card. Click a line to copy it.
+
+The interface is available in all 31 languages you can translate into, including Arabic (right to left). The texts are in `lib/ui/<code>.json`, with English as the key.
 
 ## Translators
 

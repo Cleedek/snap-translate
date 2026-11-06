@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "이미지 속 텍스트를 그 자리에서 번역합니다. 이미지를 마우스 오른쪽 버튼으로 클릭하거나 페이지의 원하는 부분을 드래그하세요."
+  },
+  "cmdSelect": {
+    "message": "번역할 영역 선택"
+  }
+}

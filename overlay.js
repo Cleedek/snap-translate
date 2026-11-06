@@ -73,12 +73,16 @@
 
     /* ---------- the result ---------- */
 
-    .frame { position: absolute; border: 1.5px solid var(--accent); border-radius: 4px; pointer-events: none; }
-    /* A translation painted over the original text: its background and letter colours come from the picture. */
+    /* An outline, not a border: a border would push what is set inside it off the picture's pixels. */
+    .frame { position: absolute; outline: 1.5px solid var(--accent); border-radius: 4px; pointer-events: none; }
+    /* The translation has taken the original's place: nothing should say this is a layer. */
+    .frame.replaced { outline-color: transparent; }
+    /* The picture with its text wiped away, see-through wherever nothing was wiped. */
+    .wiped { position: absolute; inset: 0; width: 100%; height: 100%; display: block; animation: fade .2s var(--ease); }
+    /* A translation set where the original was. Its colour, size, weight and alignment come from lib/typeset.js. */
     .label {
-      position: absolute; pointer-events: auto; display: flex; align-items: center; justify-content: center; text-align: center;
-      padding: 0 2px; border-radius: 2px; line-height: 1.12; font-weight: 600; cursor: default; overflow: hidden;
-      overflow-wrap: break-word; hyphens: auto; animation: fade .2s var(--ease);
+      position: absolute; pointer-events: auto; cursor: text; user-select: text; white-space: pre-line;
+      overflow-wrap: normal; hyphens: manual; animation: fade .2s var(--ease);
     }
     @keyframes fade { from { opacity: 0; } }
     /* Too long to fit its spot: the original stays visible, outlined, with a line to a bubble. */
@@ -157,12 +161,16 @@
   let host, ui;
 
   function ensureHost() {
-    if (host && host.isConnected) return;
+    if (host && host.isConnected) {
+      ui.dir = SnapI18n.dir;
+      return;
+    }
     host = document.createElement('snap-translate');
     host.style.cssText = 'position:absolute;top:0;left:0;width:0;height:0;z-index:2147483647;';
     const root = host.attachShadow({ mode: 'closed' });
     root.innerHTML = `<style>${CSS}</style><div class="ui"></div>`;
     ui = root.querySelector('.ui');
+    ui.dir = SnapI18n.dir;
     SnapTheme.apply(ui);
     document.documentElement.appendChild(host);
   }
@@ -382,7 +390,7 @@
     const render = ({ result, source, target, model }, img) => {
       const { blocks } = result;
       const name = (l) => `${l.flag} ${l.name.charAt(0).toLocaleUpperCase() + l.name.slice(1)}`.trim();
-      $('.title').textContent = source ? `${name(source)} → ${name(target)}` : name(target);
+      $('.title').textContent = source ? `${name(source)} ${SnapI18n.dir === 'rtl' ? '←' : '→'} ${name(target)}` : name(target);
       $('.model').textContent = model;
       $('.foot').hidden = false;
       if (!blocks.length) {
@@ -400,7 +408,7 @@
         return true;
       });
       for (const b of listed) {
-        const row = el('div', 'block', `${b.text && b.text !== b.translation ? `<p class="src">${esc(b.text)}</p>` : ''}<p class="tr" data-copied="${esc(t('Copied'))}">${esc(b.translation)}</p>`);
+        const row = el('div', 'block', `${b.text && b.text !== b.translation ? `<p class="src" dir="auto">${esc(b.text)}</p>` : ''}<p class="tr" dir="auto" data-copied="${esc(t('Copied'))}">${esc(b.translation)}</p>`);
         row.title = t('Click to copy');
         row.addEventListener('click', () => copy(b.translation).then(() => {
           row.classList.add('copied');
@@ -415,88 +423,64 @@
         copyAll.classList.add('done');
         setTimeout(() => { copyAll.innerHTML = ICON.copy; copyAll.classList.remove('done'); }, 1200);
       });
-      if (blocks.some((b) => b.box)) setupViews(blocks, img);
+      if (blocks.some((b) => b.box)) setupViews(blocks, img, target, source);
       place();
     };
 
-    // "On picture" puts each translation where the original text was, like Google Lens:
-    // over the picture's own background, in the letters' colour, sized to the same box.
+    // "On picture" takes the original text out of the picture and sets the translation in its
+    // place, in the same colour, size and alignment (lib/pixels.js, lib/typeset.js).
     // The choice is remembered for the next translation.
-    const setupViews = async (blocks, img) => {
+    const setupViews = async (blocks, img, target, source) => {
       const seg = $('.segmented');
+      const px = await SnapPixels.open(img).catch(() => null);
+      if (!px || !current || current.card !== card) return;
       seg.hidden = false;
-      const colours = await sampler(img).catch(() => null);
       // Positions the model only guessed would put translations in the wrong places: the list
       // stays, with a word on why. On picture is still one click away.
-      const unsure = colours && guessed(blocks, colours);
+      const unsure = guessed(blocks, px.colours);
       if (unsure) {
         body.prepend(el('p', 'note', esc(t('This model only guesses where the text is, so on the picture the translations would sit in the wrong places. Quick or Gemini put them in the right place.'))));
         place();
       }
       const rectOf = ([y1, x1, y2, x2]) => ({ x: (x1 / 1000) * pos.w, y: (y1 / 1000) * pos.h, w: ((x2 - x1) / 1000) * pos.w, h: ((y2 - y1) / 1000) * pos.h });
-      const shared = (a, b) => Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) * Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
-      const painted = []; // where translations are painted over the picture
-      const texts = blocks.flatMap((b) => (b.lines ? b.lines.map((l) => l.box) : b.box ? [b.box] : [])); // where the originals are
-      // Painted over the original. Null (and removed again) when it would only fit at an unreadable size,
-      // or would cover most of a translation painted before it (weaker models give two texts one place).
-      const label = (box, text, original, lines) => {
-        const r = rectOf(box);
-        if (painted.some((p) => shared(p, r) > 0.5 * Math.min(p.w * p.h, r.w * r.h))) return null;
-        // 2 px more on each side, so no antialiased edge of the original peeks out.
-        const w = r.w + 4, h = r.h + 4;
-        const c = colours ? colours(box) : { bg: 'var(--bg)', text: 'var(--text)' };
-        const n = el('div', 'label onpic');
-        n.textContent = text;
-        n.title = original;
-        Object.assign(n.style, {
-          left: r.x - 2 + 'px', top: r.y - 2 + 'px',
-          width: w + 'px', height: h + 'px', background: c.fill || c.bg, color: c.text,
-          // Soft edge in the same colour, so the patch blends into gradients and photos.
-          boxShadow: `0 0 4px 3px ${c.bg}`,
-        });
-        frame.append(n);
-        if (fit(n, h / lines)) {
-          painted.push(r);
-          return n;
-        }
-        // A little longer than the original ("90.000 đ" -> "90,000 VND"): wider by up to 0.7 of a
-        // line on each side, when that covers no other text. Only the middle of the line is
-        // checked, as the lines above and below often reach a little into it.
-        const more = 0.7 * (h / lines), wide = { x: r.x - more, y: r.y, w: r.w + 2 * more, h: r.h };
-        const band = { x: wide.x, y: r.y + r.h / 4, w: wide.w, h: r.h / 2 };
-        if (texts.every((o) => String(o) === String(box) || !shared(rectOf(o), band)) && !painted.some((p) => shared(p, band))) {
-          Object.assign(n.style, { left: wide.x - 2 + 'px', width: wide.w + 4 + 'px' });
-          if (fit(n, h / lines)) {
-            painted.push(wide);
-            return n;
-          }
-        }
-        n.remove();
-        return null;
-      };
       // Text the translation leaves as it was (names, prices, text already in your language)
-      // stays as it is on the picture: a copy painted over it only hides the original.
+      // stays as it is on the picture: nothing is gained by redrawing it.
       // Accents don't count: misread lettering often comes back the same with them dropped.
       const plain = (s) => s.normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim().toLowerCase();
-      const unchanged = (a, b) => plain(a) === plain(b);
-      const paint = () => {
-        const tooLong = [];
-        painted.length = 0;
-        for (const b of blocks.filter((x) => x.box)) {
-          const tr = b.translation.split('\n');
-          // Line by line when the translation kept the original's line breaks (Quick does).
-          // Never the whole paragraph then: its box can span other text between its lines.
-          if (b.lines && b.lines.length > 1 && tr.length === b.lines.length) {
-            b.lines.forEach((l, i) => unchanged(l.text, tr[i]) || label(l.box, tr[i], l.text, 1) || tooLong.push({ text: l.text, translation: tr[i], box: l.box, spots: [l.box] }));
-          } else if (unchanged(b.text, b.translation)) {
-            continue;
-          } else if (b.lines && b.lines.length > 1) {
-            // Line breaks lost: one bubble for the paragraph, each of its lines outlined.
-            tooLong.push({ text: b.text, translation: b.translation, box: b.lines[0].box, spots: b.lines.map((l) => l.box) });
-          } else if (!label(b.box, b.translation, b.text, Math.max(1, b.text.split('\n').length))) {
-            tooLong.push({ text: b.text, translation: b.translation, box: b.box, spots: [b.box] });
+      for (const b of blocks) b.skip = plain(b.text) === plain(b.translation);
+      // Real text on the page, rather than in a picture, already says which font it is in.
+      const fontAt = (box) => {
+        const r = rectOf(box);
+        const x = pos.x + r.x + r.w / 2 - scrollX, y = pos.y + r.y + r.h / 2 - scrollY;
+        for (const n of document.elementsFromPoint(x, y)) {
+          if (n === host) continue;
+          if (/^(IMG|CANVAS|VIDEO|SVG|PICTURE)$/i.test(n.tagName)) return null;
+          if ([...n.childNodes].some((c) => c.nodeType === 3 && c.nodeValue.trim())) {
+            const s = getComputedStyle(n);
+            return { family: s.fontFamily, weight: s.fontWeight };
           }
         }
+        return null;
+      };
+      let wiped = null, wipedFor = ''; // wiping takes a moment, so it is kept for switching back and forth
+      const paint = () => {
+        const { erase, keep, tooLong } = SnapTypeset.set({
+          blocks, px, frame, size: { w: pos.w, h: pos.h }, target: target.code, source: source && source.code, fontAt,
+          makeLabel: (u) => {
+            const n = el('div', 'label onpic');
+            n.textContent = u.text;
+            n.title = u.b.text;
+            return n;
+          },
+        });
+        const key = JSON.stringify(erase);
+        if (key !== wipedFor) {
+          wiped = px.erase(erase, keep);
+          wiped.className = 'wiped onpic';
+          wipedFor = key;
+        }
+        frame.prepend(wiped);
+        frame.classList.add('replaced');
         callouts(tooLong);
       };
       // A translation too long for its spot goes in a bubble next to it, with a line to the
@@ -525,6 +509,7 @@
           }
           const bubble = el('div', 'callout onpic');
           bubble.textContent = b.translation;
+          bubble.dir = 'auto';
           bubble.title = b.text;
           frame.append(bubble);
           const w = bubble.offsetWidth, h = bubble.offsetHeight, gap = 14, cx = r.x + r.w / 2, cy = r.y + r.h / 2;
@@ -559,6 +544,7 @@
         const onPicture = view === 'picture';
         seg.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.view === view)));
         frame.querySelectorAll('.onpic').forEach((n) => n.remove());
+        frame.classList.remove('replaced');
         body.hidden = onPicture;
         card.classList.toggle('collapsed', onPicture);
         // The card goes first, so the bubbles can keep clear of it.
@@ -569,72 +555,12 @@
         choose(btn.dataset.view);
         chrome.storage.local.set({ view: btn.dataset.view }).catch(() => {});
       }));
-      const { view } = await chrome.storage.local.get('view').catch(() => ({}));
+      // On the picture is what this is for: the list opens by itself only if you chose it, or when positions can't be trusted.
+      const { view = 'picture' } = await chrome.storage.local.get('view').catch(() => ({}));
       if (view === 'picture' && !unsure && current && current.card === card) choose('picture');
     };
 
     return { ask, error };
-  }
-
-  // Starts at the size of one original line and shrinks until the translation fits its box.
-  // False when it would have to go below 11 px (or below the original's own size, if that is smaller).
-  function fit(label, lineHeight) {
-    const start = Math.max(8, Math.min(48, lineHeight * 0.78)), smallest = Math.min(11, start);
-    let size = start;
-    const over = () => label.scrollHeight > label.clientHeight + 1 || label.scrollWidth > label.clientWidth + 1;
-    label.style.fontSize = size + 'px';
-    while (size > smallest && over()) {
-      size -= 0.5;
-      label.style.fontSize = size + 'px';
-    }
-    return !over();
-  }
-
-  // Colours from the screenshot: the background just around a piece of text,
-  // and the colour of its letters (the pixels inside that differ most from it).
-  async function sampler(img) {
-    const bytes = Uint8Array.from(atob(img.data), (ch) => ch.charCodeAt(0));
-    const bmp = await createImageBitmap(new Blob([bytes], { type: img.mime }));
-    const W = bmp.width, H = bmp.height;
-    const g = new OffscreenCanvas(W, H).getContext('2d', { willReadFrequently: true });
-    g.drawImage(bmp, 0, 0);
-    const px = g.getImageData(0, 0, W, H).data;
-    const at = (x, y) => {
-      const i = (Math.min(H - 1, Math.max(0, Math.round(y))) * W + Math.min(W - 1, Math.max(0, Math.round(x)))) * 4;
-      return [px[i], px[i + 1], px[i + 2]];
-    };
-    const median = (list) => [0, 1, 2].map((k) => list.map((c) => c[k]).sort((a, b) => a - b)[list.length >> 1]);
-    const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
-    const lum = (c) => {
-      const [r, g2, b] = c.map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
-      return 0.2126 * r + 0.7152 * g2 + 0.0722 * b;
-    };
-    const contrast = (a, b) => { const [l1, l2] = [lum(a), lum(b)].sort((x, y) => y - x); return (l1 + 0.05) / (l2 + 0.05); };
-    const rgb = (c) => `rgb(${c.map(Math.round).join(',')})`;
-
-    return (box) => {
-      const y1 = (box[0] / 1000) * H, x1 = (box[1] / 1000) * W, y2 = (box[2] / 1000) * H, x2 = (box[3] / 1000) * W;
-      // Left and right ends sampled apart, so a patch on a gradient fades like the picture does.
-      const left = [], right = [], m = 3;
-      for (let i = 0; i <= 24; i++) {
-        const x = x1 + ((x2 - x1) * i) / 24, y = y1 + ((y2 - y1) * i) / 24;
-        (i < 12 ? left : right).push(at(x, y1 - m), at(x, y2 + m));
-        left.push(at(x1 - m, y));
-        right.push(at(x2 + m, y));
-      }
-      const bg = median(left.concat(right)), bgL = median(left), bgR = median(right);
-      const ink = [];
-      for (let i = 1; i < 40; i++) for (let j = 1; j < 16; j++) {
-        const c = at(x1 + ((x2 - x1) * i) / 40, y1 + ((y2 - y1) * j) / 16);
-        if (dist(c, bg) > 60) ink.push(c);
-      }
-      const inked = ink.length / (39 * 15); // how much of the box differs from its background
-      ink.sort((a, b) => dist(b, bg) - dist(a, bg));
-      let text = ink.length ? median(ink.slice(0, Math.max(1, ink.length >> 1))) : null;
-      // Too little contrast to read: plain black or white, whichever suits the background.
-      if (!text || contrast(text, bg) < 3) text = lum(bg) > 0.4 ? [17, 17, 17] : [250, 250, 250];
-      return { bg: rgb(bg), fill: `linear-gradient(to right, ${rgb(bgL)}, ${rgb(bgR)})`, text: rgb(text), inked, height: y2 - y1 };
-    };
   }
 
   // Some models read a picture well but only guess where its text is (gemma3 put made-up boxes

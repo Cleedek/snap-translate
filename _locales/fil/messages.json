@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Isinasalin ang teksto sa mga larawan sa mismong lugar: i-right click ang larawan o i-drag sa anumang bahagi ng page."
+  },
+  "cmdSelect": {
+    "message": "Pumili ng lugar na isasalin"
+  }
+}

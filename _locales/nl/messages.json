@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Vertaalt de tekst in afbeeldingen ter plekke: klik met rechts op een afbeelding of sleep over een deel van de pagina."
+  },
+  "cmdSelect": {
+    "message": "Selecteer een gebied om te vertalen"
+  }
+}

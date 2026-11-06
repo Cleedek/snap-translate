@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Prevodi tekst na slikama točno na mjestu: desni klik na sliku ili povucite preko bilo kojeg dijela stranice."
+  },
+  "cmdSelect": {
+    "message": "Odaberite područje za prijevod"
+  }
+}

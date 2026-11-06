@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Menerjemahkan teks dalam gambar langsung di tempatnya: klik kanan gambar atau seret di bagian mana pun pada halaman."
+  },
+  "cmdSelect": {
+    "message": "Pilih area untuk diterjemahkan"
+  }
+}

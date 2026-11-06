@@ -1,7 +1,7 @@
 // Snap Translate: the background worker. It starts the picker on the page,
 // takes the screenshot, crops it to the chosen area and asks the chosen model.
 
-importScripts('lib/i18n.js', 'lib/locales.js', 'lib/settings.js');
+importScripts('lib/i18n.js', 'lib/settings.js');
 const t = SnapI18n.t;
 
 // ---------- ways in: right-click menu, shortcut, popup button ----------
@@ -27,7 +27,7 @@ chrome.commands.onCommand.addListener((command, tab) => {
 
 // The page script is added only when asked for (activeTab), never to every site.
 async function start(tabId, msg) {
-  await chrome.scripting.executeScript({ target: { tabId }, files: ['lib/i18n.js', 'lib/locales.js', 'lib/theme.js', 'overlay.js'] });
+  await chrome.scripting.executeScript({ target: { tabId }, files: ['lib/i18n.js', 'lib/theme.js', 'lib/pixels.js', 'lib/typeset.js', 'overlay.js'] });
   await chrome.tabs.sendMessage(tabId, msg);
 }
 
@@ -46,6 +46,9 @@ chrome.runtime.onMessage.addListener((msg, sender, reply) => {
       return true;
     case 'ask':
       answer(ask(msg.img));
+      return true;
+    case 'dict': // for the page script, which can't read the extension's files itself
+      answer(fetch(chrome.runtime.getURL(`lib/ui/${msg.lang}.json`)).then((r) => r.json()).then((dict) => ({ dict })));
       return true;
     case 'models':
       answer(models(msg.provider, msg.cfg));
@@ -81,8 +84,12 @@ async function capture(windowId, rect, vw) {
   const g = canvas.getContext('2d');
   g.imageSmoothingQuality = 'high';
   g.drawImage(bmp, sx, sy, sw, sh, 0, 0, w, h);
-  const blob = await canvas.convertToBlob({ type: 'image/jpeg', quality: 0.9 });
-  return { img: { mime: 'image/jpeg', data: toBase64(await blob.arrayBuffer()), w, h } };
+  // JPEG smaller for the AI models, which get the picture over the network. Quick reads it on this
+  // computer, where JPEG's ripples around the letters only cost words and leave ghosts behind.
+  const { provider } = await snapLoadSettings();
+  const type = provider === 'quick' ? 'image/png' : 'image/jpeg';
+  const blob = await canvas.convertToBlob({ type, quality: 0.9 });
+  return { img: { mime: type, data: toBase64(await blob.arrayBuffer()), w, h } };
 }
 
 function toBase64(buf) {
@@ -112,7 +119,7 @@ const ASK = 'Translate the text in this picture.';
 
 async function ask(img) {
   const s = await snapLoadSettings();
-  if (s.provider === 'quick') return labelled(await askQuick(img, s.target), s.target, 'Quick · Google Translate');
+  if (s.provider === 'quick') return labelled(await askQuick(img, s.target), s.target, `${t('Quick')} · Google Translate`);
   const lang = snapLangName(s.target);
   const cfg = s[s.provider];
   if (s.provider !== 'local' && !cfg.key) throw new Error(t('Add your API key in the extension settings.'));
@@ -129,8 +136,8 @@ function labelled(result, target, model) {
   const ui = SnapI18n.lang;
   return {
     result,
-    source: result.code ? { name: snapLangName(result.code, ui), flag: snapFlag(result.code) } : null,
-    target: { name: snapLangName(target, ui), flag: snapFlag(target) },
+    source: result.code ? { code: result.code, name: snapLangName(result.code, ui), flag: snapFlag(result.code) } : null,
+    target: { code: target, name: snapLangName(target, ui), flag: snapFlag(target) },
     model,
   };
 }
@@ -145,9 +152,10 @@ const GOOGLE_URL = 'https://translate.googleapis.com/translate_a/t?client=gtx&sl
 async function askQuick(img, target) {
   const blocks = await readText(img);
   if (!blocks.length) return { code: '', blocks: [] };
-  // Sent as HTML so the line breaks inside a paragraph survive.
+  // Each block is one running text (see flows in offscreen.js): its lines joined, a word broken
+  // at a line's end put back together, so Google Translate sees whole sentences.
   const body = new URLSearchParams();
-  for (const b of blocks) body.append('q', b.text.split('\n').map(escapeHtml).join('<br>'));
+  for (const b of blocks) body.append('q', escapeHtml(b.text.replace(/(\p{L})-\n(?=\p{Ll})/gu, '$1').replace(/\n/g, ' ')));
   let r;
   try {
     r = await fetch(GOOGLE_URL + encodeURIComponent(target), { method: 'POST', body, signal: AbortSignal.timeout(30000) });

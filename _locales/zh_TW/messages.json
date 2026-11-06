@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "就地翻譯圖片中的文字:在圖片上按右鍵,或拖曳選取頁面的任何部分。"
+  },
+  "cmdSelect": {
+    "message": "選取要翻譯的區域"
+  }
+}

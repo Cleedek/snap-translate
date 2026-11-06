@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Kääntää kuvien tekstin paikan päällä: napsauta kuvaa hiiren kakkospainikkeella tai vedä minkä tahansa sivun osan yli."
+  },
+  "cmdSelect": {
+    "message": "Valitse käännettävä alue"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Oversetter teksten i bilder der den står: høyreklikk på et bilde, eller dra over en hvilken som helst del av siden."
+  },
+  "cmdSelect": {
+    "message": "Velg et område å oversette"
+  }
+}

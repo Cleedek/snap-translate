@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Snap Translate"
+  },
+  "extDescription": {
+    "message": "Traduce textul din imagini chiar acolo unde se află: clic dreapta pe o imagine sau trage peste orice parte a paginii."
+  },
+  "cmdSelect": {
+    "message": "Selectează o zonă de tradus"
+  }
+}
