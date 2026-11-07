@@ -1,7 +1,10 @@
 // Snap Translate: the background worker. It starts the picker on the page,
 // takes the screenshot, crops it to the chosen area and asks the chosen model.
 
-importScripts('lib/i18n.js', 'lib/settings.js', 'lib/whats-new.js');
+importScripts('lib/i18n.js', 'lib/settings.js', 'lib/whats-new.js', 'lib/goodbye.js');
+
+// The "why did you leave?" page Chrome opens after the extension is removed (lib/goodbye.js).
+setupGoodbye({ ext: 'snap-translate', i18n: SnapI18n });
 const t = SnapI18n.t;
 
 // ---------- ways in: right-click menu, shortcut, popup button ----------
