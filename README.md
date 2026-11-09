@@ -4,6 +4,8 @@ A Chrome extension (also Arc, Edge, Brave) that translates the text in pictures 
 
 Plain JavaScript, no build step, no dependencies.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K1I42ACK0E)
+
 ## Use it
 
 - **Right-click a picture → Translate picture.**
