@@ -100,10 +100,14 @@ function setupSupport() {
   };
   for (const tabBtn of payTabs) tabBtn.addEventListener('click', () => selectPayTab(tabBtn));
 
-  // Local bank QR as the default tab, only for Czech or Vietnamese speakers (browser language, not location).
-  // The language picked in the extension decides first, then the browser's own language.
+  // Which tabs show depends on language only, never location: the language picked in the extension,
+  // then the browser's own. Ko-fi opens first, except a local bank QR for Czech and Vietnamese speakers.
+  // Revolut only for European languages (the extension's own), where people are likely to have it.
   const browserLang = chrome.i18n.getUILanguage().toLowerCase().split('-')[0];
-  const bankLang = [SnapI18n.lang, browserLang].find((l) => l === 'cs' || l === 'vi');
+  const payLangs = [SnapI18n.lang, browserLang];
+  const REVOLUT_LANGS = ['cs', 'en', 'de', 'fr', 'es', 'it', 'nl', 'pt', 'pl', 'sk', 'hu', 'ro', 'hr', 'el', 'da', 'sv', 'no', 'fi'];
+  $('tabRevolut').hidden = !REVOLUT_LANGS.includes(SnapI18n.lang); // the extension's language alone: an English browser is too common to say anything
+  const bankLang = payLangs.find((l) => l === 'cs' || l === 'vi');
   const localTab = { cs: $('tabBankCz'), vi: $('tabBankVn') }[bankLang];
   if (localTab) {
     localTab.hidden = false;

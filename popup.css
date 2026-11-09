@@ -13,6 +13,8 @@
   --accent-hover: oklch(0.60 0.21 293);
   --accent-soft: oklch(0.54 0.23 293 / .22);
   --success: oklch(0.86 0.13 150);
+  --logo-ink: #fff; /* the black parts of the payment logos */
+  --qr-filter: none; /* the QR images are drawn white */
   --danger: oklch(0.72 0.16 22);
   --thumb: oklch(0.97 0.004 290);
   --shadow-thumb: 0 1px 2px oklch(0.1 0.01 290 / .4);
@@ -38,6 +40,8 @@
   --accent-hover: oklch(0.48 0.23 293);
   --accent-soft: oklch(0.54 0.23 293 / .18);
   --success: oklch(0.52 0.14 150);
+  --logo-ink: #000;
+  --qr-filter: brightness(0);
   --danger: oklch(0.55 0.19 25);
   --thumb: oklch(1 0 0);
   --shadow-thumb: 0 1px 2px oklch(0.25 0.02 290 / .16), 0 0 0 1px oklch(0.25 0.02 290 / .06);
@@ -163,15 +167,22 @@ body.support #supportView { display: block !important; }
 .support .segmented { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: auto; }
 .support .segmented button { white-space: nowrap; padding-inline: 6px; }
 .segmented button[hidden] { display: none; }
-.pay-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 16px 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
-.qr { display: block; width: 196px; height: 196px; }
-/* The codes are drawn white for the dark look; on light they turn dark (the classic way round). */
-:root[data-theme="light"] .qr { filter: invert(1); }
+.pay-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 28px 16px 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
+/* QR codes straight on the card, which is their quiet zone: white in dark mode, black in light mode. */
+.qr { display: block; width: 196px; height: 196px; filter: var(--qr-filter); }
 .pay-id { margin: 14px 0 4px; font-size: 15px; font-weight: 650; letter-spacing: -.01em; }
 .pay-id span { color: var(--text); }
 .pay-note { margin: 0 0 14px; font-size: 12px; max-width: 280px; }
 .pay-actions { width: 100%; justify-content: center; }
 .pay-actions > * { flex: 1; text-align: center; padding: 8px 10px; }
+
+/* Ko-fi: the payment logos and two short promises under the address */
+.pay-logos { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 14px; margin: 16px 0 10px; padding: 0; }
+.pay-logos svg { display: block; }
+.pay-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+.pay-points span { display: inline-flex; align-items: center; gap: 5px; }
+.pay-points svg { color: var(--success); flex: none; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 a.btn { font: inherit; text-decoration: none; border-radius: 8px; border: 1px solid var(--accent); transition: background-color .15s var(--ease), border-color .15s var(--ease); }
 a.btn.primary { background: var(--accent); color: oklch(0.99 0.003 290); font-weight: 600; }
 a.btn.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
