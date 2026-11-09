@@ -8,7 +8,7 @@
   --line-strong: oklch(0.36 0.014 290);
   --text: oklch(0.94 0.006 290);
   --muted: oklch(0.70 0.014 290);
-  --faint: oklch(0.56 0.014 290);
+  --faint: oklch(0.64 0.014 290);
   --accent: oklch(0.54 0.23 293);
   --accent-hover: oklch(0.60 0.21 293);
   --accent-soft: oklch(0.54 0.23 293 / .22);
@@ -134,6 +134,7 @@ select.compact { width: auto; min-width: 128px; max-width: 200px; }
 .hint { margin: 0; font-size: 11.5px; color: var(--faint); }
 .hint a { color: var(--link); }
 .hint.error { color: var(--danger); }
+.hint.privacy { margin-top: 6px; }
 
 .ai-fields { display: flex; flex-direction: column; gap: 6px; }
 .ai-fields input { width: 100%; }
@@ -152,17 +153,20 @@ kbd {
 .toggle { position: relative; display: inline-flex; flex: none; cursor: pointer; }
 .toggle input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
 .toggle span {
-  width: 30px; height: 18px; border-radius: 999px; background: var(--line-strong); position: relative;
+  width: 36px; height: 22px; border-radius: 999px; background: var(--line-strong); position: relative;
   transition: background-color .2s var(--ease);
 }
 .toggle span::after {
-  content: ""; position: absolute; top: 2px; inset-inline-start: 2px; width: 14px; height: 14px; border-radius: 50%;
+  content: ""; position: absolute; top: 2px; inset-inline-start: 2px; width: 18px; height: 18px; border-radius: 50%;
   background: var(--thumb); box-shadow: var(--shadow-thumb);
   transition: transform .2s var(--ease);
 }
 .toggle input:checked + span { background: var(--accent); }
-.toggle input:checked + span::after { transform: translateX(12px); }
-[dir="rtl"] .toggle input:checked + span::after { transform: translateX(-12px); }
+.toggle input:checked + span::after { transform: translateX(14px); }
+/* The whole row is the switch: the hidden input stretches over the row it sits in. */
+.setting-head:has(> .toggle), .site-row:has(> .toggle) { position: relative; }
+.setting-head > .toggle, .site-row > .toggle { position: static; }
+[dir="rtl"] .toggle input:checked + span::after { transform: translateX(-14px); }
 .toggle:hover span { filter: brightness(1.12); }
 .toggle input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 label.setting-label { cursor: pointer; }
@@ -298,3 +302,25 @@ body.feedback #feedbackView { display: block !important; }
 .news-more { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--line-strong); border-radius: 8px; color: var(--text); font-weight: 600; text-decoration: none; transition: background-color .15s var(--ease); }
 .news-more:hover { background: var(--panel-hover); }
 .has-news #sister { display: none !important; } /* one card at a time, news first */
+
+/* ---------- footer list + "Language & appearance" screen (lib/prefs-view.js) ---------- */
+
+body.prefs > :not(#prefsView, script, style) { display: none !important; }
+body.prefs #prefsView { display: block !important; }
+.prefs-view .prefs { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+.foot-list { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.foot-row {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 9px 12px;
+  border: 0; border-radius: 0; background: transparent; text-align: start; font-weight: 500;
+}
+.foot-row + .foot-row { border-top: 1px solid var(--line); }
+.foot-row:hover { background: var(--panel); border-color: var(--line); }
+.foot-row > svg:first-child { flex: none; color: var(--muted); }
+.foot-row.support-open > svg:first-child { color: oklch(0.66 0.21 18); }
+.foot-text { flex: 1; min-width: 0; }
+.foot-now { color: var(--faint); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
+.foot-row .chev { flex: none; color: var(--faint); }
+[dir=rtl] .foot-row .chev { transform: scaleX(-1); }
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 18px; row-gap: 4px; margin-top: 10px; }
+.foot-links .star-link { margin-top: 0; padding-top: 0; border-top: 0; }
+.foot-list + p { margin-top: 14px; }

@@ -22,6 +22,7 @@ async function init() {
   document.querySelectorAll('[data-provider][role=radio]').forEach((b) => b.addEventListener('click', () => {
     s.provider = b.dataset.provider;
     save();
+    $('startMsg').hidden = true;
     showProvider();
     loadModels();
   }));
@@ -31,6 +32,7 @@ async function init() {
     input.addEventListener('change', () => {
       s[input.dataset.provider][input.dataset.field] = input.value.trim();
       save();
+      $('startMsg').hidden = true;
       loadModels();
     });
   });
@@ -45,6 +47,7 @@ async function init() {
   loadModels();
   setupSupport();
   setupFeedback({ ext: 'snap-translate', name: 'Snap Translate', i18n: SnapI18n });
+  setupPrefsView(['uiLang', 'theme']);
   setupWhatsNew({ slug: 'snap-translate', i18n: SnapI18n });
   setupSister();
   setupUiLang();
@@ -148,6 +151,14 @@ function save() { snapSaveSettings(s); }
 const cap = (text) => text.charAt(0).toLocaleUpperCase(SnapI18n.lang) + text.slice(1);
 
 async function startSelection() {
+  // An AI translator without its key would only fail after the area is drawn: point to the field now.
+  const keyInput = document.querySelector(`input[data-provider="${s.provider}"][data-field="key"]`);
+  if (keyInput && !keyInput.value.trim()) {
+    $('startMsg').textContent = t('Add your API key below first.');
+    $('startMsg').hidden = false;
+    keyInput.focus();
+    return;
+  }
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   const res = await chrome.runtime.sendMessage({ type: 'start', tabId: tab.id });
   if (res && res.ok) return window.close();

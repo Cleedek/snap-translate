@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Anumang API na compatible sa OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "ay may ilang libreng modelong nagbabasa ng larawan (nagtatapos ang pangalan sa \":free\").",
  "Load the model list again": "I-load muli ang listahan ng mga modelo",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Walang ipinapadala hangga't hindi ka humihiling ng salin. Sa Mabilis, nananatili ang larawan sa computer na ito at ang nakitang teksto lang ang napupunta sa Google Translate. Natatanggap ng mga AI na tagasalin ang napili mong lugar. Nananatili ang mga key sa device na ito.",
  "Change the shortcut": "Baguhin ang shortcut",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Libre at walang ad ang Snap Translate. Kung nakakatipid ito ng ilang screenshot bawat araw, makakatulong ang maliit na tip para magpatuloy ito. Salamat!",
  "Couldn’t start on this page.": "Hindi makapagsimula sa page na ito.",
@@ -127,5 +126,9 @@
  "in version {version}": "sa bersyon {version}",
  "View full changelog": "Tingnan ang buong changelog",
  "What's new in version {version}": "Ano ang bago sa bersyon {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Natatanggap ko ang mensahe mo sa email, para lang sumagot at ayusin ang mga problema. Walang ipapadala hangga't hindi mo pinipindot ang Ipadala."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Natatanggap ko ang mensahe mo sa email, para lang sumagot at ayusin ang mga problema. Walang ipapadala hangga't hindi mo pinipindot ang Ipadala.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Nananatili ang larawan sa computer na ito. Ang nahanap na text lang ang ipinapadala sa Google Translate.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Ang lugar lang na pinili mo ang ipinapadala, at kapag hiniling mo lang. Nananatili ang key mo sa device na ito.",
+ "Add your API key below first.": "Idagdag muna ang iyong API key sa ibaba.",
+ "Language & appearance": "Wika at hitsura"
 }

@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Toute API compatible OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "propose des modèles gratuits qui lisent les images (leur nom se termine par \":free\").",
  "Load the model list again": "Recharger la liste des modèles",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Rien n'est envoyé tant que vous ne demandez pas de traduction. Rapide garde l'image sur cet ordinateur et n'envoie que le texte trouvé à Google Traduction. Les traducteurs IA reçoivent la zone sélectionnée. Les clés restent sur cet appareil.",
  "Change the shortcut": "Modifier le raccourci",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate est gratuit et sans publicité. S'il vous épargne quelques captures d'écran par jour, un petit pourboire le fait vivre. Merci !",
  "Couldn’t start on this page.": "Impossible de démarrer sur cette page.",
@@ -127,5 +126,9 @@
  "in version {version}": "dans la version {version}",
  "View full changelog": "Voir tout le journal des modifications",
  "What's new in version {version}": "Nouveautés de la version {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Je reçois ton message par e-mail, uniquement pour répondre et corriger les problèmes. Rien n'est envoyé avant que tu appuies sur Envoyer."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Je reçois ton message par e-mail, uniquement pour répondre et corriger les problèmes. Rien n'est envoyé avant que tu appuies sur Envoyer.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "L’image reste sur cet ordinateur. Seul le texte trouvé part vers Google Traduction.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Seule la zone que vous sélectionnez est envoyée, et seulement à votre demande. Votre clé reste sur cet appareil.",
+ "Add your API key below first.": "Ajoutez d’abord votre clé API ci-dessous.",
+ "Language & appearance": "Langue et apparence"
 }

@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "API ใดก็ได้ที่เข้ากันได้กับ OpenAI",
  "has some free models that read pictures (their names end in \":free\").": "มีโมเดลฟรีบางตัวที่อ่านรูปภาพได้ (ชื่อลงท้ายด้วย \":free\")",
  "Load the model list again": "โหลดรายการโมเดลอีกครั้ง",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "จะไม่มีการส่งข้อมูลใดจนกว่าคุณจะขอคำแปล โหมดด่วนเก็บรูปภาพไว้ในคอมพิวเตอร์เครื่องนี้และส่งเฉพาะข้อความที่พบไปยัง Google แปลภาษา ตัวแปล AI จะได้รับพื้นที่ที่คุณเลือก คีย์จะอยู่ในอุปกรณ์เครื่องนี้",
  "Change the shortcut": "เปลี่ยนทางลัด",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate ใช้ฟรีและไม่มีโฆษณา หากช่วยลดภาพหน้าจอได้วันละไม่กี่ภาพ ทิปเล็กน้อยจะช่วยให้พัฒนาต่อไปได้ ขอบคุณ!",
  "Couldn’t start on this page.": "เริ่มในหน้านี้ไม่ได้",
@@ -127,5 +126,9 @@
  "in version {version}": "ในเวอร์ชัน {version}",
  "View full changelog": "ดูบันทึกการเปลี่ยนแปลงทั้งหมด",
  "What's new in version {version}": "มีอะไรใหม่ในเวอร์ชัน {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "ฉันได้รับข้อความของคุณทางอีเมล เพื่อใช้ตอบกลับและแก้ไขปัญหาเท่านั้น จะไม่มีการส่งข้อมูลใด ๆ จนกว่าคุณจะกดส่ง"
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "ฉันได้รับข้อความของคุณทางอีเมล เพื่อใช้ตอบกลับและแก้ไขปัญหาเท่านั้น จะไม่มีการส่งข้อมูลใด ๆ จนกว่าคุณจะกดส่ง",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "รูปอยู่ในคอมพิวเตอร์เครื่องนี้ ส่งไป Google แปลภาษาเฉพาะข้อความที่พบ",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "ส่งเฉพาะพื้นที่ที่คุณเลือก และเฉพาะเมื่อคุณขอ คีย์ของคุณอยู่ในอุปกรณ์นี้",
+ "Add your API key below first.": "เพิ่มคีย์ API ด้านล่างก่อน",
+ "Language & appearance": "ภาษาและรูปลักษณ์"
 }

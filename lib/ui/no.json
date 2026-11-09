@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Ethvert OpenAI-kompatibelt API.",
  "has some free models that read pictures (their names end in \":free\").": "har noen gratismodeller som leser bilder (navnene deres slutter på \":free\").",
  "Load the model list again": "Last inn modellisten på nytt",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Ingenting sendes før du ber om en oversettelse. Rask beholder bildet på denne datamaskinen og sender bare den funnede teksten til Google Oversetter. AI-oversetterne får området du valgte. Nøkler blir på denne enheten.",
  "Change the shortcut": "Endre snarveien",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate er gratis og uten reklame. Hvis det sparer deg for noen skjermbilder om dagen, holder en liten driks det i gang. Takk!",
  "Couldn’t start on this page.": "Kunne ikke starte på denne siden.",
@@ -127,5 +126,9 @@
  "in version {version}": "i versjon {version}",
  "View full changelog": "Se hele endringsloggen",
  "What's new in version {version}": "Hva er nytt i versjon {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jeg får meldingen din på e-post, bare for å svare og rette problemer. Ingenting sendes før du trykker på Send."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jeg får meldingen din på e-post, bare for å svare og rette problemer. Ingenting sendes før du trykker på Send.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Bildet blir på denne datamaskinen. Bare teksten som blir funnet, går til Google Oversetter.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Bare området du velger, blir sendt, og bare når du ber om det. Nøkkelen din blir på denne enheten.",
+ "Add your API key below first.": "Legg først til API-nøkkelen din nedenfor.",
+ "Language & appearance": "Språk og utseende"
 }

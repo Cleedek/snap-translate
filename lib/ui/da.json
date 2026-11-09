@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Enhver OpenAI-kompatibel API.",
  "has some free models that read pictures (their names end in \":free\").": "har nogle gratis modeller, der læser billeder (deres navne ender på \":free\").",
  "Load the model list again": "Indlæs modellisten igen",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Intet sendes, før du beder om en oversættelse. Hurtig beholder billedet på denne computer og sender kun den fundne tekst til Google Oversæt. AI-oversætterne får det valgte område. Nøgler bliver på denne enhed.",
  "Change the shortcut": "Skift genvej",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate er gratis og uden reklamer. Hvis det sparer dig for et par skærmbilleder om dagen, holder en lille drikkepenge det i gang. Tak!",
  "Couldn’t start on this page.": "Kunne ikke starte på denne side.",
@@ -127,5 +126,9 @@
  "in version {version}": "i version {version}",
  "View full changelog": "Se hele ændringsloggen",
  "What's new in version {version}": "Nyheder i version {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jeg får din besked på e-mail, kun for at svare og rette problemer. Der sendes intet, før du trykker på Send."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jeg får din besked på e-mail, kun for at svare og rette problemer. Der sendes intet, før du trykker på Send.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Billedet bliver på denne computer. Kun den fundne tekst sendes til Google Oversæt.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Kun det område, du vælger, sendes, og kun når du beder om det. Din nøgle bliver på denne enhed.",
+ "Add your API key below first.": "Tilføj først din API-nøgle herunder.",
+ "Language & appearance": "Sprog og udseende"
 }

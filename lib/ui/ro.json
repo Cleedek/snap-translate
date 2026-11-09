@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Orice API compatibil cu OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "are câteva modele gratuite care citesc imagini (numele lor se termină cu \":free\").",
  "Load the model list again": "Reîncarcă lista de modele",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Nu se trimite nimic până nu ceri o traducere. Rapid păstrează imaginea pe acest computer și trimite la Google Traducere doar textul găsit. Traducătorii AI primesc zona selectată. Cheile rămân pe acest dispozitiv.",
  "Change the shortcut": "Schimbă comanda rapidă",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate este gratuit și fără reclame. Dacă îți economisește câteva capturi de ecran pe zi, un mic bacșiș îl ține în viață. Mulțumesc!",
  "Couldn’t start on this page.": "Nu a putut porni pe această pagină.",
@@ -127,5 +126,9 @@
  "in version {version}": "în versiunea {version}",
  "View full changelog": "Vezi tot jurnalul de modificări",
  "What's new in version {version}": "Ce este nou în versiunea {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Primesc mesajul tău pe e-mail, doar ca să răspund și să repar problemele. Nu se trimite nimic până nu apeși Trimite."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Primesc mesajul tău pe e-mail, doar ca să răspund și să repar problemele. Nu se trimite nimic până nu apeși Trimite.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Imaginea rămâne pe acest computer. Doar textul găsit ajunge la Google Traducere.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Se trimite doar zona pe care o selectezi și doar când ceri. Cheia ta rămâne pe acest dispozitiv.",
+ "Add your API key below first.": "Mai întâi adaugă cheia API mai jos.",
+ "Language & appearance": "Limbă și aspect"
 }

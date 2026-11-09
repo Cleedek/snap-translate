@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Elke OpenAI-compatibele API.",
  "has some free models that read pictures (their names end in \":free\").": "heeft enkele gratis modellen die afbeeldingen lezen (hun naam eindigt op \":free\").",
  "Load the model list again": "Modellijst opnieuw laden",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Er wordt niets verstuurd totdat je om een vertaling vraagt. Snel houdt de afbeelding op deze computer en stuurt alleen de gevonden tekst naar Google Translate. De AI-vertalers krijgen het gebied dat je hebt geselecteerd. Sleutels blijven op dit apparaat.",
  "Change the shortcut": "Sneltoets wijzigen",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate is gratis en heeft geen advertenties. Bespaart het je een paar screenshots per dag, dan houdt een kleine fooi het draaiende. Bedankt!",
  "Couldn’t start on this page.": "Kan op deze pagina niet starten.",
@@ -127,5 +126,9 @@
  "in version {version}": "in versie {version}",
  "View full changelog": "Volledige changelog bekijken",
  "What's new in version {version}": "Wat is er nieuw in versie {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Je bericht komt per e-mail bij mij binnen, alleen om te antwoorden en problemen op te lossen. Er wordt niets verstuurd tot je op Versturen drukt."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Je bericht komt per e-mail bij mij binnen, alleen om te antwoorden en problemen op te lossen. Er wordt niets verstuurd tot je op Versturen drukt.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "De afbeelding blijft op deze computer. Alleen de gevonden tekst gaat naar Google Translate.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Alleen het gebied dat je selecteert wordt verstuurd, en alleen als je erom vraagt. Je sleutel blijft op dit apparaat.",
+ "Add your API key below first.": "Voeg eerst hieronder je API-sleutel toe.",
+ "Language & appearance": "Taal en weergave"
 }

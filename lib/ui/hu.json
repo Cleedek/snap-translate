@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Bármely OpenAI-kompatibilis API.",
  "has some free models that read pictures (their names end in \":free\").": "van néhány ingyenes modellje, amely képeket olvas (a nevük \":free\" végződésű).",
  "Load the model list again": "Modellek listájának újratöltése",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Semmit nem küld el, amíg nem kérsz fordítást. A Gyors a képet ezen a számítógépen tartja, és csak a talált szöveget küldi a Google Fordítónak. Az MI-fordítók a kijelölt területet kapják meg. A kulcsok ezen az eszközön maradnak.",
  "Change the shortcut": "Billentyűparancs módosítása",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "A Snap Translate ingyenes és reklámmentes. Ha naponta megspórol pár képernyőképet, egy kis borravaló segít fenntartani. Köszönöm!",
  "Couldn’t start on this page.": "Ezen az oldalon nem indítható el.",
@@ -127,5 +126,9 @@
  "in version {version}": "a(z) {version} verzióban",
  "View full changelog": "A teljes változásnapló megtekintése",
  "What's new in version {version}": "Újdonságok a(z) {version} verzióban",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Az üzenetedet e-mailben kapom meg, csak a válaszadáshoz és a hibák javításához. Semmi sem megy el, amíg meg nem nyomod a Küldés gombot."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Az üzenetedet e-mailben kapom meg, csak a válaszadáshoz és a hibák javításához. Semmi sem megy el, amíg meg nem nyomod a Küldés gombot.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "A kép ezen a gépen marad. Csak a megtalált szöveg megy a Google Fordítóba.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Csak a kijelölt terület megy el, és csak akkor, ha kéred. A kulcsod ezen az eszközön marad.",
+ "Add your API key below first.": "Előbb add meg lent az API-kulcsodat.",
+ "Language & appearance": "Nyelv és megjelenés"
 }

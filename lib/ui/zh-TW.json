@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "任何相容 OpenAI 的 API。",
  "has some free models that read pictures (their names end in \":free\").": "提供一些可讀取圖片的免費模型 (名稱以 \":free\" 結尾)。",
  "Load the model list again": "重新載入模型清單",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "在您要求翻譯之前,不會傳送任何內容。快速模式會將圖片留在這台電腦上,只把找到的文字傳給 Google 翻譯。AI 翻譯工具會收到您選取的區域。金鑰保留在此裝置上。",
  "Change the shortcut": "變更快速鍵",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate 免費且無廣告。如果它每天幫您省下幾張螢幕截圖,一點小費就能讓它持續運作。謝謝!",
  "Couldn’t start on this page.": "無法在此頁面啟動。",
@@ -127,5 +126,9 @@
  "in version {version}": "版本 {version}",
  "View full changelog": "查看完整更新記錄",
  "What's new in version {version}": "版本 {version} 的新功能",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "我會透過電子郵件收到你的訊息，僅用於回覆和修正問題。在你按下「傳送」之前，不會傳送任何內容。"
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "我會透過電子郵件收到你的訊息，僅用於回覆和修正問題。在你按下「傳送」之前，不會傳送任何內容。",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "圖片留在這台電腦上，只有辨識出的文字會傳送到 Google 翻譯。",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "只會傳送你選取的區域，而且只在你要求時傳送。金鑰保存在這台裝置上。",
+ "Add your API key below first.": "請先在下方填入 API 金鑰。",
+ "Language & appearance": "語言與外觀"
 }

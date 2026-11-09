@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Mikä tahansa OpenAI-yhteensopiva API.",
  "has some free models that read pictures (their names end in \":free\").": "tarjoaa joitakin ilmaisia malleja, jotka lukevat kuvia (nimet päättyvät \":free\").",
  "Load the model list again": "Lataa malliluettelo uudelleen",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Mitään ei lähetetä, ennen kuin pyydät käännöstä. Nopea pitää kuvan tällä tietokoneella ja lähettää Google Kääntäjälle vain löydetyn tekstin. Tekoälykääntäjät saavat valitsemasi alueen. Avaimet pysyvät tällä laitteella.",
  "Change the shortcut": "Vaihda pikanäppäin",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate on ilmainen ja mainokseton. Jos se säästää muutaman kuvakaappauksen päivässä, pieni tippi pitää sen käynnissä. Kiitos!",
  "Couldn’t start on this page.": "Käynnistys ei onnistunut tällä sivulla.",
@@ -127,5 +126,9 @@
  "in version {version}": "versiossa {version}",
  "View full changelog": "Näytä koko muutosloki",
  "What's new in version {version}": "Uutta versiossa {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saan viestisi sähköpostitse vain vastatakseni ja korjatakseni ongelmia. Mitään ei lähetetä, ennen kuin painat Lähetä."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saan viestisi sähköpostitse vain vastatakseni ja korjatakseni ongelmia. Mitään ei lähetetä, ennen kuin painat Lähetä.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Kuva pysyy tällä tietokoneella. Vain löydetty teksti lähtee Google Kääntäjään.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Vain valitsemasi alue lähetetään, ja vain kun pyydät. Avaimesi pysyy tällä laitteella.",
+ "Add your API key below first.": "Lisää ensin API-avaimesi alle.",
+ "Language & appearance": "Kieli ja ulkoasu"
 }

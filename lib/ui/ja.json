@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "OpenAI 互換の API なら何でも使えます。",
  "has some free models that read pictures (their names end in \":free\").": "には画像を読み取れる無料モデルがあります (名前が \":free\" で終わります)。",
  "Load the model list again": "モデル一覧を再読み込み",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "翻訳を依頼するまで何も送信されません。クイックは画像をこのパソコンに残し、見つかったテキストだけを Google 翻訳に送信します。AI 翻訳エンジンには選択した範囲が送信されます。キーはこのデバイスに保存されます。",
  "Change the shortcut": "ショートカットを変更",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate は無料で広告もありません。毎日のスクリーンショットの手間が減ったなら、少額のチップが開発の支えになります。ありがとうございます!",
  "Couldn’t start on this page.": "このページでは開始できませんでした。",
@@ -127,5 +126,9 @@
  "in version {version}": "バージョン {version}",
  "View full changelog": "変更履歴をすべて見る",
  "What's new in version {version}": "バージョン {version} の新機能",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "メッセージはメールで届き、返信と問題の修正にのみ使います。「送信」を押すまで何も送信されません。"
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "メッセージはメールで届き、返信と問題の修正にのみ使います。「送信」を押すまで何も送信されません。",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "画像はこのパソコンに残ります。Google 翻訳に送られるのは見つかったテキストだけです。",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "送信されるのは選んだ範囲だけで、翻訳を頼んだときだけです。キーはこのデバイスに保存されます。",
+ "Add your API key below first.": "先に下の欄に API キーを入力してください。",
+ "Language & appearance": "言語と外観"
 }

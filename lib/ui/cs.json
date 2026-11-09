@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Jakékoli API kompatibilní s OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "má několik bezplatných modelů, které čtou obrázky (jejich název končí na \":free\").",
  "Load the model list again": "Znovu načíst seznam modelů",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Nic se neodešle, dokud nepožádáte o překlad. Rychlý nechává obrázek v tomto počítači a Google Překladači pošle jen nalezený text. AI překladače dostanou vybranou oblast. Klíče zůstávají v tomto zařízení.",
  "Change the shortcut": "Změnit zkratku",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate je zdarma a bez reklam. Pokud vám ušetří pár screenshotů denně, malé spropitné ho udrží v chodu. Děkuji!",
  "Couldn’t start on this page.": "Na této stránce nejde spustit.",
@@ -127,5 +126,9 @@
  "in version {version}": "ve verzi {version}",
  "View full changelog": "Zobrazit celý changelog",
  "What's new in version {version}": "Co je nového ve verzi {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Zprávu dostanu e-mailem, jen abych ti mohl odpovědět a opravit problém. Dokud nestiskneš Odeslat, nic se neposílá."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Zprávu dostanu e-mailem, jen abych ti mohl odpovědět a opravit problém. Dokud nestiskneš Odeslat, nic se neposílá.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Obrázek zůstává v tomto počítači. Do Google Překladače jde jen nalezený text.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Posílá se jen oblast, kterou vyberete, a jen když o překlad požádáte. Klíč zůstává v tomto zařízení.",
+ "Add your API key below first.": "Nejdřív níže vložte svůj API klíč.",
+ "Language & appearance": "Jazyk a vzhled"
 }

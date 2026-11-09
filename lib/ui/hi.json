@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "कोई भी OpenAI-संगत API।",
  "has some free models that read pictures (their names end in \":free\").": "में तस्वीरें पढ़ने वाले कुछ मुफ़्त मॉडल हैं (उनके नाम \":free\" पर खत्म होते हैं)।",
  "Load the model list again": "मॉडल सूची फिर से लोड करें",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "जब तक आप अनुवाद न माँगें, कुछ नहीं भेजा जाता। तेज़ मोड तस्वीर इसी कंप्यूटर पर रखता है और Google Translate को केवल मिला हुआ टेक्स्ट भेजता है। AI अनुवादकों को आपका चुना हुआ क्षेत्र मिलता है। कुंजियाँ इसी डिवाइस पर रहती हैं।",
  "Change the shortcut": "शॉर्टकट बदलें",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate मुफ़्त और विज्ञापन-रहित है। अगर यह आपके रोज़ के कुछ स्क्रीनशॉट बचाता है, तो एक छोटी सी टिप इसे चलाए रखती है। धन्यवाद!",
  "Couldn’t start on this page.": "इस पेज पर शुरू नहीं हो सका।",
@@ -127,5 +126,9 @@
  "in version {version}": "संस्करण {version} में",
  "View full changelog": "पूरा बदलाव-लॉग देखें",
  "What's new in version {version}": "संस्करण {version} में नया क्या है",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "आपका संदेश मुझे ईमेल से मिलता है, केवल जवाब देने और समस्याएँ ठीक करने के लिए। जब तक आप भेजें नहीं दबाते, कुछ नहीं भेजा जाता।"
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "आपका संदेश मुझे ईमेल से मिलता है, केवल जवाब देने और समस्याएँ ठीक करने के लिए। जब तक आप भेजें नहीं दबाते, कुछ नहीं भेजा जाता।",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "तस्वीर इसी कंप्यूटर पर रहती है। सिर्फ़ मिला हुआ टेक्स्ट Google Translate को जाता है।",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "सिर्फ़ आपका चुना हुआ हिस्सा भेजा जाता है, और सिर्फ़ तब जब आप कहें। आपकी कुंजी इसी डिवाइस पर रहती है।",
+ "Add your API key below first.": "पहले नीचे अपनी API कुंजी जोड़ें।",
+ "Language & appearance": "भाषा और रूप"
 }

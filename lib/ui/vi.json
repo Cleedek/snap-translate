@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Bất kỳ API nào tương thích OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "có vài mô hình miễn phí đọc được ảnh (tên kết thúc bằng \":free\").",
  "Load the model list again": "Tải lại danh sách mô hình",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Không gửi gì cho đến khi bạn yêu cầu dịch. Nhanh giữ ảnh trên máy này và chỉ gửi phần chữ tìm được tới Google Dịch. Các trình dịch AI nhận vùng bạn đã chọn. Khóa được lưu trên thiết bị này.",
  "Change the shortcut": "Đổi phím tắt",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate miễn phí và không có quảng cáo. Nếu nó giúp bạn bớt vài lần chụp màn hình mỗi ngày, một chút ủng hộ sẽ giúp nó tiếp tục. Cảm ơn bạn!",
  "Couldn’t start on this page.": "Không thể bắt đầu trên trang này.",
@@ -127,5 +126,9 @@
  "in version {version}": "trong phiên bản {version}",
  "View full changelog": "Xem toàn bộ nhật ký thay đổi",
  "What's new in version {version}": "Có gì mới trong phiên bản {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Tôi nhận tin nhắn qua email, chỉ để trả lời và sửa lỗi. Không có gì được gửi cho đến khi bạn nhấn Gửi."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Tôi nhận tin nhắn qua email, chỉ để trả lời và sửa lỗi. Không có gì được gửi cho đến khi bạn nhấn Gửi.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Ảnh ở lại trên máy tính này. Chỉ phần chữ tìm thấy được gửi tới Google Dịch.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Chỉ vùng bạn chọn được gửi đi, và chỉ khi bạn yêu cầu. Khóa của bạn ở lại trên thiết bị này.",
+ "Add your API key below first.": "Hãy thêm khóa API ở bên dưới trước.",
+ "Language & appearance": "Ngôn ngữ và giao diện"
 }

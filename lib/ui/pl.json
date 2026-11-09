@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Dowolne API zgodne z OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "ma kilka darmowych modeli odczytujących obrazy (ich nazwy kończą się na \":free\").",
  "Load the model list again": "Wczytaj ponownie listę modeli",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Nic nie jest wysyłane, dopóki nie poprosisz o tłumaczenie. Szybki zostawia obraz na tym komputerze i wysyła do Tłumacza Google tylko znaleziony tekst. Tłumacze AI otrzymują wybrany obszar. Klucze pozostają na tym urządzeniu.",
  "Change the shortcut": "Zmień skrót",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate jest darmowy i bez reklam. Jeśli oszczędza Ci kilka zrzutów ekranu dziennie, mały napiwek pomoże go utrzymać. Dziękuję!",
  "Couldn’t start on this page.": "Nie można uruchomić na tej stronie.",
@@ -127,5 +126,9 @@
  "in version {version}": "w wersji {version}",
  "View full changelog": "Zobacz pełny dziennik zmian",
  "What's new in version {version}": "Co nowego w wersji {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Wiadomość dostaję e-mailem, tylko po to, by odpowiedzieć i naprawić problem. Nic nie zostanie wysłane, dopóki nie naciśniesz Wyślij."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Wiadomość dostaję e-mailem, tylko po to, by odpowiedzieć i naprawić problem. Nic nie zostanie wysłane, dopóki nie naciśniesz Wyślij.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Obraz zostaje na tym komputerze. Do Tłumacza Google trafia tylko znaleziony tekst.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Wysyłany jest tylko zaznaczony obszar i tylko wtedy, gdy o to poprosisz. Twój klucz zostaje na tym urządzeniu.",
+ "Add your API key below first.": "Najpierw dodaj poniżej swój klucz API.",
+ "Language & appearance": "Język i wygląd"
 }

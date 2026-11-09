@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "API apa pun yang kompatibel dengan OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "memiliki beberapa model gratis yang membaca gambar (namanya berakhiran \":free\").",
  "Load the model list again": "Muat ulang daftar model",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Tidak ada yang dikirim sampai Anda meminta terjemahan. Cepat menyimpan gambar di komputer ini dan hanya mengirim teks yang ditemukan ke Google Terjemahan. Penerjemah AI menerima area yang Anda pilih. Kunci tetap di perangkat ini.",
  "Change the shortcut": "Ubah pintasan",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate gratis dan tanpa iklan. Jika menghemat beberapa tangkapan layar setiap hari, tip kecil membantunya terus berjalan. Terima kasih!",
  "Couldn’t start on this page.": "Tidak dapat memulai di halaman ini.",
@@ -127,5 +126,9 @@
  "in version {version}": "di versi {version}",
  "View full changelog": "Lihat seluruh catatan perubahan",
  "What's new in version {version}": "Yang baru di versi {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saya menerima pesanmu lewat email, hanya untuk membalas dan memperbaiki masalah. Tidak ada yang dikirim sampai kamu menekan Kirim."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saya menerima pesanmu lewat email, hanya untuk membalas dan memperbaiki masalah. Tidak ada yang dikirim sampai kamu menekan Kirim.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Gambar tetap di komputer ini. Hanya teks yang ditemukan yang dikirim ke Google Terjemahan.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Hanya area yang kamu pilih yang dikirim, dan hanya saat kamu meminta. Kuncimu tetap di perangkat ini.",
+ "Add your API key below first.": "Tambahkan kunci API di bawah terlebih dahulu.",
+ "Language & appearance": "Bahasa dan tampilan"
 }

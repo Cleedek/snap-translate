@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Valfritt OpenAI-kompatibelt API.",
  "has some free models that read pictures (their names end in \":free\").": "har några gratismodeller som läser bilder (deras namn slutar på \":free\").",
  "Load the model list again": "Läs in modellistan igen",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Inget skickas förrän du ber om en översättning. Snabb behåller bilden på den här datorn och skickar bara den hittade texten till Google Översätt. AI-översättarna får området du valde. Nycklarna stannar på den här enheten.",
  "Change the shortcut": "Ändra kortkommandot",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate är gratis och utan annonser. Om det sparar dig några skärmbilder om dagen håller en liten dricks det igång. Tack!",
  "Couldn’t start on this page.": "Det gick inte att starta på den här sidan.",
@@ -127,5 +126,9 @@
  "in version {version}": "i version {version}",
  "View full changelog": "Visa hela ändringsloggen",
  "What's new in version {version}": "Nyheter i version {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jag får ditt meddelande via e-post, bara för att svara och åtgärda problem. Inget skickas förrän du trycker på Skicka."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Jag får ditt meddelande via e-post, bara för att svara och åtgärda problem. Inget skickas förrän du trycker på Skicka.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Bilden stannar på den här datorn. Bara texten som hittas skickas till Google Översätt.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Bara området du väljer skickas, och bara när du ber om det. Din nyckel stannar på den här enheten.",
+ "Add your API key below first.": "Lägg först till din API-nyckel nedan.",
+ "Language & appearance": "Språk och utseende"
 }

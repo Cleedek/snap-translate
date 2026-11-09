@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Mana-mana API yang serasi dengan OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "mempunyai beberapa model percuma yang membaca gambar (namanya berakhir dengan \":free\").",
  "Load the model list again": "Muat semula senarai model",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Tiada apa-apa dihantar sehingga anda meminta terjemahan. Pantas menyimpan gambar pada komputer ini dan hanya menghantar teks yang ditemui kepada Google Terjemah. Penterjemah AI menerima kawasan yang anda pilih. Kunci kekal pada peranti ini.",
  "Change the shortcut": "Tukar pintasan",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate percuma dan tanpa iklan. Jika ia menjimatkan beberapa tangkapan skrin sehari, sedikit tip membantunya terus berjalan. Terima kasih!",
  "Couldn’t start on this page.": "Tidak dapat bermula pada halaman ini.",
@@ -127,5 +126,9 @@
  "in version {version}": "dalam versi {version}",
  "View full changelog": "Lihat log perubahan penuh",
  "What's new in version {version}": "Apa yang baharu dalam versi {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saya menerima mesej anda melalui e-mel, hanya untuk membalas dan membaiki masalah. Tiada apa-apa dihantar sehingga anda menekan Hantar."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Saya menerima mesej anda melalui e-mel, hanya untuk membalas dan membaiki masalah. Tiada apa-apa dihantar sehingga anda menekan Hantar.",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Gambar kekal di komputer ini. Hanya teks yang ditemui dihantar ke Google Terjemah.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Hanya kawasan yang anda pilih dihantar, dan hanya apabila anda minta. Kunci anda kekal di peranti ini.",
+ "Add your API key below first.": "Tambah kunci API anda di bawah dahulu.",
+ "Language & appearance": "Bahasa dan rupa"
 }

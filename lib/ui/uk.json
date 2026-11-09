@@ -63,7 +63,6 @@
  "Any OpenAI-compatible API.": "Будь-який API, сумісний з OpenAI.",
  "has some free models that read pictures (their names end in \":free\").": "має кілька безплатних моделей, що читають зображення (їхні назви закінчуються на \":free\").",
  "Load the model list again": "Завантажити список моделей знову",
- "Nothing is sent until you ask for a translation. Quick keeps the picture on this computer and sends only the text it finds to Google Translate. The AI translators get the area you selected. Keys stay on this device.": "Нічого не надсилається, доки ви не попросите переклад. Швидкий залишає зображення на цьому комп'ютері й надсилає в Google Перекладач лише знайдений текст. ШІ-перекладачі отримують вибрану область. Ключі залишаються на цьому пристрої.",
  "Change the shortcut": "Змінити комбінацію клавіш",
  "Snap Translate is free and has no ads. If it saves you a few screenshots a day, a small tip keeps it going. Thank you!": "Snap Translate безплатний і без реклами. Якщо він заощаджує вам кілька знімків екрана на день, невеликі чайові допоможуть його підтримувати. Дякую!",
  "Couldn’t start on this page.": "Не вдалося запустити на цій сторінці.",
@@ -127,5 +126,9 @@
  "in version {version}": "у версії {version}",
  "View full changelog": "Переглянути весь журнал змін",
  "What's new in version {version}": "Що нового у версії {version}",
- "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Я отримую твоє повідомлення на e-mail лише для відповіді та виправлення проблем. Нічого не надсилається, доки ти не натиснеш «Надіслати»."
+ "I get your message by email, only to reply and fix problems. Nothing is sent until you press Send.": "Я отримую твоє повідомлення на e-mail лише для відповіді та виправлення проблем. Нічого не надсилається, доки ти не натиснеш «Надіслати».",
+ "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Зображення лишається на цьому комп’ютері. До Google Перекладача йде лише знайдений текст.",
+ "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Надсилається лише вибрана вами ділянка і лише тоді, коли ви просите. Ваш ключ лишається на цьому пристрої.",
+ "Add your API key below first.": "Спершу додайте свій ключ API нижче.",
+ "Language & appearance": "Мова й вигляд"
 }
