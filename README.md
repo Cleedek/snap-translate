@@ -1,6 +1,6 @@
 # Snap Translate
 
-A Chrome extension (also Arc, Edge, Brave) that translates the text in pictures right where they are on the page. No more screenshot, save, upload to an AI, read, come back.
+A Chrome extension (also Edge, Brave, Arc) that translates the text in pictures right where they are on the page. No more screenshot, save, upload to an AI, read, come back.
 
 Plain JavaScript, no build step, no dependencies.
 
