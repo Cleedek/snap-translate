@@ -116,8 +116,8 @@ function setupSupport() {
     localTab.hidden = false;
     selectPayTab(localTab);
   }
-  // Alipay (Filip's Stripe link) for Simplified Chinese only: it comes first and opens first.
-  if (SnapI18n.lang === 'zh-CN') {
+  // Alipay (Filip's Stripe link) for Chinese only (Simplified and Traditional): it comes first and opens first.
+  if (SnapI18n.lang.startsWith('zh')) {
     $('tabAlipay').hidden = false;
     selectPayTab($('tabAlipay'));
   }
