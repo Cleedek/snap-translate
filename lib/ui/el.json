@@ -1,5 +1,5 @@
 {
- "Same as browser": "Όπως το πρόγραμμα περιήγησης",
+ "Same as browser": "Όπως ο browser",
  "Created with 💜 by {name} in Vietnam": "Δημιουργήθηκε με 💜 από {name} στο Βιετνάμ",
  "Copied": "Αντιγράφηκε",
  "Copy failed": "Η αντιγραφή απέτυχε",
@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Η εικόνα μένει σε αυτόν τον υπολογιστή. Μόνο το κείμενο που βρίσκεται πηγαίνει στη Μετάφραση Google.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Στέλνεται μόνο η περιοχή που επιλέγετε, και μόνο όταν το ζητήσετε. Το κλειδί σας μένει σε αυτή τη συσκευή.",
  "Add your API key below first.": "Προσθέστε πρώτα το κλειδί API παρακάτω.",
- "Language & appearance": "Γλώσσα και εμφάνιση"
+ "Language & appearance": "Γλώσσα και εμφάνιση",
+ "Connecting…": "Σύνδεση…",
+ "Connected": "Συνδέθηκε",
+ "Not connected": "Χωρίς σύνδεση",
+ "Connected, but no models": "Συνδέθηκε, αλλά χωρίς μοντέλα",
+ "The original text is wiped and the translation set in its place.": "Το αρχικό κείμενο σβήνεται και η μετάφραση μπαίνει στη θέση του.",
+ "The interface comes in 31 languages, plus a light look.": "Η διεπαφή διατίθεται σε 31 γλώσσες, με ανοιχτόχρωμη εμφάνιση.",
+ "Translation bubbles no longer overlap.": "Τα συννεφάκια μετάφρασης δεν επικαλύπτονται πια."
 }

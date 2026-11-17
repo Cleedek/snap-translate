@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "La imagen se queda en este ordenador. Solo el texto que encuentra va a Google Traductor.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Solo se envía la zona que seleccionas, y solo cuando lo pides. Tu clave se queda en este dispositivo.",
  "Add your API key below first.": "Primero añade tu clave API aquí abajo.",
- "Language & appearance": "Idioma y apariencia"
+ "Language & appearance": "Idioma y apariencia",
+ "Connecting…": "Conectando…",
+ "Connected": "Conectado",
+ "Not connected": "Sin conexión",
+ "Connected, but no models": "Conectado, pero sin modelos",
+ "The original text is wiped and the translation set in its place.": "El texto original se borra y la traducción ocupa su lugar.",
+ "The interface comes in 31 languages, plus a light look.": "La interfaz está en 31 idiomas y tiene un aspecto claro.",
+ "Translation bubbles no longer overlap.": "Las burbujas de traducción ya no se superponen."
 }

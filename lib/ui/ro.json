@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Imaginea rămâne pe acest computer. Doar textul găsit ajunge la Google Traducere.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Se trimite doar zona pe care o selectezi și doar când ceri. Cheia ta rămâne pe acest dispozitiv.",
  "Add your API key below first.": "Mai întâi adaugă cheia API mai jos.",
- "Language & appearance": "Limbă și aspect"
+ "Language & appearance": "Limbă și aspect",
+ "Connecting…": "Se conectează…",
+ "Connected": "Conectat",
+ "Not connected": "Neconectat",
+ "Connected, but no models": "Conectat, dar fără modele",
+ "The original text is wiped and the translation set in its place.": "Textul original este șters, iar traducerea este pusă în locul lui.",
+ "The interface comes in 31 languages, plus a light look.": "Interfața este disponibilă în 31 de limbi, plus un aspect luminos.",
+ "Translation bubbles no longer overlap.": "Bulele cu traducerea nu se mai suprapun."
 }

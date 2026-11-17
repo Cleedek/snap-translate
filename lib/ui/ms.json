@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Gambar kekal di komputer ini. Hanya teks yang ditemui dihantar ke Google Terjemah.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Hanya kawasan yang anda pilih dihantar, dan hanya apabila anda minta. Kunci anda kekal di peranti ini.",
  "Add your API key below first.": "Tambah kunci API anda di bawah dahulu.",
- "Language & appearance": "Bahasa dan rupa"
+ "Language & appearance": "Bahasa dan rupa",
+ "Connecting…": "Menyambung…",
+ "Connected": "Bersambung",
+ "Not connected": "Tidak bersambung",
+ "Connected, but no models": "Bersambung, tetapi tiada model",
+ "The original text is wiped and the translation set in its place.": "Teks asal dipadam dan terjemahan diletakkan di tempatnya.",
+ "The interface comes in 31 languages, plus a light look.": "Antara muka tersedia dalam 31 bahasa, serta rupa cerah.",
+ "Translation bubbles no longer overlap.": "Belon terjemahan tidak lagi bertindih."
 }

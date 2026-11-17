@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Зображення лишається на цьому комп’ютері. До Google Перекладача йде лише знайдений текст.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Надсилається лише вибрана вами ділянка і лише тоді, коли ви просите. Ваш ключ лишається на цьому пристрої.",
  "Add your API key below first.": "Спершу додайте свій ключ API нижче.",
- "Language & appearance": "Мова й вигляд"
+ "Language & appearance": "Мова й вигляд",
+ "Connecting…": "Підключення…",
+ "Connected": "Підключено",
+ "Not connected": "Не підключено",
+ "Connected, but no models": "Підключено, але моделей немає",
+ "The original text is wiped and the translation set in its place.": "Оригінальний текст стирається, а на його місце стає переклад.",
+ "The interface comes in 31 languages, plus a light look.": "Інтерфейс доступний 31 мовою, а також у світлому вигляді.",
+ "Translation bubbles no longer overlap.": "Бульбашки з перекладом більше не накладаються."
 }

@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Slika ostaje na ovom računalu. U Google Prevoditelj ide samo pronađeni tekst.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Šalje se samo područje koje odaberete, i to samo kad zatražite. Vaš ključ ostaje na ovom uređaju.",
  "Add your API key below first.": "Najprije dolje dodajte svoj API ključ.",
- "Language & appearance": "Jezik i izgled"
+ "Language & appearance": "Jezik i izgled",
+ "Connecting…": "Povezujem…",
+ "Connected": "Povezano",
+ "Not connected": "Nije povezano",
+ "Connected, but no models": "Povezano, ali bez modela",
+ "The original text is wiped and the translation set in its place.": "Izvorni tekst se briše, a prijevod se postavlja na njegovo mjesto.",
+ "The interface comes in 31 languages, plus a light look.": "Sučelje je na 31 jeziku, uz svijetli izgled.",
+ "Translation bubbles no longer overlap.": "Oblačići s prijevodom više se ne preklapaju."
 }

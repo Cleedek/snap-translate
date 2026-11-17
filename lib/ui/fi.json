@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Kuva pysyy tällä tietokoneella. Vain löydetty teksti lähtee Google Kääntäjään.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Vain valitsemasi alue lähetetään, ja vain kun pyydät. Avaimesi pysyy tällä laitteella.",
  "Add your API key below first.": "Lisää ensin API-avaimesi alle.",
- "Language & appearance": "Kieli ja ulkoasu"
+ "Language & appearance": "Kieli ja ulkoasu",
+ "Connecting…": "Yhdistetään…",
+ "Connected": "Yhdistetty",
+ "Not connected": "Ei yhteyttä",
+ "Connected, but no models": "Yhdistetty, mutta ei malleja",
+ "The original text is wiped and the translation set in its place.": "Alkuperäinen teksti pyyhitään ja käännös asetetaan sen paikalle.",
+ "The interface comes in 31 languages, plus a light look.": "Käyttöliittymä on 31 kielellä, ja tarjolla on vaalea ulkoasu.",
+ "Translation bubbles no longer overlap.": "Käännöskuplat eivät enää mene päällekkäin."
 }

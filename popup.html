@@ -15,13 +15,15 @@
       <h1>Language &amp; appearance</h1>
     </div>
     <div class="prefs">
-      <div class="setting-head">
-        <label for="uiLang" class="setting-label">Language</label>
-        <select id="uiLang" class="compact"></select>
+      <div class="prefs-group">
+        <h2 id="themeLabel">Appearance</h2>
+        <div id="themeSeg" class="segmented prefs-seg" role="radiogroup" aria-labelledby="themeLabel"></div>
+        <select id="theme" hidden></select>
       </div>
-      <div class="setting-head">
-        <label for="theme" class="setting-label">Appearance</label>
-        <select id="theme" class="compact"></select>
+      <div class="prefs-group">
+        <h2 id="langLabel">Language</h2>
+        <div id="langList" class="lang-list" role="radiogroup" aria-labelledby="langLabel"></div>
+        <select id="uiLang" hidden></select>
       </div>
     </div>
   </div>
@@ -201,6 +203,8 @@
           <button data-provider="local" role="radio">Local</button>
           <button data-provider="other" role="radio">Other</button>
         </div>
+        <!-- Connected or not, with Try again on a problem. Same strip as AI settings in Subtitle Overlay (popup.js aiStatus). -->
+        <p id="aiStatus" class="ai-status" role="status" hidden><span class="dot"></span><span id="aiStatusText"></span><button id="aiRetry" type="button" class="ghost" hidden>Try again</button></p>
 
         <div class="ai-fields" data-for="quick" hidden>
           <p class="hint">Free, no key needed. Reads the text on this computer, then Google Translate translates it. Works best on clean text like menus, posts and screenshots. For memes, handwriting or stylised fonts, Gemini or Claude read far better.</p>

@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "画像はこのパソコンに残ります。Google 翻訳に送られるのは見つかったテキストだけです。",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "送信されるのは選んだ範囲だけで、翻訳を頼んだときだけです。キーはこのデバイスに保存されます。",
  "Add your API key below first.": "先に下の欄に API キーを入力してください。",
- "Language & appearance": "言語と外観"
+ "Language & appearance": "言語と外観",
+ "Connecting…": "接続中…",
+ "Connected": "接続済み",
+ "Not connected": "未接続",
+ "Connected, but no models": "接続済み（モデルなし）",
+ "The original text is wiped and the translation set in its place.": "元の文字が消え、その場所に翻訳が入ります。",
+ "The interface comes in 31 languages, plus a light look.": "画面は31言語に対応し、ライトテーマも使えます。",
+ "Translation bubbles no longer overlap.": "翻訳の吹き出しが重ならなくなりました。"
 }

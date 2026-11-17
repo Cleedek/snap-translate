@@ -10,7 +10,14 @@ const t = SnapI18n.t;
 // ---------- ways in: right-click menu, shortcut, popup button ----------
 
 // The menu is rebuilt in the new language when it changes in the popup.
-async function createMenus() {
+// Rebuilds run one after another: two at once (quick language switches) would
+// both add the same entries and Chrome refuses the second copy of an id.
+let menusQueue = Promise.resolve();
+function createMenus() {
+  menusQueue = menusQueue.then(buildMenus, buildMenus);
+  return menusQueue;
+}
+async function buildMenus() {
   await SnapI18n.load();
   await chrome.contextMenus.removeAll();
   chrome.contextMenus.create({ id: 'image', title: t('Translate picture'), contexts: ['image'] });
@@ -21,6 +28,7 @@ chrome.runtime.onInstalled.addListener(rememberUpdate);
 chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && changes.uiLang) createMenus(); });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (!(tab?.id >= 0)) return; // Chrome leaves out the tab for some places the menu opens (not a web page)
   const msg = info.menuItemId === 'image' && info.frameId === 0 ? { type: 'image', src: info.srcUrl } : { type: 'pick' };
   start(tab.id, msg).catch(() => {});
 });
@@ -329,10 +337,10 @@ function serverSays(detail) {
 
 // Models answer with JSON, sometimes wrapped in ```json fences or a sentence.
 function parse(text) {
-  const t = String(text);
-  const a = t.indexOf('{'), b = t.lastIndexOf('}');
+  const answer = String(text); // not "t": that name is the translation function used below
+  const a = answer.indexOf('{'), b = answer.lastIndexOf('}');
   let j;
-  try { j = JSON.parse(t.slice(a, b + 1)); } catch (e) { j = null; }
+  try { j = JSON.parse(answer.slice(a, b + 1)); } catch (e) { j = null; }
   if (!j || a < 0) throw new Error(t('The model did not send back a translation. Try again, or pick another model.'));
   const blocks = (Array.isArray(j.blocks) ? j.blocks : []).map((x) => ({
     text: String(x.text || ''),

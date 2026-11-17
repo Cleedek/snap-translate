@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Ảnh ở lại trên máy tính này. Chỉ phần chữ tìm thấy được gửi tới Google Dịch.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Chỉ vùng bạn chọn được gửi đi, và chỉ khi bạn yêu cầu. Khóa của bạn ở lại trên thiết bị này.",
  "Add your API key below first.": "Hãy thêm khóa API ở bên dưới trước.",
- "Language & appearance": "Ngôn ngữ và giao diện"
+ "Language & appearance": "Ngôn ngữ và giao diện",
+ "Connecting…": "Đang kết nối…",
+ "Connected": "Đã kết nối",
+ "Not connected": "Chưa kết nối",
+ "Connected, but no models": "Đã kết nối, nhưng không có mô hình",
+ "The original text is wiped and the translation set in its place.": "Chữ gốc được xóa và bản dịch được đặt vào đúng chỗ đó.",
+ "The interface comes in 31 languages, plus a light look.": "Giao diện có 31 ngôn ngữ, kèm giao diện sáng.",
+ "Translation bubbles no longer overlap.": "Các bong bóng bản dịch không còn chồng lên nhau."
 }

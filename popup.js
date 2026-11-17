@@ -39,6 +39,7 @@ async function init() {
 
   $('model').addEventListener('change', () => { s[s.provider].model = $('model').value; save(); });
   $('reload').addEventListener('click', () => loadModels(true));
+  $('aiRetry').addEventListener('click', () => loadModels(true));
   $('select').addEventListener('click', startSelection);
   $('shortcuts').addEventListener('click', () => chrome.tabs.create({ url: 'chrome://extensions/shortcuts' }));
 
@@ -194,11 +195,20 @@ function modelMsg(text, isError) {
   $('modelMsg').classList.toggle('error', !!isError);
 }
 
+// Connected or not, above the fields; nothing while there's nothing to connect to yet.
+function aiStatus(state, text) {
+  $('aiStatus').hidden = !text;
+  $('aiStatus').className = 'ai-status' + (state ? ' ' + state : '');
+  $('aiStatusText').textContent = text || '';
+  $('aiRetry').hidden = state !== 'bad';
+}
+
 // The model list comes from the provider itself, so new models show up without an update.
 async function loadModels(fromClick) {
   const provider = s.provider;
   const cfg = s[provider];
   const select = $('model');
+  aiStatus();
   if (provider === 'quick') {
     $('modelField').hidden = true;
     return modelMsg('');
@@ -224,17 +234,20 @@ async function loadModels(fromClick) {
   $('modelField').hidden = false;
   $('reload').classList.add('spinning');
   modelMsg('');
+  aiStatus('', t('Connecting…'));
   const res = await chrome.runtime.sendMessage({ type: 'models', provider, cfg });
   $('reload').classList.remove('spinning');
   if (provider !== s.provider) return; // switched while loading
   select.replaceChildren();
   if (!res.ok) {
     if (cfg.model) select.append(new Option(cfg.model, cfg.model));
+    aiStatus('bad', t('Not connected'));
     return modelMsg(res.error, true);
   }
   const list = res.models.slice();
   if (cfg.model && !list.includes(cfg.model)) list.unshift(cfg.model);
   for (const id of list) select.append(new Option(id, id));
+  aiStatus(list.length ? 'ok' : 'bad', list.length ? t('Connected') : t('Connected, but no models'));
   if (!list.length) return modelMsg(provider === 'local' ? t('No models found. Download a vision model first, for example in Ollama.') : t('No models found.'), true);
   if (!cfg.model) { cfg.model = res.suggested || list[0]; save(); }
   select.value = cfg.model;

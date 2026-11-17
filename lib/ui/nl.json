@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "De afbeelding blijft op deze computer. Alleen de gevonden tekst gaat naar Google Translate.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Alleen het gebied dat je selecteert wordt verstuurd, en alleen als je erom vraagt. Je sleutel blijft op dit apparaat.",
  "Add your API key below first.": "Voeg eerst hieronder je API-sleutel toe.",
- "Language & appearance": "Taal en weergave"
+ "Language & appearance": "Taal en weergave",
+ "Connecting…": "Verbinden…",
+ "Connected": "Verbonden",
+ "Not connected": "Niet verbonden",
+ "Connected, but no models": "Verbonden, maar geen modellen",
+ "The original text is wiped and the translation set in its place.": "De oorspronkelijke tekst wordt gewist en de vertaling komt ervoor in de plaats.",
+ "The interface comes in 31 languages, plus a light look.": "De interface is er in 31 talen, plus een lichte weergave.",
+ "Translation bubbles no longer overlap.": "Vertaalballonnen overlappen elkaar niet meer."
 }

@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "تبقى الصورة على هذا الكمبيوتر. لا يُرسل إلى ترجمة Google إلا النص الذي يُعثر عليه.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "لا تُرسل إلا المنطقة التي تحددها، وفقط عندما تطلب. يبقى مفتاحك على هذا الجهاز.",
  "Add your API key below first.": "أضف مفتاح API أدناه أولاً.",
- "Language & appearance": "اللغة والمظهر"
+ "Language & appearance": "اللغة والمظهر",
+ "Connecting…": "جارٍ الاتصال…",
+ "Connected": "متصل",
+ "Not connected": "غير متصل",
+ "Connected, but no models": "متصل، لكن لا توجد نماذج",
+ "The original text is wiped and the translation set in its place.": "يُمحى النص الأصلي وتوضع الترجمة في مكانه.",
+ "The interface comes in 31 languages, plus a light look.": "الواجهة متوفرة بـ 31 لغة، مع مظهر فاتح.",
+ "Translation bubbles no longer overlap.": "فقاعات الترجمة لم تعد تتداخل."
 }

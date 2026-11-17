@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "तस्वीर इसी कंप्यूटर पर रहती है। सिर्फ़ मिला हुआ टेक्स्ट Google Translate को जाता है।",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "सिर्फ़ आपका चुना हुआ हिस्सा भेजा जाता है, और सिर्फ़ तब जब आप कहें। आपकी कुंजी इसी डिवाइस पर रहती है।",
  "Add your API key below first.": "पहले नीचे अपनी API कुंजी जोड़ें।",
- "Language & appearance": "भाषा और रूप"
+ "Language & appearance": "भाषा और रूप",
+ "Connecting…": "कनेक्ट हो रहा है…",
+ "Connected": "कनेक्ट है",
+ "Not connected": "कनेक्ट नहीं है",
+ "Connected, but no models": "कनेक्ट है, पर कोई मॉडल नहीं",
+ "The original text is wiped and the translation set in its place.": "मूल टेक्स्ट मिटाकर उसकी जगह अनुवाद लगा दिया जाता है।",
+ "The interface comes in 31 languages, plus a light look.": "इंटरफ़ेस 31 भाषाओं में है, साथ में हल्का रूप भी।",
+ "Translation bubbles no longer overlap.": "अनुवाद के बबल अब एक-दूसरे पर नहीं चढ़ते।"
 }

@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "사진은 이 컴퓨터에 남습니다. Google 번역에는 찾은 텍스트만 보냅니다.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "선택한 영역만, 요청할 때만 보냅니다. 키는 이 기기에 저장됩니다.",
  "Add your API key below first.": "먼저 아래에 API 키를 입력하세요.",
- "Language & appearance": "언어 및 모양"
+ "Language & appearance": "언어 및 모양",
+ "Connecting…": "연결 중…",
+ "Connected": "연결됨",
+ "Not connected": "연결 안 됨",
+ "Connected, but no models": "연결됨, 모델 없음",
+ "The original text is wiped and the translation set in its place.": "원래 글자를 지우고 그 자리에 번역을 넣습니다.",
+ "The interface comes in 31 languages, plus a light look.": "인터페이스가 31개 언어를 지원하며 밝은 테마도 있습니다.",
+ "Translation bubbles no longer overlap.": "번역 말풍선이 더 이상 겹치지 않습니다."
 }

@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Resim bu bilgisayarda kalır. Yalnızca bulunan metin Google Çeviri’ye gider.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Yalnızca seçtiğiniz alan, yalnızca siz istediğinizde gönderilir. Anahtarınız bu cihazda kalır.",
  "Add your API key below first.": "Önce aşağıya API anahtarınızı ekleyin.",
- "Language & appearance": "Dil ve görünüm"
+ "Language & appearance": "Dil ve görünüm",
+ "Connecting…": "Bağlanıyor…",
+ "Connected": "Bağlandı",
+ "Not connected": "Bağlı değil",
+ "Connected, but no models": "Bağlandı, ama model yok",
+ "The original text is wiped and the translation set in its place.": "Orijinal metin silinir ve çeviri onun yerine yerleştirilir.",
+ "The interface comes in 31 languages, plus a light look.": "Arayüz 31 dilde sunuluyor, açık bir görünümle birlikte.",
+ "Translation bubbles no longer overlap.": "Çeviri balonları artık üst üste binmiyor."
 }

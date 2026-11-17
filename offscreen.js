@@ -238,7 +238,7 @@ function spread(src, W, H, R, pick) {
     const size = 2 * R + 1, head = new Uint8Array(n), tail = new Uint8Array(n);
     for (let i = 0; i < n; i++) head[i] = i % size === 0 ? get(from, i) : pick(head[i - 1], get(from, i));
     for (let i = n - 1; i >= 0; i--) tail[i] = i === n - 1 || (i + 1) % size === 0 ? get(from, i) : pick(tail[i + 1], get(from, i));
-    for (let i = 0; i < n; i++) set(from, i, i < R ? head[Math.min(n - 1, i + R)] : i + R >= n ? tail[i - R] : pick(tail[i - R], head[i + R]));
+    for (let i = 0; i < n; i++) set(from, i, i < R ? head[Math.min(n - 1, i + R)] : i + R >= n ? (Math.floor((i - R) / size) === Math.floor((n - 1) / size) ? tail[i - R] : pick(tail[i - R], head[n - 1])) : pick(tail[i - R], head[i + R]));
   };
   const across = new Uint8ClampedArray(W * H), out = new Uint8ClampedArray(W * H);
   for (let y = 0; y < H; y++) line(y * W, (o, i) => src[o + i], (o, i, v) => { across[o + i] = v; }, W);

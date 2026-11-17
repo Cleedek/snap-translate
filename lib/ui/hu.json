@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "A kép ezen a gépen marad. Csak a megtalált szöveg megy a Google Fordítóba.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Csak a kijelölt terület megy el, és csak akkor, ha kéred. A kulcsod ezen az eszközön marad.",
  "Add your API key below first.": "Előbb add meg lent az API-kulcsodat.",
- "Language & appearance": "Nyelv és megjelenés"
+ "Language & appearance": "Nyelv és megjelenés",
+ "Connecting…": "Csatlakozás…",
+ "Connected": "Csatlakozva",
+ "Not connected": "Nincs kapcsolat",
+ "Connected, but no models": "Csatlakozva, de nincs modell",
+ "The original text is wiped and the translation set in its place.": "Az eredeti szöveg eltűnik, és a helyére kerül a fordítás.",
+ "The interface comes in 31 languages, plus a light look.": "A felület 31 nyelven érhető el, világos megjelenéssel is.",
+ "Translation bubbles no longer overlap.": "A fordítási buborékok már nem fedik egymást."
 }

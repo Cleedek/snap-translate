@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "รูปอยู่ในคอมพิวเตอร์เครื่องนี้ ส่งไป Google แปลภาษาเฉพาะข้อความที่พบ",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "ส่งเฉพาะพื้นที่ที่คุณเลือก และเฉพาะเมื่อคุณขอ คีย์ของคุณอยู่ในอุปกรณ์นี้",
  "Add your API key below first.": "เพิ่มคีย์ API ด้านล่างก่อน",
- "Language & appearance": "ภาษาและรูปลักษณ์"
+ "Language & appearance": "ภาษาและรูปลักษณ์",
+ "Connecting…": "กำลังเชื่อมต่อ…",
+ "Connected": "เชื่อมต่อแล้ว",
+ "Not connected": "ไม่ได้เชื่อมต่อ",
+ "Connected, but no models": "เชื่อมต่อแล้ว แต่ไม่มีโมเดล",
+ "The original text is wiped and the translation set in its place.": "ข้อความเดิมจะถูกลบและวางคำแปลไว้แทนที่",
+ "The interface comes in 31 languages, plus a light look.": "อินเทอร์เฟซมี 31 ภาษา พร้อมธีมสว่าง",
+ "Translation bubbles no longer overlap.": "บับเบิลคำแปลไม่ซ้อนทับกันอีกแล้ว"
 }

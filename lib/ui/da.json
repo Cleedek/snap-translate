@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Billedet bliver på denne computer. Kun den fundne tekst sendes til Google Oversæt.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Kun det område, du vælger, sendes, og kun når du beder om det. Din nøgle bliver på denne enhed.",
  "Add your API key below first.": "Tilføj først din API-nøgle herunder.",
- "Language & appearance": "Sprog og udseende"
+ "Language & appearance": "Sprog og udseende",
+ "Connecting…": "Forbinder…",
+ "Connected": "Forbundet",
+ "Not connected": "Ikke forbundet",
+ "Connected, but no models": "Forbundet, men ingen modeller",
+ "The original text is wiped and the translation set in its place.": "Den oprindelige tekst fjernes, og oversættelsen sættes ind i stedet.",
+ "The interface comes in 31 languages, plus a light look.": "Brugerfladen findes på 31 sprog, og der er et lyst udseende.",
+ "Translation bubbles no longer overlap.": "Oversættelsesbobler overlapper ikke længere."
 }

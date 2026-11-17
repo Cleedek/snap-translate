@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Nananatili ang larawan sa computer na ito. Ang nahanap na text lang ang ipinapadala sa Google Translate.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Ang lugar lang na pinili mo ang ipinapadala, at kapag hiniling mo lang. Nananatili ang key mo sa device na ito.",
  "Add your API key below first.": "Idagdag muna ang iyong API key sa ibaba.",
- "Language & appearance": "Wika at hitsura"
+ "Language & appearance": "Wika at hitsura",
+ "Connecting…": "Kumokonekta…",
+ "Connected": "Konektado",
+ "Not connected": "Hindi konektado",
+ "Connected, but no models": "Konektado, pero walang model",
+ "The original text is wiped and the translation set in its place.": "Binubura ang orihinal na teksto at inilalagay ang salin sa puwesto nito.",
+ "The interface comes in 31 languages, plus a light look.": "Ang interface ay nasa 31 wika, at may maliwanag na hitsura.",
+ "Translation bubbles no longer overlap.": "Hindi na nagpapatong-patong ang mga bubble ng salin."
 }

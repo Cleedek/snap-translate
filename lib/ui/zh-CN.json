@@ -131,6 +131,13 @@
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "只会发送你选中的区域，并且只在你请求时发送。密钥保存在这台设备上。",
  "Add your API key below first.": "请先在下方填入 API 密钥。",
  "Language & appearance": "语言和外观",
+ "Connecting…": "正在连接…",
+ "Connected": "已连接",
+ "Not connected": "未连接",
+ "Connected, but no models": "已连接，但没有模型",
+ "The original text is wiped and the translation set in its place.": "原文会被擦除，译文放在原来的位置。",
+ "The interface comes in 31 languages, plus a light look.": "界面支持 31 种语言，还有浅色外观。",
+ "Translation bubbles no longer overlap.": "翻译气泡不再互相重叠。",
  "Alipay": "支付宝",
  "QR code for the Alipay and card payment page": "支付宝和银行卡付款页面的二维码"
 }

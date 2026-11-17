@@ -130,5 +130,12 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "Obrázok zostáva v tomto počítači. Do Prekladača Google ide len nájdený text.",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "Posiela sa len oblasť, ktorú vyberiete, a len keď o preklad požiadate. Kľúč zostáva v tomto zariadení.",
  "Add your API key below first.": "Najprv nižšie vložte svoj API kľúč.",
- "Language & appearance": "Jazyk a vzhľad"
+ "Language & appearance": "Jazyk a vzhľad",
+ "Connecting…": "Pripájam…",
+ "Connected": "Pripojené",
+ "Not connected": "Nepripojené",
+ "Connected, but no models": "Pripojené, ale bez modelov",
+ "The original text is wiped and the translation set in its place.": "Pôvodný text zmizne a preklad sa vysadí na jeho miesto.",
+ "The interface comes in 31 languages, plus a light look.": "Rozhranie je v 31 jazykoch a má aj svetlý vzhľad.",
+ "Translation bubbles no longer overlap.": "Bubliny s prekladom sa už neprekrývajú."
 }
