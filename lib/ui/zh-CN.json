@@ -130,5 +130,7 @@
  "The picture stays on this computer. Only the text it finds goes to Google Translate.": "图片留在这台电脑上，只有识别出的文字会发送到 Google 翻译。",
  "Only the area you select is sent, and only when you ask. Your key stays on this device.": "只会发送你选中的区域，并且只在你请求时发送。密钥保存在这台设备上。",
  "Add your API key below first.": "请先在下方填入 API 密钥。",
- "Language & appearance": "语言和外观"
+ "Language & appearance": "语言和外观",
+ "Alipay": "支付宝",
+ "QR code for the Alipay and card payment page": "支付宝和银行卡付款页面的二维码"
 }
