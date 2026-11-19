@@ -1,0 +1,53 @@
+Tradu textul din imagini chiar acolo unde sunt pe pagină.
+
+Gata cu captura de ecran, salvarea, încărcarea într-un AI, cititul și întoarcerea. Dă clic dreapta pe o imagine sau trage peste orice parte a paginii, iar Snap Translate șterge textul original din imagine și pune traducerea în locul lui, cu aceeași culoare, mărime și grosime. Imaginea se citește ca și cum ar fi fost făcută în limba ta.
+
+★ PE SCURT
+★ Dă clic dreapta pe o imagine și alege "Tradu imaginea", sau trage peste orice parte a paginii
+★ Traducerea ajunge direct pe imagine, acolo unde era textul original
+★ Preferi o listă? Vezi fiecare rând lângă imagine și dă clic ca să-l copiezi
+★ Traduce în 31 de limbi
+★ Gratuit de la primul clic: fără cheie, fără cont, imaginea rămâne pe calculatorul tău
+★ Mai isteț cu AI, dacă vrei: Gemini, Claude, un model local sau orice API compatibil cu OpenAI
+★ Și cadre video, fundaluri și canvas: tot ce vezi pe pagină
+★ Gratuit și open source: fără reclame, fără cont, fără urmărire
+
+━━━━━━━━━━━━━━━━━━━━
+
+DOUĂ MODURI DE A ÎNCEPE
+• Dă clic dreapta pe o imagine și alege "Tradu imaginea"
+• Sau apasă Alt + Shift + T (⌥ ⇧ T pe Mac), dă clic dreapta pe pagină și alege "Tradu o zonă…", sau folosește butonul din popup, apoi trage peste textul pe care vrei să-l traduci. Merge și pe cadre video, fundaluri și canvas
+• Esc anulează; altă comandă rapidă setezi în setările de comenzi rapide ale Chrome
+
+PE IMAGINE SAU ÎN LISTĂ
+• Pe imagine (implicit): textul original e șters din imagine și traducerea pusă în locul lui, cu culoarea, mărimea, grosimea și alinierea măsurate din imagine. Totul se întâmplă pe calculatorul tău și nu costă nimic
+• O traducere prea lungă pentru locul ei primește în schimb un mic balon alături, cu o linie spre original
+• Listă: fiecare text cu traducerea lui, într-un card lângă imagine. Dă clic pe un rând ca să-l copiezi, sau copiază-le pe toate deodată
+• Numele, prețurile și textul care e deja în limba ta rămân cum sunt
+
+ALEGE TRADUCĂTORUL
+• Rapid (implicit): gratuit, fără cheie. Citește text în vietnameză și engleză pe calculatorul tău, apoi Google Traducere îl traduce. Merge cel mai bine pe text clar, ca meniuri, postări și capturi de ecran
+• Gemini: o cheie gratuită din Google AI Studio, cu limite zilnice. Citește mult mai bine meme, scris de mână și fonturi decorative, în orice limbă
+• Claude: plătit după utilizare, cu propria ta cheie API
+• Local: gratuit și offline cu Ollama sau LM Studio și un model care vede imagini
+• Altul: orice API compatibil cu OpenAI, de exemplu OpenRouter
+• Traduce în: vietnameză, cehă, engleză, slovacă, germană, franceză, spaniolă, italiană, portugheză, poloneză, maghiară, ucraineană, neerlandeză, suedeză, daneză, norvegiană, finlandeză, greacă, turcă, română, croată, chineză (simplificată și tradițională), japoneză, coreeană, thailandeză, indoneziană, malaieză, filipineză, hindi, arabă
+
+INTERFAȚĂ ÎN 31 DE LIMBI
+Popupul și tot ce arată Snap Translate pe pagină sunt în toate cele 31 de limbi în care traduce, inclusiv araba (de la dreapta la stânga). Urmează browserul tău, sau alege din "Limbă și aspect". Aspect întunecat sau luminos, ori ca în browser.
+
+CONFIDENȚIALITATE
+Nimic nu iese din browserul tău până nu ceri o traducere. Cu Rapid, imaginea rămâne pe calculatorul tău și doar textul găsit în ea ajunge la Google Traducere. Cu un traducător AI, o captură doar a zonei alese ajunge la acel furnizor, cu cheia ta API. Cheile sunt salvate doar pe acest dispozitiv. Fără analize, fără conturi. Extensia rulează doar în fila în care pornești o traducere, niciodată pe toate site-urile. Dacă îmi scrii prin "Problemă sau idee?", mesajul ajunge la mine pe e-mail și nimic nu se trimite până nu apeși Trimite.
+
+PROBLEMĂ SAU IDEE?
+Dă clic pe "Problemă sau idee?" jos în popup și scrie-mi. Citesc fiecare mesaj.
+
+OPEN SOURCE
+Toată extensia e open source (GPL-3.0), așa că oricine poate verifica exact ce face: github.com/Cleedek/snap-translate. Dacă îți place, o stea pe GitHub îi ajută și pe alții s-o găsească.
+
+SUSȚINE CREATORUL
+Snap Translate e gratuit și fără reclame. Dacă te scutește de câteva capturi de ecran pe zi, popupul are o pagină "Susține creatorul" cu Ko-fi și alte câteva moduri de plată. Complet opțional, și mulțumesc!
+
+Creat cu 💜 de Cleedek în Vietnam.
+
+De la creatorul Subtitle Overlay și Edge Trim.

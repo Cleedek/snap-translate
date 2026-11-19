@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "O texto das imagens, <em>traduzido onde está.</em>",
+  "s1": "Clique com o botão direito numa imagem ou arraste sobre qualquer parte da página. O texto original desaparece e a tradução fica no seu lugar.",
+  "before": "Original",
+  "after": "Com o Snap Translate",
+  "k2": "Diretamente na página",
+  "h2": "Botão direito. <em>Traduzido.</em>",
+  "s2": "Escolha <q>Traduzir imagem</q> em qualquer imagem. A tradução fica com a cor, o tamanho e a espessura do original, e um clique em <q>Lista</q> mostra-a como texto.",
+  "k3": "Qualquer parte da página",
+  "h3": "Ou arraste sobre <em>tudo o que vê.</em>",
+  "s3": "Prima <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> ou o botão no popup e arraste sobre o texto. Também em fotogramas de vídeo, fundos e canvas.",
+  "k4": "Ou em lista",
+  "h4": "Cada linha, <em>pronta a copiar.</em>",
+  "s4": "Cada texto com a sua tradução, num cartão ao lado da imagem. Clique numa linha para a copiar, ou copie todas de uma vez.",
+  "k5": "Escolha o seu tradutor",
+  "h5": "Grátis desde já. <em>Mais esperto com IA.</em>",
+  "s5": "O Rápido não precisa de chave: lê a imagem no seu computador e o Google Tradutor traduz o texto. Gemini, Claude ou um modelo local leem também memes, letra manuscrita e qualquer língua.",
+  "promises": [
+    [
+      "Grátis, sem anúncios",
+      "Sem conta"
+    ],
+    [
+      "A sua imagem fica aqui",
+      "O Rápido envia só o texto"
+    ],
+    [
+      "Código aberto",
+      "Cada linha no GitHub"
+    ],
+    [
+      "31 línguas",
+      "Português, inglês, japonês…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Sítios",
+      "Guias",
+      "Mapa"
+    ],
+    "title": "Onde comer sushi no Distrito 1",
+    "meta": "Guia gastronómico · 5 min de leitura"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Sítios",
+      "Guias",
+      "Mapa"
+    ],
+    "title": "Pequeno-almoço no Bairro Antigo",
+    "meta": "Diário de viagem · Hanói"
+  }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Chrome Web Store screenshots, 1280 × 800. ?shot=1…5 picks one, ?lang=cs the language.
+       The translations on the pictures come from Snap Translate's real page script running in page.html,
+       with Google Translate's real answers (copy/gt); the popup is the real one (popup-frame.html).
+       store/render.mjs saves them as PNG. -->
+  <title>Snap Translate store screenshots</title>
+  <link rel="stylesheet" href="store.css">
+</head>
+<body>
+  <div id="canvas" class="canvas"></div>
+
+  <script src="pictures.js"></script>
+  <script src="common.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lang = params.get('lang') || 'en';
+    const shot = Number(params.get('shot') || 1);
+    document.documentElement.lang = lang.replace('_', '-');
+    document.documentElement.dir = RTL_LANGS.has(lang) ? 'rtl' : 'ltr';
+    useScriptFont(lang);
+
+    // Everything the images say: store/src/copy/<store language>.json, English for anything missing.
+    // Menu items come from Chrome's own strings (copy/chrome-menu.json), Snap Translate's from lib/ui.
+    const T = {};
+    async function loadCopy() {
+      const get = async (url) => { try { const r = await fetch(url); return r.ok ? r.json() : {}; } catch (e) { return {}; } };
+      const [en, mine, menus, ui] = await Promise.all([get('copy/en.json'), get(`copy/${lang}.json`), get('copy/chrome-menu.json'),
+        uiCode(lang) === 'en' ? {} : get(`../../lib/ui/${uiCode(lang)}.json`)]);
+      Object.assign(T, en, mine, { menu: menus[lang] || menus.en, translatePicture: ui['Translate picture'] || 'Translate picture' });
+    }
+    const tx = (key) => tieShortWords(T[key], lang);
+    const canvas = document.getElementById('canvas');
+
+    function textBlock(n, cls, style) {
+      const box = put(el('div', cls, null, style));
+      box.append(el('p', 'kicker', tx(`k${n}`)), el('h1', 'headline', tx(`h${n}`)), el('p', 'sub', tx(`s${n}`)));
+      return box;
+    }
+    const from = () => (lang === 'vi' ? 'en' : 'vi');
+
+    // ---------- 1: before and after ----------
+    async function shot1() {
+      const text = textBlock(1, 'text-top');
+      const top = text.offsetTop + text.offsetHeight + 56;
+      const pic = await StorePictures.draw('poster', from());
+      pictureSlot(pic.canvas, { x: 64, y: top + 50, w: 300, h: 300, tag: tx('before') });
+      put(el('div', 'arrow', ARROW, `left:384px;top:${top + 188}px`));
+      const page = await webPage({ x: 476, y: top, w: 744, h: 800 - top - 36, url: 'saigoneats.example/sushi-district-1', pic: 'poster', size: 340, compact: true });
+      put(el('div', 'label', `<span class="tag after">${tx('after')}</span>`, `left:476px;top:${top - 34}px`));
+      await page.win.translatePicture();
+    }
+
+    // ---------- 2: the right-click menu ----------
+    async function shot2() {
+      textBlock(2, 'text-left', 'top:220px');
+      const page = await webPage({ x: 540, y: 96, w: 700, h: 610, url: 'saigoneats.example/sushi-district-1', pic: 'poster', size: 380 });
+      const img = inFrame(page.frame, page.win.document.getElementById('pic').getBoundingClientRect());
+      rightClick({ mx: img.x + 190, my: img.y + 150, items: tx('menu'), ours: T.translatePicture, maxRight: 1224 });
+    }
+
+    // ---------- 3: dragging over an area ----------
+    async function shot3() {
+      textBlock(3, 'text-left', 'top:236px');
+      const page = await webPage({ x: 540, y: 96, w: 700, h: 610, url: 'saigoneats.example/old-quarter-breakfast', pic: 'menu', size: 420 });
+      await page.win.startPick();
+      // render.mjs drags the real mouse from here to there: the page script draws the box as it would.
+      const img = inFrame(page.frame, page.win.document.getElementById('pic').getBoundingClientRect());
+      const k = img.w / 500;
+      window.dragPlan = { from: [img.x + 30 * k, img.y + 116 * k], to: [img.x + 470 * k, img.y + 342 * k] };
+      put(el('div', 'crosshair', '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1v22M1 12h22" stroke="#000" stroke-width="4"/><path d="M12 1v22M1 12h22" stroke="#fff" stroke-width="1.6"/></svg>',
+        `left:${window.dragPlan.to[0]}px;top:${window.dragPlan.to[1]}px`));
+    }
+
+    // ---------- 4: the list ----------
+    async function shot4() {
+      textBlock(4, 'text-left', 'top:236px;width:380px');
+      const page = await webPage({ x: 476, y: 70, w: 772, h: 660, url: 'saigoneats.example/old-quarter-breakfast', pic: 'menu', view: 'list', size: 360 });
+      await page.win.translatePicture();
+      // One line just copied, as after a click.
+      const row = page.win.ui().querySelectorAll('.block')[1];
+      row.classList.add('copied');
+    }
+
+    // ---------- 5: the translators, and what Snap Translate promises ----------
+    async function shot5() {
+      const text = textBlock(5, 'text-left', 'top:96px;width:520px');
+      const box = await popup({ x: 700, y: 0, zoom: 1.15, crop: 'section:has(.translator)', pad: -1, padEnd: -1 });
+      box.style.top = `${Math.max(48, (640 - box.offsetHeight) / 2)}px`;
+      const icons = [
+        '<path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.7-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
+        '<path d="M4 7h16v10H4zM2 20h20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>',
+        '<path d="m8 8-4 4 4 4m8-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+        '<path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+      ];
+      const row = put(el('div', 'promises'));
+      tx('promises').forEach(([a, b], i) => row.append(el('div', 'promise', `<svg width="24" height="24" viewBox="0 0 24 24">${icons[i]}</svg><span>${a}<small>${b}</small></span>`)));
+    }
+
+    (async () => {
+      await Promise.all([loadCopy(), fontsLoaded(lang), StorePictures.load()]);
+      await [shot1, shot2, shot3, shot4, shot5][shot - 1]();
+      await document.fonts.ready;
+      await wait(300);
+      window.shotReady = true;
+    })();
+  </script>
+</body>
+</html>

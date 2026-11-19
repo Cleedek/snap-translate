@@ -1,0 +1,53 @@
+Prevedite tekst na slikama točno ondje gdje se nalaze na stranici.
+
+Gotovo je sa snimkama zaslona, spremanjem, učitavanjem u AI, čitanjem i vraćanjem. Desnom tipkom kliknite sliku ili povucite preko bilo kojeg dijela stranice, a Snap Translate izbriše izvorni tekst sa slike i na njegovo mjesto postavi prijevod, iste boje, veličine i debljine. Slika izgleda kao da je napravljena na vašem jeziku.
+
+★ NAJVAŽNIJE
+★ Desnom tipkom kliknite sliku i odaberite "Prevedi sliku" ili povucite preko bilo kojeg dijela stranice
+★ Prijevod ide izravno na sliku, ondje gdje je bio izvorni tekst
+★ Više volite popis? Vidite svaki redak pokraj slike i kopirate ga klikom
+★ Prevodi na 31 jezik
+★ Besplatno od prvog klika: bez ključa, bez računa, slika ostaje na vašem računalu
+★ Pametnije s AI-jem ako želite: Gemini, Claude, lokalni model ili bilo koji API kompatibilan s OpenAI-jem
+★ I kadrovi videa, pozadine i canvas elementi: sve što vidite na stranici
+★ Besplatno i otvorenog koda: bez oglasa, bez računa, bez praćenja
+
+━━━━━━━━━━━━━━━━━━━━
+
+DVA NAČINA ZA POČETAK
+• Desnom tipkom kliknite sliku i odaberite "Prevedi sliku"
+• Ili pritisnite Alt + Shift + T (⌥ ⇧ T na Macu), desnom tipkom kliknite stranicu i odaberite "Prevedi područje…" ili upotrijebite gumb u skočnom prozoru, a zatim povucite preko teksta koji želite prevesti. Radi i na kadrovima videa, pozadinama i canvas elementima
+• Esc poništava; drugi tipkovnički prečac postavljate u postavkama prečaca u Chromeu
+
+NA SLICI ILI U POPISU
+• Na slici (zadano): izvorni tekst nestaje sa slike, a na njegovo mjesto dolazi prijevod, s bojom, veličinom, debljinom i poravnanjem izmjerenima sa slike. Sve se to događa na vašem računalu i ništa ne košta
+• Prijevod predug za svoje mjesto umjesto toga dobiva mali oblačić pokraj, s crtom prema izvorniku
+• Popis: svaki tekst s prijevodom na kartici pokraj slike. Kliknite redak da ga kopirate ili kopirajte sve odjednom
+• Imena, cijene i tekst koji je već na vašem jeziku ostaju kakvi jesu
+
+ODABERITE PREVODITELJ
+• Brzi (zadano): besplatan, bez ključa. Čita vijetnamski i engleski tekst na vašem računalu, a zatim ga prevodi Google Prevoditelj. Najbolje radi na čistom tekstu kao što su jelovnici, objave i snimke zaslona
+• Gemini: besplatan ključ iz Google AI Studija, s dnevnim ograničenjima. Mnogo bolje čita meme, rukopis i ukrasne fontove na bilo kojem jeziku
+• Claude: plaća se prema upotrebi, s vašim vlastitim API ključem
+• Lokalni: besplatno i izvanmrežno s Ollamom ili LM Studiom i modelom koji vidi slike
+• Drugo: bilo koji API kompatibilan s OpenAI-jem, na primjer OpenRouter
+• Prevodi na: vijetnamski, češki, engleski, slovački, njemački, francuski, španjolski, talijanski, portugalski, poljski, mađarski, ukrajinski, nizozemski, švedski, danski, norveški, finski, grčki, turski, rumunjski, hrvatski, kineski (pojednostavljeni i tradicionalni), japanski, korejski, tajlandski, indonezijski, malajski, filipinski, hindski, arapski
+
+SUČELJE NA 31 JEZIKU
+Skočni prozor i sve što Snap Translate prikazuje na stranici postoji na svih 31 jezika na koje prevodi, uključujući arapski (zdesna nalijevo). Prati vaš preglednik, ili odaberite jezik u "Jezik i izgled". Tamni ili svijetli izgled, ili kao u pregledniku.
+
+PRIVATNOST
+Ništa ne napušta vaš preglednik dok ne zatražite prijevod. S Brzim slika ostaje na vašem računalu, a Google Prevoditelju ide samo tekst pronađen u njoj. S AI prevoditeljem tom pružatelju ide snimka samo područja koje ste odabrali, s vašim API ključem. Ključevi se spremaju samo na ovom uređaju. Bez analitike, bez računa. Proširenje radi samo u kartici u kojoj pokrenete prijevod, nikad na svim web-mjestima. Ako mi pišete putem "Problem ili ideja?", poruka mi stiže e-poštom i ništa se ne šalje dok ne pritisnete Pošalji.
+
+PROBLEM ILI IDEJA?
+Kliknite "Problem ili ideja?" na dnu skočnog prozora i pišite mi. Čitam svaku poruku.
+
+OTVORENI KOD
+Cijelo proširenje je otvorenog koda (GPL-3.0), pa svatko može provjeriti što točno radi: github.com/Cleedek/snap-translate. Ako vam se sviđa, zvjezdica na GitHubu pomaže drugima da ga pronađu.
+
+PODRŽITE AUTORA
+Snap Translate je besplatan i bez oglasa. Ako vam uštedi nekoliko snimki zaslona dnevno, u skočnom prozoru je stranica "Podržite autora" s Ko-fijem i još nekoliko načina plaćanja. Potpuno dobrovoljno, i hvala!
+
+S 💜 izradio Cleedek u Vijetnamu.
+
+Od autora Subtitle Overlaya i Edge Trima.

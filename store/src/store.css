@@ -1,0 +1,129 @@
+/* Store images: same look as Subtitle Overlay's (store/images there): near black, a violet glow,
+   a small violet kicker, a white headline with a lavender second half. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=block");
+
+:root {
+  --bg: #0d0c12;
+  --text: #f6f5fa;
+  --body: #a6a3b4;
+  --faint: #6f6c7c;
+  --kicker: #a78bfa;
+  --lavender: #c7b8ff;
+  --violet: #7c3aed;
+  --frame: #1b1a21;
+  --frame-line: #2b2934;
+  --ok: oklch(0.86 0.13 150);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); }
+body { font-family: var(--font); color: var(--text); -webkit-font-smoothing: antialiased; }
+/* Inter for Latin, Greek and Cyrillic; another script gets its Noto Sans (common.js useScriptFont). */
+:root { --font: Inter, var(--script-font, system-ui), sans-serif; }
+.script .headline { letter-spacing: 0; line-height: 1.18; }
+.script .kicker, .script .tag { letter-spacing: .04em; }
+.script-ja, .script-zh_CN, .script-zh_TW { line-break: strict; }
+/* Japanese has no spaces: lines break between phrases, not inside a word. A phrase like トリミング完了。
+   is 8 characters, so headlines are a little smaller to fit it on one line of the 430 px column. */
+.script-ja { word-break: auto-phrase; }
+.script-ja .headline { font-size: 50px; }
+.script-ko { word-break: keep-all; }
+/* Arabic: text reads from the right; the layout itself stays as it is. */
+[dir=rtl] .text-left :is(.headline, .sub, .kicker) { text-align: right; }
+/* File sizes ("1143 × 1158 px") and file names read left to right in any language. */
+[dir=rtl] .label { direction: ltr; }
+
+.canvas {
+  position: relative; overflow: hidden; width: 1280px; height: 800px;
+  background:
+    radial-gradient(900px 520px at 100% -8%, rgb(124 58 237 / .34), transparent 70%),
+    radial-gradient(700px 420px at -10% 108%, rgb(124 58 237 / .16), transparent 70%),
+    var(--bg);
+}
+.canvas.marquee { width: 1400px; height: 560px; }
+.canvas.tile { width: 440px; height: 280px; }
+/* A video still: 1280 × 720, saved at 1.5× (1920 × 1080). */
+.canvas.frame { width: 1280px; height: 720px; }
+
+.kicker { margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--kicker); }
+.headline { margin: 0; font-size: 54px; line-height: 1.06; font-weight: 700; letter-spacing: -.028em; text-wrap: balance; }
+.headline em { font-style: normal; color: var(--lavender); }
+.sub { margin: 18px 0 0; font-size: 19px; line-height: 1.5; color: var(--body); text-wrap: pretty; }
+.sub q { quotes: "\"" "\""; color: var(--text); }
+
+.text-left { position: absolute; left: 64px; width: 430px; }
+.text-top { position: absolute; left: 64px; right: 64px; top: 54px; text-align: center; }
+.text-top .sub { max-width: 760px; margin-inline: auto; }
+
+/* The popup, as it looks in the toolbar: its own panel with a soft shadow. */
+.popup {
+  position: absolute; overflow: hidden; border-radius: 14px; border: 1px solid var(--frame-line);
+  box-shadow: 0 30px 80px rgb(0 0 0 / .55), 0 0 0 1px rgb(255 255 255 / .02);
+  background: oklch(0.185 0.008 290);
+}
+.popup iframe { display: block; border: 0; width: 100%; height: 100%; }
+
+/* A browser window, as in Subtitle Overlay's images. */
+.browser {
+  position: absolute; overflow: hidden; border-radius: 14px; background: var(--frame); border: 1px solid var(--frame-line);
+  box-shadow: 0 30px 80px rgb(0 0 0 / .5);
+}
+.browser-bar { display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 12px 0 14px; background: var(--frame); }
+.dots { display: flex; gap: 7px; }
+.dots i { width: 11px; height: 11px; border-radius: 50%; background: #3a3843; }
+.url { flex: 1; height: 26px; border-radius: 7px; background: #121117; color: #8f8c9c; font-size: 13px; line-height: 26px; padding: 0 12px; }
+.ext-icon { width: 22px; height: 22px; border-radius: 6px; display: block; }
+.page { position: relative; overflow: hidden; background: #f7f6f3; color: #1c1b22; }
+
+/* Chrome's right-click menu on macOS (light). */
+.menu {
+  position: absolute; z-index: 3; min-width: 232px; padding: 5px; border-radius: 8px;
+  background: rgb(236 236 238 / .97); border: .5px solid rgb(0 0 0 / .18);
+  box-shadow: 0 12px 36px rgb(0 0 0 / .28), 0 0 0 .5px rgb(255 255 255 / .6) inset;
+  font: 13px/1 -apple-system, system-ui, sans-serif; color: #1d1d1f;
+}
+.menu div { display: flex; align-items: center; gap: 8px; height: 23px; padding: 0 10px; border-radius: 4px; white-space: nowrap; }
+.menu hr { border: 0; height: 1px; margin: 5px 10px; background: rgb(0 0 0 / .1); }
+.menu .on { background: #0a63d8; color: #fff; }
+.menu .sub-arrow { margin-left: auto; font-size: 10px; opacity: .7; }
+.menu img { width: 16px; height: 16px; border-radius: 4px; }
+
+/* The note Edge Trim shows on the page (background.js toast): dark on a light page. */
+.toast {
+  position: absolute; z-index: 4; display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px;
+  background: oklch(0.225 0.010 290); color: oklch(0.94 0.006 290); border: 1px solid oklch(0.36 0.014 290);
+  font: 500 13px/1.4 system-ui, -apple-system, sans-serif; box-shadow: 0 8px 24px oklch(0.1 0.01 290 / .45); white-space: nowrap;
+}
+.toast i { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+
+/* A picture's file: a checkerboard where it's transparent, a dashed line where the file ends. */
+.file { position: absolute; display: grid; place-items: center; }
+.checker { background: repeating-conic-gradient(#2a2832 0 25%, #211f28 0 50%) 0 0 / 16px 16px; }
+.checker.light { background: repeating-conic-gradient(#ffffff 0 25%, #e9e8ee 0 50%) 0 0 / 16px 16px; }
+.edge { position: absolute; outline: 2px dashed rgb(199 184 255 / .85); outline-offset: 0; pointer-events: none; }
+.label { position: absolute; font-size: 15px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.label small { display: block; margin-top: 3px; font-size: 13px; font-weight: 500; color: var(--body); font-variant-numeric: tabular-nums; }
+.tag { display: inline-block; margin-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
+.tag.after { color: var(--kicker); }
+
+.arrow { position: absolute; color: var(--kicker); }
+/* Around a nearly invisible leftover, made visible. */
+.ring { position: absolute; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; border: 1.5px dashed var(--lavender); }
+
+/* The row of promises at the bottom of the last image. */
+.promises { position: absolute; left: 64px; right: 64px; bottom: 52px; display: flex; gap: 12px; }
+.promise {
+  flex: 1; display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 14px;
+  background: rgb(255 255 255 / .035); border: 1px solid var(--frame-line); font-size: 15px; font-weight: 600; line-height: 1.3;
+}
+.promise svg { flex: none; color: var(--kicker); }
+.promise small { display: block; font-size: 13px; font-weight: 500; color: var(--body); margin-top: 2px; }
+
+/* ---------- Snap Translate ---------- */
+.page-frame { display: block; width: 100%; border: 0; background: #f7f6f3; }
+.sub kbd, .headline kbd {
+  display: inline-block; min-width: 1.6em; padding: 1px 7px; border-radius: 6px; text-align: center;
+  font: 600 .82em/1.5 var(--font); color: var(--text); background: rgb(255 255 255 / .07); border: 1px solid var(--frame-line);
+}
+/* The pointer while dragging over an area: a crosshair. */
+.crosshair { position: absolute; z-index: 5; width: 24px; height: 24px; margin: -12px 0 0 -12px; }

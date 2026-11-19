@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "El texto de las imágenes, <em>traducido donde está.</em>",
+  "s1": "Haz clic derecho en una imagen o arrastra sobre cualquier parte de la página. El texto original desaparece y la traducción ocupa su lugar.",
+  "before": "Original",
+  "after": "Con Snap Translate",
+  "k2": "Desde la propia página",
+  "h2": "Clic derecho. <em>Traducido.</em>",
+  "s2": "Elige <q>Traducir imagen</q> en cualquier imagen. La traducción toma el color, el tamaño y el grosor del original, y un clic en <q>Lista</q> la muestra como texto.",
+  "k3": "Cualquier parte de la página",
+  "h3": "O arrastra sobre <em>todo lo que veas.</em>",
+  "s3": "Pulsa <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> o el botón del popup y arrastra sobre el texto. También en fotogramas de vídeo, fondos y lienzos.",
+  "k4": "O como lista",
+  "h4": "Cada línea, <em>lista para copiar.</em>",
+  "s4": "Cada texto con su traducción, en una tarjeta junto a la imagen. Haz clic en una línea para copiarla, o cópialas todas a la vez.",
+  "k5": "Elige tu traductor",
+  "h5": "Gratis desde ya. <em>Más listo con IA.</em>",
+  "s5": "Rápido no necesita clave: lee la imagen en tu ordenador y Google Traductor traduce el texto. Gemini, Claude o un modelo local leen también memes, letra a mano y cualquier idioma.",
+  "promises": [
+    [
+      "Gratis, sin anuncios",
+      "Sin cuenta"
+    ],
+    [
+      "Tu imagen se queda aquí",
+      "Rápido solo envía el texto"
+    ],
+    [
+      "Código abierto",
+      "Cada línea en GitHub"
+    ],
+    [
+      "31 idiomas",
+      "Español, inglés, japonés…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugares",
+      "Guías",
+      "Mapa"
+    ],
+    "title": "Dónde comer sushi en el Distrito 1",
+    "meta": "Guía gastronómica · 5 min de lectura"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugares",
+      "Guías",
+      "Mapa"
+    ],
+    "title": "Desayuno en el Barrio Antiguo",
+    "meta": "Diario de viaje · Hanói"
+  }
+}

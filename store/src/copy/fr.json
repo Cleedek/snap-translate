@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Le texte des images, <em>traduit sur place.</em>",
+  "s1": "Clic droit sur une image, ou fais glisser sur n’importe quelle partie de la page. Le texte d’origine s’efface et la traduction prend sa place.",
+  "before": "Original",
+  "after": "Avec Snap Translate",
+  "k2": "Directement sur la page",
+  "h2": "Clic droit. <em>Traduit.</em>",
+  "s2": "Choisis <q>Traduire l'image</q> sur n’importe quelle image. La traduction reprend la couleur, la taille et la graisse de l’original, et un clic sur <q>Liste</q> l’affiche en texte.",
+  "k3": "N’importe où sur la page",
+  "h3": "Ou fais glisser sur <em>tout ce que tu vois.</em>",
+  "s3": "Appuie sur <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> ou sur le bouton du popup, puis fais glisser sur le texte. Aussi sur les images de vidéo, les arrière-plans et les canvas.",
+  "k4": "Ou sous forme de liste",
+  "h4": "Chaque ligne, <em>prête à copier.</em>",
+  "s4": "Chaque texte avec sa traduction, dans une carte à côté de l’image. Un clic copie une ligne, ou copie-les toutes d’un coup.",
+  "k5": "Choisis ton traducteur",
+  "h5": "Gratuit tout de suite. <em>Plus malin avec l’IA.</em>",
+  "s5": "Rapide n’a besoin d’aucune clé : l’image est lue sur ton ordinateur et Google Traduction traduit le texte. Gemini, Claude ou un modèle local lisent aussi les mèmes, l’écriture manuscrite et toutes les langues.",
+  "promises": [
+    [
+      "Gratuit, sans pub",
+      "Sans compte"
+    ],
+    [
+      "Ton image reste ici",
+      "Rapide n’envoie que le texte"
+    ],
+    [
+      "Open source",
+      "Chaque ligne sur GitHub"
+    ],
+    [
+      "31 langues",
+      "Français, anglais, japonais…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Adresses",
+      "Guides",
+      "Carte"
+    ],
+    "title": "Où manger des sushis dans le 1er arrondissement",
+    "meta": "Guide gourmand · 5 min de lecture"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Adresses",
+      "Guides",
+      "Carte"
+    ],
+    "title": "Petit-déjeuner dans la vieille ville",
+    "meta": "Carnet de voyage · Hanoï"
+  }
+}

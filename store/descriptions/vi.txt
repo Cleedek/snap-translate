@@ -1,0 +1,53 @@
+Dịch chữ trong ảnh ngay tại chỗ trên trang web.
+
+Không còn chụp màn hình, lưu, tải lên AI, đọc rồi quay lại. Nhấp chuột phải vào ảnh hoặc kéo chọn bất kỳ phần nào của trang, Snap Translate sẽ xóa chữ gốc khỏi ảnh và đặt bản dịch vào đúng chỗ đó, cùng màu, cùng cỡ chữ và độ đậm. Bức ảnh đọc như thể được làm bằng ngôn ngữ của bạn ngay từ đầu.
+
+★ ĐIỂM NỔI BẬT
+★ Nhấp chuột phải vào ảnh và chọn "Dịch ảnh", hoặc kéo chọn bất kỳ phần nào của trang
+★ Bản dịch nằm ngay trên ảnh, ở chỗ chữ gốc
+★ Thích dạng danh sách hơn? Xem từng dòng bên cạnh ảnh và nhấp để sao chép
+★ Dịch sang 31 ngôn ngữ
+★ Miễn phí ngay từ lần nhấp đầu tiên: không cần khóa, không cần tài khoản, ảnh vẫn ở trên máy bạn
+★ Thông minh hơn với AI nếu bạn muốn: Gemini, Claude, mô hình cục bộ hoặc bất kỳ API nào tương thích OpenAI
+★ Cả khung hình video, ảnh nền và canvas: bất cứ thứ gì bạn thấy trên trang
+★ Miễn phí và mã nguồn mở: không quảng cáo, không tài khoản, không theo dõi
+
+━━━━━━━━━━━━━━━━━━━━
+
+HAI CÁCH BẮT ĐẦU
+• Nhấp chuột phải vào ảnh và chọn "Dịch ảnh"
+• Hoặc nhấn Alt + Shift + T (⌥ ⇧ T trên Mac), nhấp chuột phải vào trang và chọn "Dịch một vùng…", hoặc dùng nút trong cửa sổ bật lên, rồi kéo chọn phần chữ muốn dịch. Dùng được cả với khung hình video, ảnh nền và canvas
+• Esc để hủy; có thể đặt phím tắt khác trong cài đặt phím tắt của Chrome
+
+TRÊN ẢNH HOẶC DẠNG DANH SÁCH
+• Trên ảnh (mặc định): chữ gốc được xóa khỏi ảnh và bản dịch được đặt vào chỗ đó, với màu, cỡ chữ, độ đậm và căn lề đo từ chính bức ảnh. Mọi thứ diễn ra trên máy bạn và hoàn toàn miễn phí
+• Bản dịch quá dài so với chỗ trống sẽ hiện trong một bong bóng nhỏ bên cạnh, có đường nối tới chữ gốc
+• Danh sách: từng đoạn chữ kèm bản dịch, trong thẻ bên cạnh ảnh. Nhấp vào một dòng để sao chép, hoặc sao chép tất cả cùng lúc
+• Tên riêng, giá tiền và chữ đã là ngôn ngữ của bạn được giữ nguyên
+
+CHỌN TRÌNH DỊCH
+• Nhanh (mặc định): miễn phí, không cần khóa. Đọc chữ tiếng Việt và tiếng Anh ngay trên máy bạn, rồi Google Dịch sẽ dịch. Hợp nhất với chữ rõ ràng như thực đơn, bài đăng và ảnh chụp màn hình
+• Gemini: khóa miễn phí từ Google AI Studio, có giới hạn mỗi ngày. Đọc meme, chữ viết tay và phông chữ trang trí bằng mọi ngôn ngữ tốt hơn nhiều
+• Claude: trả theo mức dùng, với khóa API của riêng bạn
+• Cục bộ: miễn phí và ngoại tuyến với Ollama hoặc LM Studio và một mô hình có thể nhìn ảnh
+• Khác: bất kỳ API nào tương thích OpenAI, ví dụ OpenRouter
+• Dịch sang: tiếng Việt, Séc, Anh, Slovakia, Đức, Pháp, Tây Ban Nha, Ý, Bồ Đào Nha, Ba Lan, Hungary, Ukraina, Hà Lan, Thụy Điển, Đan Mạch, Na Uy, Phần Lan, Hy Lạp, Thổ Nhĩ Kỳ, Romania, Croatia, Trung (Giản thể và Phồn thể), Nhật, Hàn, Thái, Indonesia, Mã Lai, Philippines, Hindi, Ả Rập
+
+GIAO DIỆN 31 NGÔN NGỮ
+Cửa sổ bật lên và mọi thứ Snap Translate hiển thị trên trang đều có đủ 31 ngôn ngữ mà nó dịch được, kể cả tiếng Ả Rập (từ phải sang trái). Theo ngôn ngữ trình duyệt của bạn, hoặc chọn trong "Ngôn ngữ và giao diện". Giao diện tối, sáng hoặc theo trình duyệt.
+
+QUYỀN RIÊNG TƯ
+Không có gì rời khỏi trình duyệt của bạn cho tới khi bạn yêu cầu dịch. Với Nhanh, ảnh vẫn ở trên máy bạn và chỉ phần chữ tìm thấy trong ảnh được gửi tới Google Dịch. Với trình dịch AI, chỉ ảnh chụp của vùng bạn chọn được gửi tới nhà cung cấp đó, kèm khóa API của bạn. Khóa chỉ được lưu trên thiết bị này. Không phân tích, không tài khoản. Tiện ích chỉ chạy trong thẻ bạn bắt đầu dịch, không bao giờ chạy trên mọi trang. Nếu bạn viết cho tôi qua "Sự cố hay ý tưởng?", tin nhắn sẽ đến tôi qua email, và không có gì được gửi cho tới khi bạn nhấn "Gửi".
+
+SỰ CỐ HAY Ý TƯỞNG?
+Nhấp "Sự cố hay ý tưởng?" ở cuối cửa sổ bật lên và viết cho tôi. Tôi đọc mọi tin nhắn.
+
+MÃ NGUỒN MỞ
+Toàn bộ tiện ích là mã nguồn mở (GPL-3.0), nên ai cũng có thể kiểm tra chính xác nó làm gì: github.com/Cleedek/snap-translate. Nếu bạn thích, một ngôi sao trên GitHub sẽ giúp người khác tìm thấy nó.
+
+ỦNG HỘ TÁC GIẢ
+Snap Translate miễn phí và không quảng cáo. Nếu nó giúp bạn bớt vài lần chụp màn hình mỗi ngày, cửa sổ bật lên có trang "Ủng hộ tác giả" với Ko-fi và vài cách thanh toán khác. Hoàn toàn tùy ý, và cảm ơn bạn!
+
+Được tạo với 💜 bởi Cleedek tại Việt Nam.
+
+Từ tác giả của Subtitle Overlay và Edge Trim.

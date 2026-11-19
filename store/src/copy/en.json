@@ -1,0 +1,37 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Text in pictures, <em>translated where it is.</em>",
+  "s1": "Right-click a picture or drag over any part of the page. The original text is wiped and the translation set in its place.",
+  "before": "Original",
+  "after": "With Snap Translate",
+  "k2": "Right from the page",
+  "h2": "Right-click. <em>Translated.</em>",
+  "s2": "Pick <q>Translate picture</q> on any picture. The translation takes the colour, size and weight of the original, and a click on <q>List</q> shows it as text.",
+  "k3": "Any part of the page",
+  "h3": "Or drag over <em>anything you see.</em>",
+  "s3": "Press <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> or click the button in the popup, then drag over the text. Video frames, backgrounds and canvases too.",
+  "k4": "Or as a list",
+  "h4": "Every line, <em>ready to copy.</em>",
+  "s4": "Each piece of text with its translation, in a card next to the picture. Click a line to copy it, or copy them all at once.",
+  "k5": "Pick your translator",
+  "h5": "Free to start. <em>Smarter with AI.</em>",
+  "s5": "Quick needs no key: it reads the picture on your computer and Google Translate translates the text. Gemini, Claude or a local model read memes, handwriting and any language.",
+  "promises": [
+    ["Free, no ads", "No account needed"],
+    ["Your picture stays here", "Quick sends only the text"],
+    ["Open source", "Every line on GitHub"],
+    ["31 languages", "English, Czech, Japanese…"]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": ["Places", "Guides", "Map"],
+    "title": "Where to eat sushi in District 1",
+    "meta": "Food guide · 5 min read"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": ["Places", "Guides", "Map"],
+    "title": "Breakfast in the Old Quarter",
+    "meta": "Travel diary · Hanoi"
+  }
+}

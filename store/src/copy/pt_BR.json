@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "O texto das imagens, <em>traduzido onde está.</em>",
+  "s1": "Clique com o botão direito em uma imagem ou arraste sobre qualquer parte da página. O texto original some e a tradução fica no lugar dele.",
+  "before": "Original",
+  "after": "Com o Snap Translate",
+  "k2": "Direto na página",
+  "h2": "Botão direito. <em>Traduzido.</em>",
+  "s2": "Escolha <q>Traduzir imagem</q> em qualquer imagem. A tradução pega a cor, o tamanho e a espessura do original, e um clique em <q>Lista</q> mostra tudo como texto.",
+  "k3": "Qualquer parte da página",
+  "h3": "Ou arraste sobre <em>tudo o que você vê.</em>",
+  "s3": "Pressione <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> ou o botão no popup e arraste sobre o texto. Também em quadros de vídeo, fundos e canvas.",
+  "k4": "Ou em lista",
+  "h4": "Cada linha, <em>pronta para copiar.</em>",
+  "s4": "Cada texto com sua tradução, em um cartão ao lado da imagem. Clique em uma linha para copiá-la, ou copie todas de uma vez.",
+  "k5": "Escolha seu tradutor",
+  "h5": "Grátis desde já. <em>Mais esperto com IA.</em>",
+  "s5": "O Rápido não precisa de chave: lê a imagem no seu computador e o Google Tradutor traduz o texto. Gemini, Claude ou um modelo local leem também memes, letra à mão e qualquer idioma.",
+  "promises": [
+    [
+      "Grátis, sem anúncios",
+      "Sem conta"
+    ],
+    [
+      "Sua imagem fica aqui",
+      "O Rápido envia só o texto"
+    ],
+    [
+      "Código aberto",
+      "Cada linha no GitHub"
+    ],
+    [
+      "31 idiomas",
+      "Português, inglês, japonês…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugares",
+      "Guias",
+      "Mapa"
+    ],
+    "title": "Onde comer sushi no Distrito 1",
+    "meta": "Guia gastronômico · 5 min de leitura"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugares",
+      "Guias",
+      "Mapa"
+    ],
+    "title": "Café da manhã no Bairro Antigo",
+    "meta": "Diário de viagem · Hanói"
+  }
+}

@@ -1,0 +1,53 @@
+Translate the text in pictures right where they are on the page.
+
+No more screenshot, save, upload to an AI, read, come back. Right-click a picture, or drag over any part of the page, and Snap Translate wipes the original text from the picture and sets the translation in its place, in the same colour, size and weight. It reads as if the picture had been made in your language.
+
+★ THE HIGHLIGHTS
+★ Right-click a picture and choose "Translate picture", or drag over any part of the page
+★ The translation goes right onto the picture, where the original text was
+★ Prefer a list? See every line next to the picture and click one to copy it
+★ Translates into 31 languages
+★ Free from the first click: no key, no account, the picture stays on your computer
+★ Smarter with AI if you want it: Gemini, Claude, a local model or any OpenAI-compatible API
+★ Also video frames, backgrounds and canvases: anything you can see on the page
+★ Free and open source: no ads, no account, no tracking
+
+━━━━━━━━━━━━━━━━━━━━
+
+TWO WAYS TO START
+• Right-click a picture and choose "Translate picture"
+• Or press Alt + Shift + T (⌥ ⇧ T on a Mac), right-click the page and choose "Translate an area…", or use the button in the popup, then drag over the text you want translated. This also works on video frames, backgrounds and canvases
+• Esc cancels; another shortcut can be set in Chrome's shortcut settings
+
+ON THE PICTURE OR IN A LIST
+• On picture (the default): the original text is wiped from the picture and the translation set in its place, with the colour, size, weight and alignment measured from the picture. This all happens on your computer and adds no cost
+• A translation too long for its spot gets a small bubble next to it instead, with a line to the original
+• List: every piece of text with its translation in a card next to the picture. Click a line to copy it, or copy them all at once
+• Names, prices and text already in your language stay as they are
+
+PICK YOUR TRANSLATOR
+• Quick (the default): free, no key needed. Reads Vietnamese and English text on your computer, then Google Translate translates it. Best on clean text like menus, posts and screenshots
+• Gemini: a free key from Google AI Studio, with daily limits. Reads memes, handwriting and stylised fonts in any language far better
+• Claude: paid per use with your own API key
+• Local: free and offline with Ollama or LM Studio and a vision model
+• Other: any OpenAI-compatible API, for example OpenRouter
+• Translates into: Vietnamese, Czech, English, Slovak, German, French, Spanish, Italian, Portuguese, Polish, Hungarian, Ukrainian, Dutch, Swedish, Danish, Norwegian, Finnish, Greek, Turkish, Romanian, Croatian, Chinese (Simplified and Traditional), Japanese, Korean, Thai, Indonesian, Malay, Filipino, Hindi, Arabic
+
+INTERFACE IN 31 LANGUAGES
+The popup and everything Snap Translate shows on the page come in all 31 languages you can translate into, Arabic included (right to left). It follows your browser, or pick one under "Language & appearance". Dark or light look, or the same as your browser.
+
+PRIVACY
+Nothing leaves your browser until you ask for a translation. With Quick the picture stays on your computer and only the text found in it goes to Google Translate. With an AI translator, a screenshot of only the area you chose goes to that provider, with your API key. Keys are stored on this device only. No analytics, no accounts. The extension runs only in the tab where you start a translation, never on every site. If you write to me with "Problem or idea?", your message reaches me by email, and nothing is sent until you press Send.
+
+PROBLEM OR IDEA?
+Click "Problem or idea?" at the bottom of the popup and write to me. I read every message.
+
+OPEN SOURCE
+The whole extension is open source (GPL-3.0), so anyone can check exactly what it does: github.com/Cleedek/snap-translate. If you like it, a star on GitHub helps other people find it.
+
+SUPPORT THE CREATOR
+Snap Translate is free and has no ads. If it saves you a few screenshots a day, the popup has a "Support the creator" page with Ko-fi and a few other ways to pay. Completely optional, and thank you!
+
+Created with 💜 by Cleedek in Vietnam.
+
+From the maker of Subtitle Overlay and Edge Trim.

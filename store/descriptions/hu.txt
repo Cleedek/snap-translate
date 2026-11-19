@@ -1,0 +1,53 @@
+Fordítsd le a képeken lévő szöveget ott, ahol a képek az oldalon vannak.
+
+Nincs több képernyőkép, mentés, feltöltés egy MI-be, olvasás és visszatérés. Kattints jobb gombbal egy képre, vagy húzd az egeret az oldal bármely része fölé, és a Snap Translate letörli a képről az eredeti szöveget, a helyére pedig a fordítást teszi, ugyanazzal a színnel, mérettel és vastagsággal. A kép úgy olvasható, mintha a te nyelveden készült volna.
+
+★ A LÉNYEG
+★ Kattints jobb gombbal egy képre és válaszd a "Kép fordítása" lehetőséget, vagy húzd az egeret az oldal bármely része fölé
+★ A fordítás egyenesen a képre kerül, oda, ahol az eredeti szöveg volt
+★ Inkább lista? Lásd minden sort a kép mellett, és egy kattintással másold ki
+★ 31 nyelvre fordít
+★ Ingyenes az első kattintástól: nincs kulcs, nincs fiók, a kép a gépeden marad
+★ Okosabb MI-vel, ha szeretnéd: Gemini, Claude, helyi modell vagy bármilyen OpenAI-kompatibilis API
+★ Videóképkockák, hátterek és vásznak is: bármi, amit az oldalon látsz
+★ Ingyenes és nyílt forráskódú: nincs reklám, nincs fiók, nincs követés
+
+━━━━━━━━━━━━━━━━━━━━
+
+KÉTFÉLE KEZDÉS
+• Kattints jobb gombbal egy képre és válaszd a "Kép fordítása" lehetőséget
+• Vagy nyomd meg az Alt + Shift + T billentyűket (Macen ⌥ ⇧ T), kattints jobb gombbal az oldalra és válaszd a "Terület fordítása…" lehetőséget, vagy használd a gombot a felugró ablakban, majd húzd az egeret a lefordítandó szöveg fölé. Videóképkockákon, hátereken és vásznakon is működik
+• Az Esc megszakítja; másik billentyűparancsot a Chrome billentyűparancs-beállításaiban adhatsz meg
+
+A KÉPEN VAGY LISTÁBAN
+• A képen (alapértelmezett): az eredeti szöveg eltűnik a képről, a helyén a fordítás áll, a képről mért színnel, mérettel, vastagsággal és igazítással. Mindez a gépeden történik, és semmibe sem kerül
+• Az a fordítás, amely nem fér el a helyén, ehelyett egy kis buborékot kap mellette, egy vonallal az eredetihez
+• Lista: minden szöveg a fordításával, egy kártyán a kép mellett. Egy kattintás kimásol egy sort, vagy másold ki mindet egyszerre
+• A nevek, az árak és a már a te nyelveden lévő szöveg változatlan marad
+
+VÁLASSZ FORDÍTÓT
+• Gyors (alapértelmezett): ingyenes, kulcs nélkül. A gépeden olvassa be a vietnámi és angol szöveget, majd a Google Fordító lefordítja. Tiszta szövegen működik a legjobban, például étlapokon, posztokon és képernyőképeken
+• Gemini: ingyenes kulcs a Google AI Studióból, napi korlátokkal. Mémeket, kézírást és díszes betűket bármilyen nyelven sokkal jobban olvas
+• Claude: használat szerint fizetős, a saját API-kulcsoddal
+• Helyi: ingyenes és offline, Ollamával vagy LM Studióval és egy képeket értő modellel
+• Egyéb: bármilyen OpenAI-kompatibilis API, például az OpenRouter
+• Fordít: vietnámira, csehre, angolra, szlovákra, németre, franciára, spanyolra, olaszra, portugálra, lengyelre, magyarra, ukránra, hollandra, svédre, dánra, norvégra, finnre, görögre, törökre, románra, horvátra, kínaira (egyszerűsített és hagyományos), japánra, koreaira, thaira, indonézre, malájra, filippínóra, hindire és arabra
+
+FELÜLET 31 NYELVEN
+A felugró ablak és minden, amit a Snap Translate az oldalon mutat, mind a 31 nyelven elérhető, amelyre fordít, az arabot is beleértve (jobbról balra). A böngésződet követi, vagy válassz a "Nyelv és megjelenés" alatt. Sötét vagy világos megjelenés, vagy a böngésző szerint.
+
+ADATVÉDELEM
+Semmi sem hagyja el a böngésződet, amíg nem kérsz fordítást. A Gyorssal a kép a gépeden marad, és csak a benne talált szöveg megy a Google Fordítóhoz. MI-fordítóval csak a kiválasztott terület képernyőképe megy az adott szolgáltatóhoz, a te API-kulcsoddal. A kulcsok csak ezen az eszközön tárolódnak. Nincs analitika, nincsenek fiókok. A bővítmény csak abban a lapon fut, ahol fordítást indítasz, sosem minden oldalon. Ha a "Hiba vagy ötlet?" gombbal írsz nekem, az üzenet e-mailben ér el, és semmi sem megy el, amíg meg nem nyomod a Küldés gombot.
+
+HIBA VAGY ÖTLET?
+Kattints a felugró ablak alján a "Hiba vagy ötlet?" gombra, és írj nekem. Minden üzenetet elolvasok.
+
+NYÍLT FORRÁSKÓD
+Az egész bővítmény nyílt forráskódú (GPL-3.0), így bárki ellenőrizheti, pontosan mit csinál: github.com/Cleedek/snap-translate. Ha tetszik, egy csillag a GitHubon segít, hogy mások is megtalálják.
+
+A KÉSZÍTŐ TÁMOGATÁSA
+A Snap Translate ingyenes és reklámmentes. Ha naponta megspórol pár képernyőképet, a felugró ablakban van egy "A készítő támogatása" oldal Ko-fival és néhány más fizetési móddal. Teljesen önkéntes, és köszönöm!
+
+Készítette 💜 Cleedek, Vietnámban.
+
+A Subtitle Overlay és az Edge Trim készítőjétől.

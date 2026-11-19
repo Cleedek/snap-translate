@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Szöveg a képeken, <em>ott lefordítva, ahol van.</em>",
+  "s1": "Kattints jobb gombbal egy képre, vagy húzd az egeret az oldal bármely része fölé. Az eredeti szöveg eltűnik, a helyén a fordítás áll.",
+  "before": "Eredeti",
+  "after": "Snap Translate-tel",
+  "k2": "Közvetlenül az oldalon",
+  "h2": "Jobb klikk. <em>Lefordítva.</em>",
+  "s2": "Bármelyik képen válaszd a <q>Kép fordítása</q> lehetőséget. A fordítás átveszi az eredeti színét, méretét és vastagságát, a <q>Lista</q> pedig szövegként mutatja.",
+  "k3": "Az oldal bármely része",
+  "h3": "Vagy jelölj ki <em>bármit, amit látsz.</em>",
+  "s3": "Nyomd meg: <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd>, vagy a gombot a felugró ablakban, és húzd az egeret a szöveg fölé. Videóképkockákon, hátereken és vásznakon is.",
+  "k4": "Vagy listaként",
+  "h4": "Minden sor <em>másolásra készen.</em>",
+  "s4": "Minden szöveg a fordításával, egy kártyán a kép mellett. Egy kattintás kimásol egy sort, vagy másold ki mindet egyszerre.",
+  "k5": "Válassz fordítót",
+  "h5": "Azonnal ingyen. <em>Okosabban MI-vel.</em>",
+  "s5": "A Gyors nem kér kulcsot: a gépeden olvassa be a képet, a szöveget a Google Fordító fordítja. A Gemini, a Claude vagy egy helyi modell mémeket, kézírást és bármilyen nyelvet is elolvas.",
+  "promises": [
+    [
+      "Ingyenes, reklám nélkül",
+      "Fiók nélkül"
+    ],
+    [
+      "A képed itt marad",
+      "A Gyors csak a szöveget küldi"
+    ],
+    [
+      "Nyílt forráskód",
+      "Minden sor a GitHubon"
+    ],
+    [
+      "31 nyelv",
+      "Magyar, angol, japán…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Helyek",
+      "Útmutatók",
+      "Térkép"
+    ],
+    "title": "Hol együnk sushit az 1. kerületben",
+    "meta": "Gasztrokalauz · 5 perc olvasás"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Helyek",
+      "Útmutatók",
+      "Térkép"
+    ],
+    "title": "Reggeli az óvárosban",
+    "meta": "Útinapló · Hanoi"
+  }
+}

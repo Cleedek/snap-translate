@@ -1,0 +1,53 @@
+Traduci il testo nelle immagini proprio dove si trovano sulla pagina.
+
+Basta screenshot, salvataggi, caricamenti su un’IA, lettura e ritorno. Clic destro su un’immagine o trascina su qualsiasi parte della pagina: Snap Translate cancella il testo originale dall’immagine e mette la traduzione al suo posto, con lo stesso colore, la stessa dimensione e lo stesso spessore. L’immagine si legge come se fosse stata fatta nella tua lingua.
+
+★ IN BREVE
+★ Clic destro su un’immagine e scegli "Traduci immagine", oppure trascina su qualsiasi parte della pagina
+★ La traduzione va direttamente sull’immagine, dove c’era il testo originale
+★ Preferisci un elenco? Vedi ogni riga accanto all’immagine e cliccala per copiarla
+★ Traduce in 31 lingue
+★ Gratis dal primo clic: nessuna chiave, nessun account, l’immagine resta sul tuo computer
+★ Più bravo con l’IA, se vuoi: Gemini, Claude, un modello locale o qualsiasi API compatibile con OpenAI
+★ Anche fotogrammi video, sfondi e canvas: tutto ciò che vedi sulla pagina
+★ Gratis e open source: niente pubblicità, niente account, nessun tracciamento
+
+━━━━━━━━━━━━━━━━━━━━
+
+DUE MODI PER INIZIARE
+• Clic destro su un’immagine e scegli "Traduci immagine"
+• Oppure premi Alt + Maiusc + T (⌥ ⇧ T su Mac), fai clic destro sulla pagina e scegli "Traduci un'area…", o usa il pulsante nel popup, poi trascina sul testo da tradurre. Funziona anche su fotogrammi video, sfondi e canvas
+• Esc annulla; un’altra scorciatoia si imposta nelle impostazioni delle scorciatoie di Chrome
+
+SULL’IMMAGINE O IN ELENCO
+• Sull'immagine (predefinito): il testo originale viene cancellato dall’immagine e la traduzione messa al suo posto, con colore, dimensione, spessore e allineamento misurati sull’immagine. Tutto avviene sul tuo computer e non costa nulla
+• Una traduzione troppo lunga per il suo spazio riceve invece un piccolo fumetto accanto, con una linea verso l’originale
+• Elenco: ogni testo con la sua traduzione, in una scheda accanto all’immagine. Clicca una riga per copiarla, o copiale tutte insieme
+• Nomi, prezzi e testo già nella tua lingua restano come sono
+
+SCEGLI IL TRADUTTORE
+• Rapido (predefinito): gratis, senza chiave. Legge il testo vietnamita e inglese sul tuo computer, poi Google Traduttore lo traduce. Funziona meglio con testo pulito come menu, post e screenshot
+• Gemini: una chiave gratuita da Google AI Studio, con limiti giornalieri. Legge molto meglio meme, scrittura a mano e caratteri decorativi in qualsiasi lingua
+• Claude: a pagamento in base all’uso, con la tua chiave API
+• Locale: gratis e offline con Ollama o LM Studio e un modello che vede le immagini
+• Altro: qualsiasi API compatibile con OpenAI, per esempio OpenRouter
+• Traduce in: vietnamita, ceco, inglese, slovacco, tedesco, francese, spagnolo, italiano, portoghese, polacco, ungherese, ucraino, olandese, svedese, danese, norvegese, finlandese, greco, turco, rumeno, croato, cinese (semplificato e tradizionale), giapponese, coreano, thailandese, indonesiano, malese, filippino, hindi, arabo
+
+INTERFACCIA IN 31 LINGUE
+Il popup e tutto ciò che Snap Translate mostra sulla pagina sono in tutte le 31 lingue in cui traduce, arabo compreso (da destra a sinistra). Segue il tuo browser, oppure scegli in "Lingua e aspetto". Aspetto scuro o chiaro, o come il browser.
+
+PRIVACY
+Nulla lascia il tuo browser finché non chiedi una traduzione. Con Rapido l’immagine resta sul tuo computer e solo il testo trovato al suo interno va a Google Traduttore. Con un traduttore IA, uno screenshot della sola area scelta va a quel fornitore, con la tua chiave API. Le chiavi sono salvate solo su questo dispositivo. Niente analisi, niente account. L’estensione funziona solo nella scheda in cui avvii una traduzione, mai su tutti i siti. Se mi scrivi con "Problema o idea?", il messaggio mi arriva per email, e non viene inviato nulla finché non premi Invia.
+
+PROBLEMA O IDEA?
+Clicca "Problema o idea?" in fondo al popup e scrivimi. Leggo ogni messaggio.
+
+OPEN SOURCE
+Tutta l’estensione è open source (GPL-3.0), quindi chiunque può verificare esattamente cosa fa: github.com/Cleedek/snap-translate. Se ti piace, una stella su GitHub aiuta altre persone a trovarla.
+
+SOSTIENI L’AUTORE
+Snap Translate è gratis e senza pubblicità. Se ti risparmia qualche screenshot al giorno, nel popup c’è la pagina "Sostieni l'autore" con Ko-fi e qualche altro modo di pagare. Del tutto facoltativo, e grazie!
+
+Creato con 💜 da Cleedek in Vietnam.
+
+Dall’autore di Subtitle Overlay ed Edge Trim.

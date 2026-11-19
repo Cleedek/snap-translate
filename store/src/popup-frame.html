@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- The real popup.html, for the store images: runs on a plain page with stand-ins for chrome.*.
+       ?lang=cs picks the interface language (and the target), ?provider=gemini the translator, ?zoom=1.1 the size. -->
+  <base href="../../">
+  <title>Snap Translate popup for store images</title>
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (() => {
+      const params = new URLSearchParams(location.search);
+      const lang = params.get('lang') || 'en';
+      const store = {
+        uiLang: lang, theme: 'dark', sisterClosed: true,
+        settings: { target: lang, provider: params.get('provider') || 'quick' },
+      };
+      localStorage.setItem('theme', 'dark');
+      const pick = (keys) => {
+        if (keys == null) return { ...store };
+        if (typeof keys === 'string') keys = [keys];
+        if (Array.isArray(keys)) return Object.fromEntries(keys.filter((k) => k in store).map((k) => [k, store[k]]));
+        return Object.fromEntries(Object.entries(keys).map(([k, d]) => [k, k in store ? store[k] : d]));
+      };
+      window.chrome = {
+        storage: {
+          local: { get: async (keys) => structuredClone(pick(keys)), set: async (obj) => { Object.assign(store, structuredClone(obj)); } },
+          onChanged: { addListener() {} },
+        },
+        tabs: { getCurrent: async () => undefined, query: async () => [{ id: 1 }], create() {} },
+        commands: { getAll: async () => [{ name: 'start-selection', shortcut: '⌥⇧T' }] },
+        permissions: { contains: async () => true, request: async () => true },
+        i18n: { getUILanguage: () => lang },
+        runtime: {
+          getManifest: () => ({ version: '1.1.0' }), getURL: (path) => path, setUninstallURL() {},
+          // The interface strings: the background worker answers this in the extension.
+          sendMessage: async (msg) => (msg && msg.type === 'dict' ? { ok: true, dict: await (await fetch(`lib/ui/${msg.lang}.json`)).json() } : { ok: false }),
+        },
+      };
+      document.documentElement.style.zoom = params.get('zoom') || 1;
+    })();
+  </script>
+  <script src="lib/theme.js"></script>
+  <link rel="stylesheet" href="popup.css">
+  <style>html { scrollbar-width: none; }</style>
+</head>
+<body>
+  <script>
+    (async () => {
+      const doc = new DOMParser().parseFromString(await (await fetch('popup.html', { cache: 'no-store' })).text(), 'text/html');
+      const scripts = [...doc.body.querySelectorAll('script')].map((s) => (s.remove(), s.getAttribute('src')));
+      document.body.innerHTML = doc.body.innerHTML;
+      for (const src of scripts.filter((s) => s !== 'lib/theme.js')) {
+        await new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = src; s.onload = resolve; s.onerror = reject;
+          document.body.append(s);
+        });
+      }
+      const until = async (test) => { while (!test()) await new Promise((r) => setTimeout(r, 30)); };
+      await until(() => document.getElementById('reads').textContent);
+      await new Promise((r) => setTimeout(r, 300));
+      window.popupReady = true;
+    })();
+  </script>
+</body>
+</html>

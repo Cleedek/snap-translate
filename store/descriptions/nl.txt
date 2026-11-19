@@ -1,0 +1,53 @@
+Vertaal de tekst in afbeeldingen precies waar ze op de pagina staan.
+
+Geen screenshot, opslaan, uploaden naar een AI, lezen en terugkeren meer. Klik met rechts op een afbeelding of sleep over een deel van de pagina, en Snap Translate veegt de originele tekst uit de afbeelding en zet de vertaling op zijn plek, in dezelfde kleur, grootte en dikte. De afbeelding leest alsof hij in jouw taal is gemaakt.
+
+★ DE HOOGTEPUNTEN
+★ Klik met rechts op een afbeelding en kies "Afbeelding vertalen", of sleep over een deel van de pagina
+★ De vertaling komt direct op de afbeelding, waar de originele tekst stond
+★ Liever een lijst? Zie elke regel naast de afbeelding en klik om hem te kopiëren
+★ Vertaalt naar 31 talen
+★ Gratis vanaf de eerste klik: geen sleutel, geen account, de afbeelding blijft op je computer
+★ Slimmer met AI als je wilt: Gemini, Claude, een lokaal model of elke OpenAI-compatibele API
+★ Ook videobeelden, achtergronden en canvassen: alles wat je op de pagina ziet
+★ Gratis en open source: geen reclame, geen account, geen tracking
+
+━━━━━━━━━━━━━━━━━━━━
+
+TWEE MANIEREN OM TE BEGINNEN
+• Klik met rechts op een afbeelding en kies "Afbeelding vertalen"
+• Of druk op Alt + Shift + T (⌥ ⇧ T op een Mac), klik met rechts op de pagina en kies "Gebied vertalen…", of gebruik de knop in de popup, en sleep dan over de tekst die je vertaald wilt hebben. Werkt ook op videobeelden, achtergronden en canvassen
+• Esc annuleert; een andere sneltoets stel je in bij de sneltoetsinstellingen van Chrome
+
+OP DE AFBEELDING OF IN EEN LIJST
+• Op de afbeelding (standaard): de originele tekst wordt uit de afbeelding geveegd en de vertaling op zijn plek gezet, met de kleur, grootte, dikte en uitlijning gemeten uit de afbeelding. Dit gebeurt allemaal op je computer en kost niets
+• Een vertaling die te lang is voor haar plek krijgt in plaats daarvan een kleine ballon ernaast, met een lijntje naar het origineel
+• Lijst: elke tekst met zijn vertaling in een kaart naast de afbeelding. Klik op een regel om die te kopiëren, of kopieer ze allemaal tegelijk
+• Namen, prijzen en tekst die al in jouw taal is, blijven zoals ze zijn
+
+KIES JE VERTALER
+• Snel (standaard): gratis, geen sleutel nodig. Leest Vietnamese en Engelse tekst op je computer, waarna Google Translate hem vertaalt. Werkt het best op duidelijke tekst zoals menu's, posts en screenshots
+• Gemini: een gratis sleutel van Google AI Studio, met daglimieten. Leest memes, handschrift en sierlijke lettertypen in elke taal veel beter
+• Claude: betaald per gebruik, met je eigen API-sleutel
+• Lokaal: gratis en offline met Ollama of LM Studio en een model dat afbeeldingen kan zien
+• Anders: elke OpenAI-compatibele API, bijvoorbeeld OpenRouter
+• Vertaalt naar: Vietnamees, Tsjechisch, Engels, Slowaaks, Duits, Frans, Spaans, Italiaans, Portugees, Pools, Hongaars, Oekraïens, Nederlands, Zweeds, Deens, Noors, Fins, Grieks, Turks, Roemeens, Kroatisch, Chinees (vereenvoudigd en traditioneel), Japans, Koreaans, Thai, Indonesisch, Maleis, Filipijns, Hindi, Arabisch
+
+INTERFACE IN 31 TALEN
+De popup en alles wat Snap Translate op de pagina toont, is er in alle 31 talen waarnaar het vertaalt, Arabisch inbegrepen (van rechts naar links). Het volgt je browser, of kies er een onder "Taal en weergave". Donkere of lichte weergave, of zoals de browser.
+
+PRIVACY
+Niets verlaat je browser totdat je om een vertaling vraagt. Met Snel blijft de afbeelding op je computer en gaat alleen de gevonden tekst naar Google Translate. Met een AI-vertaler gaat een screenshot van alleen het gekozen gebied naar die aanbieder, met jouw API-sleutel. Sleutels worden alleen op dit apparaat opgeslagen. Geen analytics, geen accounts. De extensie draait alleen in het tabblad waar je een vertaling start, nooit op elke site. Als je me schrijft via "Probleem of idee?", komt je bericht per e-mail bij mij aan, en er wordt niets verstuurd totdat je op Versturen drukt.
+
+PROBLEEM OF IDEE?
+Klik onderaan de popup op "Probleem of idee?" en schrijf me. Ik lees elk bericht.
+
+OPEN SOURCE
+De hele extensie is open source (GPL-3.0), zodat iedereen precies kan nagaan wat ze doet: github.com/Cleedek/snap-translate. Vind je haar fijn, dan helpt een ster op GitHub anderen haar te vinden.
+
+STEUN DE MAKER
+Snap Translate is gratis en zonder reclame. Als het je elke dag een paar screenshots bespaart, heeft de popup een pagina "Steun de maker" met Ko-fi en een paar andere manieren om te betalen. Helemaal vrijwillig, en bedankt!
+
+Gemaakt met 💜 door Cleedek in Vietnam.
+
+Van de maker van Subtitle Overlay en Edge Trim.

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Teksto sa mga larawan, <em>isinasalin kung nasaan ito.</em>",
+  "s1": "I-right-click ang isang larawan o i-drag sa anumang bahagi ng page. Nabubura ang orihinal na teksto at ang salin ang pumapalit dito.",
+  "before": "Orihinal",
+  "after": "Gamit ang Snap Translate",
+  "k2": "Mismo sa page",
+  "h2": "Right-click. <em>Naisalin na.</em>",
+  "s2": "Piliin ang <q>Isalin ang larawan</q> sa anumang larawan. Kinukuha ng salin ang kulay, laki, at kapal ng orihinal, at ipinapakita ito bilang teksto ng isang click sa <q>Listahan</q>.",
+  "k3": "Anumang bahagi ng page",
+  "h3": "O i-drag sa <em>anumang nakikita mo.</em>",
+  "s3": "Pindutin ang <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> o ang button sa popup, saka i-drag sa teksto. Gumagana rin sa mga frame ng video, background, at canvas.",
+  "k4": "O bilang listahan",
+  "h4": "Bawat linya, <em>handang kopyahin.</em>",
+  "s4": "Bawat teksto kasama ang salin nito, sa isang card sa tabi ng larawan. I-click ang isang linya para kopyahin ito, o kopyahin lahat nang sabay.",
+  "k5": "Pumili ng tagasalin",
+  "h5": "Libre agad. <em>Mas matalino gamit ang AI.</em>",
+  "s5": "Hindi kailangan ng key ang Mabilis: binabasa nito ang larawan sa computer mo at isinasalin ng Google Translate ang teksto. Nababasa rin ng Gemini, Claude, o isang lokal na model ang mga meme, sulat-kamay, at anumang wika.",
+  "promises": [
+    [
+      "Libre, walang ads",
+      "Walang account"
+    ],
+    [
+      "Nasa iyo lang ang larawan",
+      "Teksto lang ang ipinapadala ng Mabilis"
+    ],
+    [
+      "Open source",
+      "Bawat linya nasa GitHub"
+    ],
+    [
+      "31 wika",
+      "Filipino, Ingles, Hapon…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugar",
+      "Gabay",
+      "Mapa"
+    ],
+    "title": "Saan kakain ng sushi sa District 1",
+    "meta": "Gabay sa pagkain · 5 min basahin"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Lugar",
+      "Gabay",
+      "Mapa"
+    ],
+    "title": "Almusal sa Old Quarter",
+    "meta": "Talaarawan ng biyahe · Hanoi"
+  }
+}

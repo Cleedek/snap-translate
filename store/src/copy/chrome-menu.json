@@ -1,0 +1,258 @@
+{
+ "ar": [
+  "فتح الصورة في علامة تبويب جديدة",
+  "حفظ الصورة باسم…",
+  "نسخ صورة",
+  "نسخ عنوان الصورة",
+  "البحث عن الصورة باستخدام \"Google\"",
+  "فحص"
+ ],
+ "cs": [
+  "Otevřít obrázek v nové kartě",
+  "Uložit obrázek jako…",
+  "Kopírovat obrázek",
+  "Kopírovat adresu obrázku",
+  "Vyhledat obrázek pomocí: Google",
+  "Prozkoumat"
+ ],
+ "da": [
+  "Åbn billede på ny fane",
+  "Gem billede som…",
+  "Kopier billede",
+  "Kopiér billedets webadresse",
+  "Søg på billedet med Google",
+  "Undersøg"
+ ],
+ "de": [
+  "Bild in neuem Tab öffnen",
+  "Bild speichern unter…",
+  "Bild kopieren",
+  "Bildadresse kopieren",
+  "Bild an Google senden",
+  "Untersuchen"
+ ],
+ "el": [
+  "Άνοιγμα Εικόνας σε Νέα Καρτέλα",
+  "Αποθήκευση Εικόνας Ως…",
+  "Αντιγραφή Εικόνας",
+  "Αντιγραφή της διεύθυνσης εικόνας",
+  "Αναζήτηση εικόνας με το Google",
+  "Έλεγχος"
+ ],
+ "en": [
+  "Open Image in New Tab",
+  "Save Image As…",
+  "Copy Image",
+  "Copy Image Address",
+  "Search Image with Google",
+  "Inspect"
+ ],
+ "es": [
+  "Abrir imagen en una pestaña nueva",
+  "Guardar imagen como…",
+  "Copiar imagen",
+  "Copiar dirección de imagen",
+  "Buscar imagen con Google",
+  "Inspeccionar"
+ ],
+ "fi": [
+  "Avaa kuva uudessa välilehdessä",
+  "Tallenna kuva nimellä…",
+  "Kopioi kuva",
+  "Kopioi kuvan osoite",
+  "Hae kuvaa: Google",
+  "Tarkista"
+ ],
+ "fil": [
+  "Buksan ang Imahe sa Bagong Tab",
+  "I-save ang Imahe Bilang…",
+  "Kopyahin ang Imahe",
+  "Kopyahin ang Address ng Larawan",
+  "Hanapin ang Larawan gamit ang Google",
+  "Suriin"
+ ],
+ "fr": [
+  "Ouvrir l'image dans un nouvel onglet",
+  "Enregistrer l'image sous…",
+  "Copier l'image",
+  "Copier l'adresse de l'image",
+  "Rechercher l'image avec Google",
+  "Inspecter"
+ ],
+ "hi": [
+  "नए टैब में छवि खोलें",
+  "इमेज को इस रूप में सेव करें…",
+  "इमेज को कॉपी करें",
+  "इमेज के पते को कॉपी करें",
+  "Google की मदद से इमेज खोजें",
+  "निरीक्षण करें"
+ ],
+ "hr": [
+  "Otvori sliku u novoj kartici",
+  "Spremi sliku kao…",
+  "Kopiraj sliku",
+  "Kopiraj adresu slike",
+  "Pretraži sliku pomoću usluge Google",
+  "Provjeri"
+ ],
+ "hu": [
+  "Kép megnyitása új lapon",
+  "Kép mentése másként…",
+  "Kép másolása",
+  "Képcím másolása",
+  "Képkeresés a következővel: Google",
+  "Vizsgálat"
+ ],
+ "id": [
+  "Buka Gambar di Tab Baru",
+  "Simpan Gambar Sebagai…",
+  "Salin Gambar",
+  "Salin Alamat Gambar",
+  "Telusuri Gambar dengan Google",
+  "Inspeksi"
+ ],
+ "it": [
+  "Apri immagine in un'altra scheda",
+  "Salva immagine con nome…",
+  "Copia immagine",
+  "Copia l'indirizzo dell'immagine",
+  "Cerca immagine con Google",
+  "Ispeziona"
+ ],
+ "ja": [
+  "新しいタブで画像を開く",
+  "名前を付けて画像を保存…",
+  "画像をコピー",
+  "画像アドレスをコピー",
+  "Google で画像を検索",
+  "検証"
+ ],
+ "ko": [
+  "새 탭에서 이미지 열기",
+  "이미지를 다른 이름으로 저장…",
+  "이미지 복사",
+  "이미지 주소 복사",
+  "Google로 이미지 검색",
+  "검사"
+ ],
+ "ms": [
+  "Buka Imej dalam Tab Baharu",
+  "Simpan Imej Sebagai…",
+  "Salin Imej",
+  "Salin Alamat Imej",
+  "Cari Imej dengan Google",
+  "Semak"
+ ],
+ "no": [
+  "Åpne bilde i ny fane",
+  "Lagre bildet som",
+  "Kopier bilde",
+  "Kopiér bildeadressen",
+  "Søk etter bildet med Google",
+  "Inspiser"
+ ],
+ "nl": [
+  "Afbeelding openen op nieuw tabblad",
+  "Afbeelding opslaan als…",
+  "Afbeelding kopiëren",
+  "Adres van afbeelding kopiëren",
+  "Afbeelding zoeken met Google",
+  "Inspecteren"
+ ],
+ "pl": [
+  "Otwórz grafikę w nowej karcie",
+  "Zapisz grafikę jako…",
+  "Kopiuj grafikę",
+  "Kopiuj adres obrazu",
+  "Wyszukaj obraz za pomocą: Google",
+  "Zbadaj"
+ ],
+ "pt_BR": [
+  "Abrir imagem em uma nova guia",
+  "Salvar imagem como…",
+  "Copiar imagem",
+  "Copiar endereço da imagem",
+  "Pesquisar imagem com o Google",
+  "Inspecionar"
+ ],
+ "pt_PT": [
+  "Abrir imagem num novo separador",
+  "Guardar Imagem Como…",
+  "Copiar Imagem",
+  "Copiar Endereço da imagem",
+  "Pesquisar imagem com o Google",
+  "Inspecionar"
+ ],
+ "ro": [
+  "Deschide imaginea într-o filă nouă",
+  "Salvează imaginea ca…",
+  "Copiază imaginea",
+  "Copiază adresa imaginii",
+  "Caută imaginea cu Google",
+  "Inspectează"
+ ],
+ "sk": [
+  "Otvoriť obrázok na novej karte",
+  "Uložiť obrázok ako…",
+  "Kopírovať obrázok",
+  "Kopírovať adresu obrázka",
+  "Hľadať obrázok pomocou funkcie Google",
+  "Preskúmať"
+ ],
+ "sv": [
+  "Öppna bild i ny flik",
+  "Spara bild som…",
+  "Kopiera bild",
+  "Kopiera bildadress",
+  "Bildsökning med Google",
+  "Inspektera"
+ ],
+ "th": [
+  "เปิดรูปภาพในแท็บใหม่",
+  "บันทึกรูปภาพเป็น…",
+  "คัดลอกรูปภาพ",
+  "คัดลอกที่อยู่รูปภาพ",
+  "ค้นหารูปภาพด้วย Google",
+  "ตรวจสอบ"
+ ],
+ "tr": [
+  "Resmi Yeni Sekmede Aç",
+  "Resmi Farklı Kaydet…",
+  "Resmi Kopyala",
+  "Resim Adresini Kopyala",
+  "Resmi Google ile ara",
+  "İncele"
+ ],
+ "uk": [
+  "Відкрити зображення в новій вкладці",
+  "Зберегти зображення як…",
+  "Копіювати зображення",
+  "Копіювати адресу зображення",
+  "Пошук зображення через Google",
+  "Перевірити"
+ ],
+ "vi": [
+  "Mở hình ảnh trong thẻ mới",
+  "Lưu hình ảnh dưới dạng…",
+  "Sao chép hình ảnh",
+  "Sao chép địa chỉ hình ảnh",
+  "Tìm hình ảnh bằng Google",
+  "Kiểm tra"
+ ],
+ "zh_CN": [
+  "在新标签页中打开图片",
+  "图片存储为…",
+  "复制图片",
+  "复制图片地址",
+  "使用 Google搜索图片",
+  "检查"
+ ],
+ "zh_TW": [
+  "在新分頁中開啟圖片",
+  "另存圖片…",
+  "複製圖片",
+  "複製圖片網址",
+  "使用 Google搜尋圖片",
+  "檢查"
+ ]
+}

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Tekst in afbeeldingen, <em>vertaald waar hij staat.</em>",
+  "s1": "Klik met rechts op een afbeelding of sleep over een deel van de pagina. De originele tekst verdwijnt en de vertaling staat op zijn plek.",
+  "before": "Origineel",
+  "after": "Met Snap Translate",
+  "k2": "Gewoon op de pagina",
+  "h2": "Rechtsklik. <em>Vertaald.</em>",
+  "s2": "Kies <q>Afbeelding vertalen</q> bij elke afbeelding. De vertaling neemt de kleur, grootte en dikte van het origineel over, en een klik op <q>Lijst</q> toont haar als tekst.",
+  "k3": "Elk deel van de pagina",
+  "h3": "Of sleep over <em>alles wat je ziet.</em>",
+  "s3": "Druk op <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> of op de knop in de popup en sleep over de tekst. Ook op videobeelden, achtergronden en canvassen.",
+  "k4": "Of als lijst",
+  "h4": "Elke regel, <em>klaar om te kopiëren.</em>",
+  "s4": "Elke tekst met zijn vertaling, in een kaart naast de afbeelding. Klik op een regel om die te kopiëren, of kopieer ze allemaal tegelijk.",
+  "k5": "Kies je vertaler",
+  "h5": "Meteen gratis. <em>Slimmer met AI.</em>",
+  "s5": "Snel heeft geen sleutel nodig: de afbeelding wordt op je computer gelezen en Google Translate vertaalt de tekst. Gemini, Claude of een lokaal model lezen ook memes, handschrift en elke taal.",
+  "promises": [
+    [
+      "Gratis, zonder reclame",
+      "Geen account nodig"
+    ],
+    [
+      "Je afbeelding blijft hier",
+      "Snel stuurt alleen de tekst"
+    ],
+    [
+      "Open source",
+      "Elke regel op GitHub"
+    ],
+    [
+      "31 talen",
+      "Nederlands, Engels, Japans…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Plekken",
+      "Gidsen",
+      "Kaart"
+    ],
+    "title": "Waar eet je sushi in District 1",
+    "meta": "Eetgids · 5 min lezen"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Plekken",
+      "Gidsen",
+      "Kaart"
+    ],
+    "title": "Ontbijt in de oude wijk",
+    "meta": "Reisdagboek · Hanoi"
+  }
+}

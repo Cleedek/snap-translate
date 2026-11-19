@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Tekst na obrazach, <em>przetłumaczony tam, gdzie jest.</em>",
+  "s1": "Kliknij obraz prawym przyciskiem albo przeciągnij po dowolnej części strony. Oryginalny tekst znika, a na jego miejscu pojawia się tłumaczenie.",
+  "before": "Oryginał",
+  "after": "Ze Snap Translate",
+  "k2": "Prosto ze strony",
+  "h2": "Prawy przycisk. <em>Przetłumaczone.</em>",
+  "s2": "Wybierz <q>Przetłumacz obraz</q> na dowolnym obrazie. Tłumaczenie przejmuje kolor, rozmiar i grubość oryginału, a kliknięcie <q>Lista</q> pokazuje je jako tekst.",
+  "k3": "Dowolna część strony",
+  "h3": "Albo przeciągnij po <em>wszystkim, co widzisz.</em>",
+  "s3": "Naciśnij <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> lub przycisk w popupie i przeciągnij po tekście. Także na klatkach wideo, tłach i elementach canvas.",
+  "k4": "Albo jako lista",
+  "h4": "Każda linijka <em>gotowa do skopiowania.</em>",
+  "s4": "Każdy tekst z tłumaczeniem w karcie obok obrazu. Kliknij linijkę, by ją skopiować, albo skopiuj wszystkie naraz.",
+  "k5": "Wybierz tłumacza",
+  "h5": "Za darmo od razu. <em>Mądrzej z AI.</em>",
+  "s5": "Szybki nie potrzebuje klucza: odczytuje obraz na twoim komputerze, a Tłumacz Google tłumaczy tekst. Gemini, Claude albo lokalny model przeczytają też memy, pismo odręczne i każdy język.",
+  "promises": [
+    [
+      "Za darmo, bez reklam",
+      "Bez konta"
+    ],
+    [
+      "Obraz zostaje u ciebie",
+      "Szybki wysyła tylko tekst"
+    ],
+    [
+      "Open source",
+      "Każda linijka na GitHubie"
+    ],
+    [
+      "31 języków",
+      "Polski, angielski, japoński…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Miejsca",
+      "Przewodniki",
+      "Mapa"
+    ],
+    "title": "Gdzie zjeść sushi w Dzielnicy 1",
+    "meta": "Przewodnik kulinarny · 5 min czytania"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Miejsca",
+      "Przewodniki",
+      "Mapa"
+    ],
+    "title": "Śniadanie na Starym Mieście",
+    "meta": "Dziennik podróży · Hanoi"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Chữ trong ảnh, <em>dịch ngay tại chỗ.</em>",
+  "s1": "Nhấp chuột phải vào ảnh hoặc kéo chọn bất kỳ phần nào của trang. Chữ gốc được xóa và bản dịch nằm đúng chỗ đó.",
+  "before": "Ảnh gốc",
+  "after": "Với Snap Translate",
+  "k2": "Ngay trên trang",
+  "h2": "Chuột phải. <em>Đã dịch.</em>",
+  "s2": "Chọn <q>Dịch ảnh</q> trên bất kỳ ảnh nào. Bản dịch giữ màu, cỡ chữ và độ đậm của chữ gốc, còn nhấp <q>Danh sách</q> sẽ hiện nó dưới dạng chữ.",
+  "k3": "Bất kỳ phần nào của trang",
+  "h3": "Hoặc kéo chọn <em>mọi thứ bạn thấy.</em>",
+  "s3": "Nhấn <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> hoặc nút trong cửa sổ bật lên, rồi kéo chọn phần chữ. Dùng được cả trên khung hình video, ảnh nền và canvas.",
+  "k4": "Hoặc dạng danh sách",
+  "h4": "Từng dòng, <em>sẵn sàng sao chép.</em>",
+  "s4": "Mỗi đoạn chữ cùng bản dịch, trong một thẻ cạnh ảnh. Nhấp vào một dòng để sao chép, hoặc sao chép tất cả cùng lúc.",
+  "k5": "Chọn trình dịch",
+  "h5": "Miễn phí ngay. <em>Thông minh hơn với AI.</em>",
+  "s5": "Nhanh không cần khóa: đọc ảnh ngay trên máy tính của bạn và Google Dịch dịch phần chữ. Gemini, Claude hoặc mô hình cục bộ đọc được cả meme, chữ viết tay và mọi ngôn ngữ.",
+  "promises": [
+    [
+      "Miễn phí, không quảng cáo",
+      "Không cần tài khoản"
+    ],
+    [
+      "Ảnh ở lại máy bạn",
+      "Nhanh chỉ gửi phần chữ"
+    ],
+    [
+      "Mã nguồn mở",
+      "Từng dòng trên GitHub"
+    ],
+    [
+      "31 ngôn ngữ",
+      "Tiếng Việt, tiếng Anh, tiếng Nhật…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Địa điểm",
+      "Cẩm nang",
+      "Bản đồ"
+    ],
+    "title": "Ăn sushi ở đâu tại Quận 1",
+    "meta": "Cẩm nang ẩm thực · 5 phút đọc"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Địa điểm",
+      "Cẩm nang",
+      "Bản đồ"
+    ],
+    "title": "Bữa trưa ở Singapore",
+    "meta": "Nhật ký du lịch · Singapore"
+  }
+}

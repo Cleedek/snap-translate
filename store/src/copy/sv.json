@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Text i bilder, <em>översatt där den står.</em>",
+  "s1": "Högerklicka på en bild eller dra över valfri del av sidan. Originaltexten försvinner och översättningen hamnar på dess plats.",
+  "before": "Original",
+  "after": "Med Snap Translate",
+  "k2": "Direkt på sidan",
+  "h2": "Högerklick. <em>Översatt.</em>",
+  "s2": "Välj <q>Översätt bild</q> på vilken bild som helst. Översättningen får originalets färg, storlek och tjocklek, och ett klick på <q>Lista</q> visar den som text.",
+  "k3": "Valfri del av sidan",
+  "h3": "Eller dra över <em>allt du ser.</em>",
+  "s3": "Tryck <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> eller på knappen i popupen och dra över texten. Även på videobilder, bakgrunder och canvas.",
+  "k4": "Eller som lista",
+  "h4": "Varje rad, <em>redo att kopiera.</em>",
+  "s4": "Varje text med sin översättning, i ett kort bredvid bilden. Klicka på en rad för att kopiera den, eller kopiera alla på en gång.",
+  "k5": "Välj översättare",
+  "h5": "Gratis direkt. <em>Smartare med AI.</em>",
+  "s5": "Snabb behöver ingen nyckel: bilden läses på din dator och Google Översätt översätter texten. Gemini, Claude eller en lokal modell läser också memes, handskrift och alla språk.",
+  "promises": [
+    [
+      "Gratis, ingen reklam",
+      "Inget konto behövs"
+    ],
+    [
+      "Din bild stannar här",
+      "Snabb skickar bara texten"
+    ],
+    [
+      "Öppen källkod",
+      "Varje rad på GitHub"
+    ],
+    [
+      "31 språk",
+      "Svenska, engelska, japanska…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Ställen",
+      "Guider",
+      "Karta"
+    ],
+    "title": "Var man äter sushi i Distrikt 1",
+    "meta": "Matguide · 5 min läsning"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Ställen",
+      "Guider",
+      "Karta"
+    ],
+    "title": "Frukost i gamla stan",
+    "meta": "Resedagbok · Hanoi"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Resimlerdeki yazılar, <em>olduğu yerde çevrilir.</em>",
+  "s1": "Bir resme sağ tıklayın veya sayfanın herhangi bir yerini sürükleyerek seçin. Orijinal yazı silinir ve çeviri onun yerine geçer.",
+  "before": "Orijinal",
+  "after": "Snap Translate ile",
+  "k2": "Doğrudan sayfada",
+  "h2": "Sağ tık. <em>Çevrildi.</em>",
+  "s2": "Herhangi bir resimde <q>Resmi çevir</q> seçeneğini seçin. Çeviri orijinalin rengini, boyutunu ve kalınlığını alır; <q>Liste</q> ise onu metin olarak gösterir.",
+  "k3": "Sayfanın her yeri",
+  "h3": "Ya da <em>gördüğünüz her şeyi</em> seçin.",
+  "s3": "<kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> tuşlarına veya açılır penceredeki düğmeye basın, sonra yazının üzerini sürükleyin. Video karelerinde, arka planlarda ve canvas alanlarında da çalışır.",
+  "k4": "Ya da liste olarak",
+  "h4": "Her satır <em>kopyalanmaya hazır.</em>",
+  "s4": "Her yazı çevirisiyle birlikte, resmin yanındaki bir kartta. Bir satırı kopyalamak için tıklayın ya da hepsini birden kopyalayın.",
+  "k5": "Çeviricinizi seçin",
+  "h5": "Hemen ücretsiz. <em>Yapay zekâyla daha akıllı.</em>",
+  "s5": "Hızlı anahtar istemez: resmi bilgisayarınızda okur, metni Google Çeviri çevirir. Gemini, Claude ya da yerel bir model mizahi görselleri, el yazısını ve her dili de okur.",
+  "promises": [
+    [
+      "Ücretsiz, reklamsız",
+      "Hesap gerekmez"
+    ],
+    [
+      "Resminiz burada kalır",
+      "Hızlı yalnızca metni gönderir"
+    ],
+    [
+      "Açık kaynak",
+      "Her satırı GitHub’da"
+    ],
+    [
+      "31 dil",
+      "Türkçe, İngilizce, Japonca…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Mekânlar",
+      "Rehberler",
+      "Harita"
+    ],
+    "title": "1. Bölge’de nerede suşi yenir",
+    "meta": "Yemek rehberi · 5 dk okuma"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Mekânlar",
+      "Rehberler",
+      "Harita"
+    ],
+    "title": "Eski Mahalle’de kahvaltı",
+    "meta": "Gezi günlüğü · Hanoi"
+  }
+}

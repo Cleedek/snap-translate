@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Kuvien teksti <em>käännettynä paikallaan.</em>",
+  "s1": "Napsauta kuvaa hiiren oikealla tai vedä sivun minkä tahansa kohdan yli. Alkuperäinen teksti katoaa ja käännös tulee sen paikalle.",
+  "before": "Alkuperäinen",
+  "after": "Snap Translatella",
+  "k2": "Suoraan sivulta",
+  "h2": "Oikea napsautus. <em>Käännetty.</em>",
+  "s2": "Valitse mistä tahansa kuvasta <q>Käännä kuva</q>. Käännös saa alkuperäisen värin, koon ja paksuuden, ja <q>Luettelo</q> näyttää sen tekstinä.",
+  "k3": "Mikä tahansa sivun kohta",
+  "h3": "Tai vedä <em>kaiken näkemäsi yli.</em>",
+  "s3": "Paina <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> tai ponnahdusikkunan painiketta ja vedä tekstin yli. Myös videokuvissa, taustoissa ja canvas-alueissa.",
+  "k4": "Tai luettelona",
+  "h4": "Jokainen rivi <em>valmiina kopioitavaksi.</em>",
+  "s4": "Jokainen teksti käännöksineen kortissa kuvan vieressä. Napsauta riviä kopioidaksesi sen, tai kopioi kaikki kerralla.",
+  "k5": "Valitse kääntäjä",
+  "h5": "Heti ilmaiseksi. <em>Fiksumpi tekoälyllä.</em>",
+  "s5": "Nopea ei tarvitse avainta: kuva luetaan tietokoneellasi ja Google Kääntäjä kääntää tekstin. Gemini, Claude tai paikallinen malli lukevat myös meemit, käsialan ja minkä tahansa kielen.",
+  "promises": [
+    [
+      "Ilmainen, ei mainoksia",
+      "Ei tiliä"
+    ],
+    [
+      "Kuvasi pysyy täällä",
+      "Nopea lähettää vain tekstin"
+    ],
+    [
+      "Avoin lähdekoodi",
+      "Jokainen rivi GitHubissa"
+    ],
+    [
+      "31 kieltä",
+      "Suomi, englanti, japani…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Paikat",
+      "Oppaat",
+      "Kartta"
+    ],
+    "title": "Missä syödä sushia 1. piirissä",
+    "meta": "Ruokaopas · 5 min lukuaika"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Paikat",
+      "Oppaat",
+      "Kartta"
+    ],
+    "title": "Aamiainen vanhassakaupungissa",
+    "meta": "Matkapäiväkirja · Hanoi"
+  }
+}

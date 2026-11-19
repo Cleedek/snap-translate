@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- A web page with a picture on it, for the store images. Snap Translate's real page script
+       (overlay.js with lib/pixels.js and lib/typeset.js) runs here, with stand-ins for chrome.*:
+       "capture" crops the picture, "ask" answers with the saved Google Translate result (copy/gt).
+       ?lang=<store language> &pic=poster|menu &view=picture|list -->
+  <base href="../../">
+  <title>Snap Translate test page</title>
+  <style>
+    html, body { margin: 0; background: #f7f6f3; color: #1c1b22; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    html { scrollbar-width: none; }
+    header { display: flex; align-items: center; height: 54px; padding: 0 28px; border-bottom: 1px solid #e6e4de; background: #fff; }
+    header b { font-size: 17px; letter-spacing: -.02em; }
+    header nav { margin-inline-start: auto; display: flex; gap: 22px; font-size: 13px; font-weight: 500; color: #6b6876; }
+    main { padding: 26px 28px; }
+    h1 { margin: 0 0 6px; font-size: 24px; line-height: 1.2; letter-spacing: -.02em; }
+    .meta { margin: 0 0 18px; font-size: 13px; color: #6b6876; }
+    #pic { display: block; border-radius: 6px; }
+    .bars { display: grid; gap: 9px; margin-top: 18px; }
+    .bars i { display: block; height: 8px; border-radius: 4px; background: #e3e1db; }
+  </style>
+</head>
+<body>
+  <header><b id="site"></b><nav id="nav"></nav></header>
+  <main>
+    <h1 id="title"></h1>
+    <p class="meta" id="meta"></p>
+    <img id="pic" alt="">
+    <div class="bars"><i style="width:92%"></i><i style="width:84%"></i><i style="width:60%"></i></div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const storeLang = params.get('lang') || 'en';
+    const uiLang = { pt_BR: 'pt', pt_PT: 'pt', fil: 'tl', zh_CN: 'zh-CN', zh_TW: 'zh-TW' }[storeLang] || storeLang;
+    const picName = params.get('pic') || 'poster';
+
+    // The overlay's shadow root is closed in the extension; open here so the store image can read it.
+    const attach = Element.prototype.attachShadow;
+    Element.prototype.attachShadow = function (init) { return attach.call(this, { ...init, mode: 'open' }); };
+
+    const store = { uiLang, theme: 'dark', view: params.get('view') || 'picture' };
+    let listener = null, picture = null, gt = null;
+    const b64 = (canvas) => canvas.toDataURL('image/png').split(',')[1];
+
+    window.chrome = {
+      i18n: { getUILanguage: () => uiLang },
+      storage: {
+        local: {
+          get: async (k) => (typeof k === 'string' ? { [k]: store[k] } : { ...store }),
+          set: async (o) => { Object.assign(store, o); },
+        },
+        onChanged: { addListener() {} },
+      },
+      runtime: {
+        onMessage: { addListener(fn) { listener = fn; } },
+        sendMessage: async (msg) => {
+          if (msg.type === 'dict') return { ok: true, dict: await (await fetch(`lib/ui/${msg.lang}.json`)).json() };
+          if (msg.type === 'capture') return capture(msg.rect);
+          if (msg.type === 'ask') return ask();
+          return { ok: false };
+        },
+      },
+    };
+
+    // What the area shows, at 2× like a Retina screen: a crop of the picture's canvas.
+    let shotRect = null;
+    function capture(rect) {
+      shotRect = rect;
+      const at = document.getElementById('pic').getBoundingClientRect();
+      const k = picture.canvas.width / at.width;
+      const c = document.createElement('canvas');
+      c.width = Math.round(rect.w * 2); c.height = Math.round(rect.h * 2);
+      const g = c.getContext('2d');
+      g.fillStyle = '#f7f6f3';
+      g.fillRect(0, 0, c.width, c.height);
+      g.drawImage(picture.canvas, (rect.x - at.left) * k, (rect.y - at.top) * k, rect.w * k, rect.h * k, 0, 0, c.width, c.height);
+      return { ok: true, img: { mime: 'image/png', data: b64(c) } };
+    }
+
+    // Quick's answer: each block's lines with their boxes (0–1000 of the captured area) and Google's translation.
+    function ask() {
+      const at = document.getElementById('pic').getBoundingClientRect();
+      const s = at.width / picture.w;
+      const toBox = (r) => {
+        const x = at.left + r.x * s - shotRect.x, y = at.top + r.y * s - shotRect.y;
+        return [y / shotRect.h * 1000, x / shotRect.w * 1000, (y + r.h * s) / shotRect.h * 1000, (x + r.w * s) / shotRect.w * 1000].map((v) => Math.min(1000, Math.max(0, v)));
+      };
+      const blocks = picture.blocks.map((b, i) => {
+        const lines = b.lines.map((l) => ({ text: l.text, box: toBox(l.box) }));
+        const box = [0, 1, 2, 3].map((j) => (j < 2 ? Math.min : Math.max)(...lines.map((l) => l.box[j])));
+        return { text: b.text, translation: gt[picName][i], box, lines };
+      }).filter((b) => b.box[2] - b.box[0] > 5 && b.box[3] - b.box[1] > 5);
+      const target = uiLang;
+      return {
+        ok: true,
+        result: { code: gt.code, blocks },
+        source: { code: gt.code, name: snapLangName(gt.code, uiLang), flag: snapFlag(gt.code) },
+        target: { code: target, name: snapLangName(target, uiLang), flag: snapFlag(target) },
+        model: `${SnapI18n.t('Quick')} · Google Translate`,
+      };
+    }
+  </script>
+  <script src="lib/i18n.js"></script>
+  <script src="lib/settings.js"></script>
+  <script src="lib/theme.js"></script>
+  <script src="lib/pixels.js"></script>
+  <script src="lib/typeset.js"></script>
+  <script src="overlay.js"></script>
+  <script src="store/src/pictures.js"></script>
+  <script>
+    (async () => {
+      const [copy, en] = await Promise.all([
+        fetch(`store/src/copy/${storeLang}.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+        fetch('store/src/copy/en.json').then((r) => r.json()),
+      ]);
+      const T = { ...en, ...copy };
+      gt = await (await fetch(`store/src/copy/gt/${storeLang}.json`)).json();
+      await SnapI18n.load();
+      document.documentElement.lang = uiLang;
+      document.documentElement.dir = SnapI18n.dir;
+      const page = T[`page_${picName}`];
+      document.getElementById('site').textContent = page.site;
+      document.getElementById('nav').innerHTML = page.nav.map((n) => `<span>${n}</span>`).join('');
+      document.getElementById('title').textContent = page.title;
+      document.getElementById('meta').textContent = page.meta;
+      // Compact: just the picture under the site's bar.
+      if (params.get('compact')) for (const id of ['title', 'meta']) document.getElementById(id).hidden = true;
+      await StorePictures.load();
+      picture = await StorePictures.draw(picName, gt.from);
+      const img = document.getElementById('pic');
+      img.src = picture.canvas.toDataURL('image/png');
+      img.style.width = `${Number(params.get('size') || picture.w)}px`;
+      await img.decode();
+      window.pageReady = true;
+    })();
+
+    const until = async (test) => { while (!test()) await new Promise((r) => setTimeout(r, 30)); };
+    const ui = () => document.querySelector('snap-translate')?.shadowRoot;
+    // Right-click > Translate picture, as background.js sends it.
+    window.translatePicture = async () => {
+      await until(() => window.pageReady);
+      await listener({ type: 'image', src: document.getElementById('pic').src });
+      const want = store.view === 'picture' ? '.frame.replaced .label' : '.block';
+      await until(() => ui()?.querySelector(want));
+      await new Promise((r) => setTimeout(r, 400)); // fade-ins
+    };
+    // The shortcut: the page dims and waits for a drag.
+    window.startPick = async () => {
+      await until(() => window.pageReady);
+      await listener({ type: 'pick' });
+      await until(() => ui()?.querySelector('.pick'));
+    };
+    window.ui = ui;
+  </script>
+</body>
+</html>

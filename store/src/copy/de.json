@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Text in Bildern, <em>übersetzt, wo er steht.</em>",
+  "s1": "Rechtsklick auf ein Bild oder über einen beliebigen Teil der Seite ziehen. Der Originaltext verschwindet, die Übersetzung steht an seiner Stelle.",
+  "before": "Original",
+  "after": "Mit Snap Translate",
+  "k2": "Direkt auf der Seite",
+  "h2": "Rechtsklick. <em>Übersetzt.</em>",
+  "s2": "Wähle bei jedem Bild <q>Bild übersetzen</q>. Die Übersetzung übernimmt Farbe, Größe und Stärke des Originals, und ein Klick auf <q>Liste</q> zeigt sie als Text.",
+  "k3": "Jeder Teil der Seite",
+  "h3": "Oder zieh über <em>alles, was du siehst.</em>",
+  "s3": "Drück <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> oder die Schaltfläche im Popup und zieh über den Text. Auch auf Videobildern, Hintergründen und Canvas-Grafiken.",
+  "k4": "Oder als Liste",
+  "h4": "Jede Zeile <em>bereit zum Kopieren.</em>",
+  "s4": "Jeder Text mit seiner Übersetzung in einer Karte neben dem Bild. Ein Klick kopiert eine Zeile, oder kopier alle auf einmal.",
+  "k5": "Wähl deinen Übersetzer",
+  "h5": "Kostenlos ab sofort. <em>Klüger mit KI.</em>",
+  "s5": "Schnell braucht keinen Schlüssel: Das Bild wird auf deinem Computer gelesen, Google Translate übersetzt den Text. Gemini, Claude oder ein lokales Modell lesen auch Memes, Handschrift und jede Sprache.",
+  "promises": [
+    [
+      "Kostenlos, ohne Werbung",
+      "Kein Konto nötig"
+    ],
+    [
+      "Dein Bild bleibt hier",
+      "Schnell sendet nur den Text"
+    ],
+    [
+      "Open Source",
+      "Jede Zeile auf GitHub"
+    ],
+    [
+      "31 Sprachen",
+      "Deutsch, Englisch, Japanisch…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Orte",
+      "Guides",
+      "Karte"
+    ],
+    "title": "Wo man in Distrikt 1 Sushi isst",
+    "meta": "Food-Guide · 5 Min. Lesezeit"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Orte",
+      "Guides",
+      "Karte"
+    ],
+    "title": "Frühstück in der Altstadt",
+    "meta": "Reisetagebuch · Hanoi"
+  }
+}

@@ -1,0 +1,53 @@
+Isalin ang teksto sa mga larawan mismo kung nasaan sila sa page.
+
+Wala nang screenshot, save, upload sa AI, basa, at balik. I-right-click ang isang larawan o i-drag sa anumang bahagi ng page, at buburahin ng Snap Translate ang orihinal na teksto sa larawan at ilalagay ang salin sa puwesto nito, sa parehong kulay, laki, at kapal. Mababasa ang larawan na parang ginawa ito sa wika mo.
+
+★ MGA TAMPOK
+★ I-right-click ang isang larawan at piliin ang "Isalin ang larawan", o i-drag sa anumang bahagi ng page
+★ Diretso sa larawan ang salin, kung saan naroon ang orihinal na teksto
+★ Mas gusto ng listahan? Makita ang bawat linya sa tabi ng larawan at i-click para kopyahin
+★ Nagsasalin sa 31 wika
+★ Libre mula sa unang click: walang key, walang account, nasa computer mo lang ang larawan
+★ Mas matalino gamit ang AI kung gusto mo: Gemini, Claude, isang lokal na model, o anumang API na compatible sa OpenAI
+★ Pati mga frame ng video, background, at canvas: anumang nakikita mo sa page
+★ Libre at open source: walang ads, walang account, walang tracking
+
+━━━━━━━━━━━━━━━━━━━━
+
+DALAWANG PARAAN PARA MAGSIMULA
+• I-right-click ang isang larawan at piliin ang "Isalin ang larawan"
+• O pindutin ang Alt + Shift + T (⌥ ⇧ T sa Mac), i-right-click ang page at piliin ang "Isalin ang isang lugar…", o gamitin ang button sa popup, saka i-drag sa tekstong gusto mong isalin. Gumagana rin sa mga frame ng video, background, at canvas
+• Kinakansela ng Esc; maitatakda ang ibang shortcut sa mga setting ng shortcut ng Chrome
+
+SA LARAWAN O SA LISTAHAN
+• Sa larawan (default): binubura ang orihinal na teksto sa larawan at inilalagay ang salin sa puwesto nito, na may kulay, laki, kapal, at alignment na sinukat mula sa larawan. Lahat ng ito ay nangyayari sa computer mo at walang bayad
+• Ang salin na masyadong mahaba para sa puwesto nito ay nagkakaroon na lang ng maliit na bubble sa tabi, na may linya papunta sa orihinal
+• Listahan: bawat teksto kasama ang salin nito, sa isang card sa tabi ng larawan. I-click ang isang linya para kopyahin ito, o kopyahin lahat nang sabay
+• Nananatili ang mga pangalan, presyo, at tekstong nasa wika mo na
+
+PUMILI NG TAGASALIN
+• Mabilis (default): libre, walang key. Binabasa ang tekstong Vietnamese at English sa computer mo, saka isinasalin ng Google Translate. Pinakamahusay sa malinaw na teksto gaya ng mga menu, post, at screenshot
+• Gemini: libreng key mula sa Google AI Studio, may araw-araw na limitasyon. Mas mahusay na nababasa ang mga meme, sulat-kamay, at magarbong font sa anumang wika
+• Claude: may bayad ayon sa paggamit, gamit ang sarili mong API key
+• Lokal: libre at offline gamit ang Ollama o LM Studio at isang model na nakakakita ng larawan
+• Iba pa: anumang API na compatible sa OpenAI, halimbawa ang OpenRouter
+• Nagsasalin sa: Vietnamese, Czech, English, Slovak, German, French, Spanish, Italian, Portuguese, Polish, Hungarian, Ukrainian, Dutch, Swedish, Danish, Norwegian, Finnish, Greek, Turkish, Romanian, Croatian, Chinese (Simplified at Traditional), Japanese, Korean, Thai, Indonesian, Malay, Filipino, Hindi, Arabic
+
+INTERFACE SA 31 WIKA
+Ang popup at lahat ng ipinapakita ng Snap Translate sa page ay nasa lahat ng 31 wikang maisasalin nito, kasama ang Arabic (mula kanan pakaliwa). Sumusunod ito sa browser mo, o pumili sa "Wika at hitsura". Madilim o maliwanag na hitsura, o katulad ng browser.
+
+PRIVACY
+Walang lumalabas sa browser mo hangga't hindi ka humihingi ng salin. Sa Mabilis, nasa computer mo lang ang larawan at ang tekstong nakita rito lang ang napupunta sa Google Translate. Sa isang AI na tagasalin, screenshot lang ng lugar na pinili mo ang napupunta sa provider na iyon, kasama ang API key mo. Sa device na ito lang naka-save ang mga key. Walang analytics, walang account. Tumatakbo lang ang extension sa tab kung saan mo sinimulan ang salin, hindi kailanman sa lahat ng site. Kung susulat ka sa akin sa "Problema o ideya?", aabot sa akin ang mensahe mo sa email, at walang maipapadala hangga't hindi mo pinipindot ang Ipadala.
+
+PROBLEMA O IDEYA?
+I-click ang "Problema o ideya?" sa ibaba ng popup at sumulat sa akin. Binabasa ko ang bawat mensahe.
+
+OPEN SOURCE
+Open source ang buong extension (GPL-3.0), kaya kahit sino ay masusuri kung ano mismo ang ginagawa nito: github.com/Cleedek/snap-translate. Kung gusto mo ito, nakakatulong ang star sa GitHub para mahanap din ito ng iba.
+
+SUPORTAHAN ANG GUMAWA
+Libre at walang ads ang Snap Translate. Kung natitipid ka nito ng ilang screenshot araw-araw, may page na "Suportahan ang gumawa" sa popup na may Ko-fi at ilang iba pang paraan ng pagbabayad. Ganap na opsyonal, at salamat!
+
+Ginawa nang may 💜 ni Cleedek sa Vietnam.
+
+Mula sa gumawa ng Subtitle Overlay at Edge Trim.

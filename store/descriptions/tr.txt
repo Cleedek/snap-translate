@@ -1,0 +1,53 @@
+Resimlerdeki yazıları, sayfada durdukları yerde çevirin.
+
+Ekran görüntüsü alıp kaydetmek, bir yapay zekâya yüklemek, okuyup geri dönmek artık yok. Bir resme sağ tıklayın ya da sayfanın herhangi bir yerini sürükleyerek seçin; Snap Translate orijinal yazıyı resimden siler ve çeviriyi aynı renk, boyut ve kalınlıkta onun yerine koyar. Resim, sanki sizin dilinizde yapılmış gibi okunur.
+
+★ ÖNE ÇIKANLAR
+★ Bir resme sağ tıklayıp "Resmi çevir"i seçin ya da sayfanın herhangi bir yerini sürükleyin
+★ Çeviri doğrudan resme, orijinal yazının olduğu yere gider
+★ Liste mi tercih edersiniz? Her satırı resmin yanında görün ve kopyalamak için tıklayın
+★ 31 dile çevirir
+★ İlk tıklamadan itibaren ücretsiz: anahtar yok, hesap yok, resim bilgisayarınızda kalır
+★ İsterseniz yapay zekâyla daha akıllı: Gemini, Claude, yerel bir model veya OpenAI uyumlu herhangi bir API
+★ Video kareleri, arka planlar ve canvas alanları da: sayfada gördüğünüz her şey
+★ Ücretsiz ve açık kaynak: reklam yok, hesap yok, izleme yok
+
+━━━━━━━━━━━━━━━━━━━━
+
+BAŞLAMANIN İKİ YOLU
+• Bir resme sağ tıklayıp "Resmi çevir"i seçin
+• Ya da Alt + Shift + T'ye basın (Mac'te ⌥ ⇧ T), sayfaya sağ tıklayıp "Bir alanı çevir…"i seçin veya açılır penceredeki düğmeyi kullanın, sonra çevirmek istediğiniz yazının üzerini sürükleyin. Video karelerinde, arka planlarda ve canvas alanlarında da çalışır
+• Esc iptal eder; başka bir kısayolu Chrome'un kısayol ayarlarından belirleyebilirsiniz
+
+RESİMDE YA DA LİSTEDE
+• Resimde (varsayılan): orijinal yazı resimden silinir ve çeviri, resimden ölçülen renk, boyut, kalınlık ve hizalamayla onun yerine konur. Hepsi bilgisayarınızda olur ve hiçbir ücreti yoktur
+• Yerine sığmayacak kadar uzun bir çeviri bunun yerine yanında küçük bir baloncuk alır, orijinale giden bir çizgiyle
+• Liste: her yazı çevirisiyle birlikte resmin yanındaki bir kartta. Bir satırı kopyalamak için tıklayın ya da hepsini birden kopyalayın
+• İsimler, fiyatlar ve zaten sizin dilinizde olan yazılar olduğu gibi kalır
+
+ÇEVİRİCİNİZİ SEÇİN
+• Hızlı (varsayılan): ücretsiz, anahtar gerekmez. Vietnamca ve İngilizce yazıyı bilgisayarınızda okur, ardından Google Çeviri çevirir. Menüler, gönderiler ve ekran görüntüleri gibi temiz yazılarda en iyi sonucu verir
+• Gemini: Google AI Studio'dan ücretsiz bir anahtar, günlük sınırlarla. Mizahi görselleri, el yazısını ve süslü yazı tiplerini her dilde çok daha iyi okur
+• Claude: kullanıma göre ücretli, kendi API anahtarınızla
+• Yerel: Ollama veya LM Studio ve resimleri görebilen bir modelle ücretsiz ve çevrimdışı
+• Diğer: OpenAI uyumlu herhangi bir API, örneğin OpenRouter
+• Şu dillere çevirir: Vietnamca, Çekçe, İngilizce, Slovakça, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Lehçe, Macarca, Ukraynaca, Felemenkçe, İsveççe, Danca, Norveççe, Fince, Yunanca, Türkçe, Romence, Hırvatça, Çince (Basitleştirilmiş ve Geleneksel), Japonca, Korece, Tayca, Endonezce, Malayca, Filipince, Hintçe, Arapça
+
+31 DİLDE ARAYÜZ
+Açılır pencere ve Snap Translate'in sayfada gösterdiği her şey, çevirebildiği 31 dilin hepsinde var, sağdan sola yazılan Arapça dahil. Tarayıcınızı takip eder ya da "Dil ve görünüm" bölümünden seçebilirsiniz. Koyu veya açık görünüm, ya da tarayıcıyla aynı.
+
+GİZLİLİK
+Siz çeviri isteyene kadar hiçbir şey tarayıcınızdan çıkmaz. Hızlı ile resim bilgisayarınızda kalır ve yalnızca içinde bulunan yazı Google Çeviri'ye gider. Yapay zekâ çeviricisiyle, yalnızca seçtiğiniz alanın ekran görüntüsü API anahtarınızla birlikte o sağlayıcıya gider. Anahtarlar yalnızca bu cihazda saklanır. Analiz yok, hesap yok. Uzantı yalnızca çeviriyi başlattığınız sekmede çalışır, asla her sitede değil. "Sorun mu, fikir mi?" ile bana yazarsanız mesajınız bana e-postayla ulaşır ve Gönder'e basana kadar hiçbir şey gönderilmez.
+
+SORUN MU, FİKİR Mİ?
+Açılır pencerenin altındaki "Sorun mu, fikir mi?" düğmesine tıklayın ve bana yazın. Her mesajı okurum.
+
+AÇIK KAYNAK
+Uzantının tamamı açık kaynaktır (GPL-3.0); böylece herkes tam olarak ne yaptığını kontrol edebilir: github.com/Cleedek/snap-translate. Beğendiyseniz GitHub'daki bir yıldız, başkalarının da onu bulmasına yardımcı olur.
+
+GELİŞTİRİCİYİ DESTEKLEYİN
+Snap Translate ücretsiz ve reklamsızdır. Size günde birkaç ekran görüntüsü kazandırıyorsa, açılır pencerede Ko-fi ve birkaç başka ödeme yolu olan bir "Geliştiriciyi destekleyin" sayfası var. Tamamen isteğe bağlı, teşekkürler!
+
+Cleedek tarafından Vietnam'da 💜 ile yapıldı.
+
+Subtitle Overlay ve Edge Trim'in yapımcısından.

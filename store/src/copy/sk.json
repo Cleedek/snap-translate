@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Text v obrázkoch, <em>preložený tam, kde je.</em>",
+  "s1": "Klikni pravým na obrázok alebo ťahaj cez akúkoľvek časť stránky. Pôvodný text zmizne a na jeho mieste je preklad.",
+  "before": "Originál",
+  "after": "So Snap Translate",
+  "k2": "Priamo na stránke",
+  "h2": "Pravé tlačidlo. <em>Preložené.</em>",
+  "s2": "Na akomkoľvek obrázku zvoľ <q>Preložiť obrázok</q>. Preklad prevezme farbu, veľkosť aj hrúbku originálu a kliknutím na <q>Zoznam</q> ho uvidíš ako text.",
+  "k3": "Akákoľvek časť stránky",
+  "h3": "Alebo ťahaj cez <em>čokoľvek, čo vidíš.</em>",
+  "s3": "Stlač <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> alebo tlačidlo v popupe a ťahaj cez text. Funguje aj na snímkach z videa, pozadiach a plátnach.",
+  "k4": "Alebo ako zoznam",
+  "h4": "Každý riadok <em>pripravený na skopírovanie.</em>",
+  "s4": "Každý text s prekladom v karte vedľa obrázka. Kliknutím riadok skopíruješ, alebo skopíruj všetky naraz.",
+  "k5": "Vyber si prekladač",
+  "h5": "Zadarmo hneď. <em>Múdrejší s AI.</em>",
+  "s5": "Rýchly nepotrebuje kľúč: obrázok prečíta na tvojom počítači a text preloží Google Translate. Gemini, Claude alebo lokálny model prečítajú aj memy, rukopis a akýkoľvek jazyk.",
+  "promises": [
+    [
+      "Zadarmo, bez reklám",
+      "Bez účtu"
+    ],
+    [
+      "Obrázok zostane u teba",
+      "Rýchly posiela len text"
+    ],
+    [
+      "Open source",
+      "Každý riadok na GitHube"
+    ],
+    [
+      "31 jazykov",
+      "Slovenčina, angličtina, japončina…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Miesta",
+      "Sprievodcovia",
+      "Mapa"
+    ],
+    "title": "Kde jesť sushi v 1. obvode",
+    "meta": "Gastro sprievodca · 5 min čítania"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Miesta",
+      "Sprievodcovia",
+      "Mapa"
+    ],
+    "title": "Raňajky v Starom meste",
+    "meta": "Cestovný denník · Hanoj"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Text v obrázcích, <em>přeložený tam, kde je.</em>",
+  "s1": "Klikni pravým na obrázek nebo táhni přes jakoukoli část stránky. Původní text zmizí a na jeho místě je překlad.",
+  "before": "Originál",
+  "after": "Se Snap Translate",
+  "k2": "Přímo na stránce",
+  "h2": "Pravé tlačítko. <em>Přeloženo.</em>",
+  "s2": "Na jakémkoli obrázku zvol <q>Přeložit obrázek</q>. Překlad převezme barvu, velikost i tloušťku originálu a kliknutím na <q>Seznam</q> ho uvidíš jako text.",
+  "k3": "Jakákoli část stránky",
+  "h3": "Nebo táhni přes <em>cokoli, co vidíš.</em>",
+  "s3": "Stiskni <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> nebo tlačítko v popupu a táhni přes text. Funguje i na snímcích z videa, pozadích a plátnech.",
+  "k4": "Nebo jako seznam",
+  "h4": "Každý řádek <em>připravený ke zkopírování.</em>",
+  "s4": "Každý text s překladem v kartě vedle obrázku. Kliknutím řádek zkopíruješ, nebo zkopíruj všechny naráz.",
+  "k5": "Vyber si překladač",
+  "h5": "Zdarma hned. <em>Chytřejší s AI.</em>",
+  "s5": "Rychlý nepotřebuje klíč: obrázek přečte na tvém počítači a text přeloží Google Translate. Gemini, Claude nebo lokální model přečtou i memy, rukopis a jakýkoli jazyk.",
+  "promises": [
+    [
+      "Zdarma, bez reklam",
+      "Bez účtu"
+    ],
+    [
+      "Obrázek zůstane u tebe",
+      "Rychlý posílá jen text"
+    ],
+    [
+      "Open source",
+      "Každý řádek na GitHubu"
+    ],
+    [
+      "31 jazyků",
+      "Čeština, angličtina, japonština…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Místa",
+      "Průvodci",
+      "Mapa"
+    ],
+    "title": "Kde jíst sushi v 1. obvodu",
+    "meta": "Gastro průvodce · 5 min čtení"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Místa",
+      "Průvodci",
+      "Mapa"
+    ],
+    "title": "Snídaně ve Starém městě",
+    "meta": "Cestovní deník · Hanoj"
+  }
+}

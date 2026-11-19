@@ -1,0 +1,53 @@
+Terjemah teks dalam gambar tepat di tempatnya pada halaman.
+
+Tiada lagi tangkap layar, simpan, muat naik ke AI, baca dan kembali semula. Klik kanan pada gambar atau seret di mana-mana bahagian halaman, dan Snap Translate memadam teks asal daripada gambar lalu meletakkan terjemahan di tempatnya, dengan warna, saiz dan ketebalan yang sama. Gambar itu dibaca seolah-olah dibuat dalam bahasa anda.
+
+★ SOROTAN
+★ Klik kanan pada gambar dan pilih "Terjemah gambar", atau seret di mana-mana bahagian halaman
+★ Terjemahan terus masuk ke dalam gambar, di tempat teks asal
+★ Lebih suka senarai? Lihat setiap baris di sebelah gambar dan klik untuk menyalinnya
+★ Menterjemah ke 31 bahasa
+★ Percuma dari klik pertama: tanpa kunci, tanpa akaun, gambar kekal dalam komputer anda
+★ Lebih bijak dengan AI jika anda mahu: Gemini, Claude, model tempatan atau mana-mana API yang serasi dengan OpenAI
+★ Juga bingkai video, latar belakang dan kanvas: apa sahaja yang anda lihat pada halaman
+★ Percuma dan sumber terbuka: tanpa iklan, tanpa akaun, tanpa penjejakan
+
+━━━━━━━━━━━━━━━━━━━━
+
+DUA CARA UNTUK BERMULA
+• Klik kanan pada gambar dan pilih "Terjemah gambar"
+• Atau tekan Alt + Shift + T (⌥ ⇧ T pada Mac), klik kanan pada halaman dan pilih "Terjemah kawasan…", atau gunakan butang dalam popup, kemudian seret di atas teks yang mahu diterjemah. Juga berfungsi pada bingkai video, latar belakang dan kanvas
+• Esc membatalkan; pintasan lain boleh ditetapkan dalam tetapan pintasan Chrome
+
+PADA GAMBAR ATAU DALAM SENARAI
+• Pada gambar (lalai): teks asal dipadam daripada gambar dan terjemahan diletakkan di tempatnya, dengan warna, saiz, ketebalan dan penjajaran yang diukur daripada gambar. Semuanya berlaku dalam komputer anda dan tiada kos
+• Terjemahan yang terlalu panjang untuk tempatnya mendapat gelembung kecil di sebelah, dengan garisan ke teks asal
+• Senarai: setiap teks bersama terjemahannya, dalam kad di sebelah gambar. Klik satu baris untuk menyalinnya, atau salin semuanya sekali gus
+• Nama, harga dan teks yang sudah dalam bahasa anda kekal seperti asal
+
+PILIH PENTERJEMAH ANDA
+• Pantas (lalai): percuma, tanpa kunci. Membaca teks bahasa Vietnam dan Inggeris dalam komputer anda, kemudian Google Terjemah menterjemahkannya. Paling sesuai untuk teks yang jelas seperti menu, siaran dan tangkap layar
+• Gemini: kunci percuma daripada Google AI Studio, dengan had harian. Membaca meme, tulisan tangan dan fon hiasan dalam apa-apa bahasa dengan jauh lebih baik
+• Claude: berbayar mengikut penggunaan, dengan kunci API anda sendiri
+• Tempatan: percuma dan luar talian dengan Ollama atau LM Studio dan model yang boleh melihat gambar
+• Lain: mana-mana API yang serasi dengan OpenAI, contohnya OpenRouter
+• Menterjemah ke: Vietnam, Czech, Inggeris, Slovak, Jerman, Perancis, Sepanyol, Itali, Portugis, Poland, Hungary, Ukraine, Belanda, Sweden, Denmark, Norway, Finland, Greek, Turki, Romania, Croatia, Cina (Ringkas dan Tradisional), Jepun, Korea, Thai, Indonesia, Melayu, Filipina, Hindi, Arab
+
+ANTARA MUKA DALAM 31 BAHASA
+Popup dan semua yang dipaparkan Snap Translate pada halaman tersedia dalam kesemua 31 bahasa yang boleh diterjemah, termasuk bahasa Arab (dari kanan ke kiri). Ia mengikut pelayar anda, atau pilih dalam "Bahasa dan rupa". Rupa gelap atau cerah, atau sama seperti pelayar.
+
+PRIVASI
+Tiada apa-apa yang keluar dari pelayar anda sehingga anda meminta terjemahan. Dengan Pantas, gambar kekal dalam komputer anda dan hanya teks yang ditemui di dalamnya dihantar ke Google Terjemah. Dengan penterjemah AI, tangkap layar kawasan yang anda pilih sahaja dihantar kepada pembekal itu, bersama kunci API anda. Kunci disimpan pada peranti ini sahaja. Tiada analitik, tiada akaun. Sambungan hanya berjalan dalam tab tempat anda memulakan terjemahan, tidak sekali-kali pada semua laman. Jika anda menulis kepada saya melalui "Masalah atau idea?", mesej anda sampai kepada saya melalui e-mel, dan tiada apa-apa dihantar sehingga anda menekan Hantar.
+
+MASALAH ATAU IDEA?
+Klik "Masalah atau idea?" di bahagian bawah popup dan tulis kepada saya. Saya membaca setiap mesej.
+
+SUMBER TERBUKA
+Keseluruhan sambungan ini sumber terbuka (GPL-3.0), jadi sesiapa pun boleh menyemak dengan tepat apa yang dilakukannya: github.com/Cleedek/snap-translate. Jika anda suka, bintang di GitHub membantu orang lain menemuinya.
+
+SOKONG PENCIPTA
+Snap Translate percuma dan tanpa iklan. Jika ia menjimatkan beberapa tangkap layar sehari, popup ada halaman "Sokong pencipta" dengan Ko-fi dan beberapa cara bayaran lain. Sepenuhnya pilihan, dan terima kasih!
+
+Dicipta dengan 💜 oleh Cleedek di Vietnam.
+
+Daripada pencipta Subtitle Overlay dan Edge Trim.

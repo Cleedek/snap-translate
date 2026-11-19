@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Tekst na slikama, <em>preveden ondje gdje jest.</em>",
+  "s1": "Desnom tipkom kliknite sliku ili povucite preko bilo kojeg dijela stranice. Izvorni tekst nestaje, a na njegovo mjesto dolazi prijevod.",
+  "before": "Izvornik",
+  "after": "Sa Snap Translateom",
+  "k2": "Izravno na stranici",
+  "h2": "Desni klik. <em>Prevedeno.</em>",
+  "s2": "Na bilo kojoj slici odaberite <q>Prevedi sliku</q>. Prijevod preuzima boju, veličinu i debljinu izvornika, a klik na <q>Popis</q> prikazuje ga kao tekst.",
+  "k3": "Bilo koji dio stranice",
+  "h3": "Ili povucite preko <em>svega što vidite.</em>",
+  "s3": "Pritisnite <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> ili gumb u skočnom prozoru i povucite preko teksta. Radi i na kadrovima videa, pozadinama i canvas elementima.",
+  "k4": "Ili kao popis",
+  "h4": "Svaki redak <em>spreman za kopiranje.</em>",
+  "s4": "Svaki tekst s prijevodom, na kartici pokraj slike. Kliknite redak da ga kopirate ili kopirajte sve odjednom.",
+  "k5": "Odaberite prevoditelj",
+  "h5": "Odmah besplatno. <em>Pametnije s AI-jem.</em>",
+  "s5": "Brzi ne treba ključ: sliku čita na vašem računalu, a tekst prevodi Google Prevoditelj. Gemini, Claude ili lokalni model čitaju i meme, rukopis i bilo koji jezik.",
+  "promises": [
+    [
+      "Besplatno, bez oglasa",
+      "Bez računa"
+    ],
+    [
+      "Slika ostaje kod vas",
+      "Brzi šalje samo tekst"
+    ],
+    [
+      "Otvoreni kod",
+      "Svaki redak na GitHubu"
+    ],
+    [
+      "31 jezik",
+      "Hrvatski, engleski, japanski…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Mjesta",
+      "Vodiči",
+      "Karta"
+    ],
+    "title": "Gdje jesti sushi u Okrugu 1",
+    "meta": "Gastro vodič · 5 min čitanja"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Mjesta",
+      "Vodiči",
+      "Karta"
+    ],
+    "title": "Doručak u Starom kvartu",
+    "meta": "Putni dnevnik · Hanoi"
+  }
+}

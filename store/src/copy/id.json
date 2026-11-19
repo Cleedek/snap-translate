@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Teks di gambar, <em>diterjemahkan di tempatnya.</em>",
+  "s1": "Klik kanan gambar atau seret di bagian mana pun di halaman. Teks aslinya dihapus dan terjemahannya muncul di tempat itu.",
+  "before": "Asli",
+  "after": "Dengan Snap Translate",
+  "k2": "Langsung dari halaman",
+  "h2": "Klik kanan. <em>Diterjemahkan.</em>",
+  "s2": "Pilih <q>Terjemahkan gambar</q> di gambar mana pun. Terjemahannya mengikuti warna, ukuran, dan ketebalan aslinya, dan klik <q>Daftar</q> menampilkannya sebagai teks.",
+  "k3": "Bagian mana pun di halaman",
+  "h3": "Atau seret di atas <em>apa pun yang kamu lihat.</em>",
+  "s3": "Tekan <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> atau tombol di popup, lalu seret di atas teksnya. Juga di frame video, latar belakang, dan kanvas.",
+  "k4": "Atau sebagai daftar",
+  "h4": "Setiap baris, <em>siap disalin.</em>",
+  "s4": "Setiap teks dengan terjemahannya, di kartu di samping gambar. Klik satu baris untuk menyalinnya, atau salin semuanya sekaligus.",
+  "k5": "Pilih penerjemahmu",
+  "h5": "Langsung gratis. <em>Lebih pintar dengan AI.</em>",
+  "s5": "Cepat tidak perlu kunci: gambar dibaca di komputermu dan Google Terjemahan menerjemahkan teksnya. Gemini, Claude, atau model lokal juga bisa membaca meme, tulisan tangan, dan bahasa apa pun.",
+  "promises": [
+    [
+      "Gratis, tanpa iklan",
+      "Tanpa akun"
+    ],
+    [
+      "Gambarmu tetap di sini",
+      "Cepat hanya mengirim teks"
+    ],
+    [
+      "Sumber terbuka",
+      "Setiap baris di GitHub"
+    ],
+    [
+      "31 bahasa",
+      "Indonesia, Inggris, Jepang…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Tempat",
+      "Panduan",
+      "Peta"
+    ],
+    "title": "Tempat makan sushi di Distrik 1",
+    "meta": "Panduan kuliner · 5 menit baca"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Tempat",
+      "Panduan",
+      "Peta"
+    ],
+    "title": "Sarapan di Kota Tua",
+    "meta": "Catatan perjalanan · Hanoi"
+  }
+}

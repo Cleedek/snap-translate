@@ -1,0 +1,53 @@
+Käännä kuvien teksti juuri siellä, missä kuvat ovat sivulla.
+
+Ei enää kuvakaappausta, tallennusta, lataamista tekoälylle, lukemista ja takaisin palaamista. Napsauta kuvaa hiiren oikealla tai vedä sivun minkä tahansa kohdan yli, niin Snap Translate pyyhkii alkuperäisen tekstin kuvasta ja asettaa käännöksen sen paikalle, samalla värillä, koolla ja paksuudella. Kuva näyttää siltä kuin se olisi tehty sinun kielelläsi.
+
+★ TÄRKEIMMÄT
+★ Napsauta kuvaa hiiren oikealla ja valitse "Käännä kuva", tai vedä sivun minkä tahansa kohdan yli
+★ Käännös menee suoraan kuvaan, siihen missä alkuperäinen teksti oli
+★ Mieluummin luettelo? Näet jokaisen rivin kuvan vieressä ja kopioit sen napsautuksella
+★ Kääntää 31 kielelle
+★ Ilmainen ensimmäisestä napsautuksesta: ei avainta, ei tiliä, kuva pysyy tietokoneellasi
+★ Fiksumpi tekoälyllä, jos haluat: Gemini, Claude, paikallinen malli tai mikä tahansa OpenAI-yhteensopiva API
+★ Myös videokuvat, taustat ja canvas-alueet: kaikki, mitä sivulla näet
+★ Ilmainen ja avointa lähdekoodia: ei mainoksia, ei tiliä, ei seurantaa
+
+━━━━━━━━━━━━━━━━━━━━
+
+KAKSI TAPAA ALOITTAA
+• Napsauta kuvaa hiiren oikealla ja valitse "Käännä kuva"
+• Tai paina Alt + Shift + T (Macilla ⌥ ⇧ T), napsauta sivua hiiren oikealla ja valitse "Käännä alue…", tai käytä ponnahdusikkunan painiketta, ja vedä sitten käännettävän tekstin yli. Toimii myös videokuvissa, taustoissa ja canvas-alueissa
+• Esc peruuttaa; toisen pikanäppäimen voit asettaa Chromen pikanäppäinasetuksissa
+
+KUVASSA TAI LUETTELONA
+• Kuvassa (oletus): alkuperäinen teksti pyyhitään kuvasta ja käännös asetetaan sen paikalle, kuvasta mitatulla värillä, koolla, paksuudella ja tasauksella. Kaikki tapahtuu tietokoneellasi eikä maksa mitään
+• Käännös, joka on liian pitkä paikalleen, saa sen sijaan pienen puhekuplan viereensä, viivalla alkuperäiseen
+• Luettelo: jokainen teksti käännöksineen kortissa kuvan vieressä. Napsauta riviä kopioidaksesi sen, tai kopioi kaikki kerralla
+• Nimet, hinnat ja jo sinun kielelläsi oleva teksti pysyvät ennallaan
+
+VALITSE KÄÄNTÄJÄ
+• Nopea (oletus): ilmainen, ei avainta. Lukee vietnamin- ja englanninkielisen tekstin tietokoneellasi, minkä jälkeen Google Kääntäjä kääntää sen. Toimii parhaiten selkeällä tekstillä, kuten ruokalistoilla, julkaisuilla ja kuvakaappauksilla
+• Gemini: ilmainen avain Google AI Studiosta, päivittäisin rajoin. Lukee meemit, käsialan ja koristeelliset fontit millä tahansa kielellä paljon paremmin
+• Claude: maksullinen käytön mukaan, omalla API-avaimellasi
+• Paikallinen: ilmainen ja offline Ollaman tai LM Studion ja kuvia näkevän mallin kanssa
+• Muu: mikä tahansa OpenAI-yhteensopiva API, esimerkiksi OpenRouter
+• Kääntää kielille: vietnam, tšekki, englanti, slovakki, saksa, ranska, espanja, italia, portugali, puola, unkari, ukraina, hollanti, ruotsi, tanska, norja, suomi, kreikka, turkki, romania, kroatia, kiina (yksinkertaistettu ja perinteinen), japani, korea, thai, indonesia, malaiji, filipino, hindi, arabia
+
+KÄYTTÖLIITTYMÄ 31 KIELELLÄ
+Ponnahdusikkuna ja kaikki, mitä Snap Translate näyttää sivulla, on saatavilla kaikilla 31 kielellä, joille se kääntää, arabia mukaan lukien (oikealta vasemmalle). Kieli seuraa selaintasi, tai valitse se kohdasta "Kieli ja ulkoasu". Tumma tai vaalea ulkoasu, tai sama kuin selaimessa.
+
+YKSITYISYYS
+Mikään ei lähde selaimestasi ennen kuin pyydät käännöstä. Nopealla kuva pysyy tietokoneellasi ja vain siitä löytynyt teksti menee Google Kääntäjälle. Tekoälykääntäjällä vain valitsemasi alueen kuvakaappaus menee kyseiselle palveluntarjoajalle, API-avaimesi kanssa. Avaimet tallennetaan vain tälle laitteelle. Ei analytiikkaa, ei tilejä. Laajennus toimii vain välilehdellä, jolla aloitat käännöksen, ei koskaan kaikilla sivustoilla. Jos kirjoitat minulle kohdasta "Ongelma tai idea?", viestisi tulee minulle sähköpostina, eikä mitään lähetetä ennen kuin painat Lähetä.
+
+ONGELMA TAI IDEA?
+Napsauta ponnahdusikkunan alareunassa "Ongelma tai idea?" ja kirjoita minulle. Luen jokaisen viestin.
+
+AVOIN LÄHDEKOODI
+Koko laajennus on avointa lähdekoodia (GPL-3.0), joten kuka tahansa voi tarkistaa, mitä se tarkalleen tekee: github.com/Cleedek/snap-translate. Jos pidät siitä, tähti GitHubissa auttaa muita löytämään sen.
+
+TUE TEKIJÄÄ
+Snap Translate on ilmainen ja mainokseton. Jos se säästää sinulta muutaman kuvakaappauksen päivässä, ponnahdusikkunassa on sivu "Tue tekijää", jossa on Ko-fi ja muutama muu maksutapa. Täysin vapaaehtoista, ja kiitos!
+
+Tehty 💜:lla, tekijä Cleedek, Vietnamissa.
+
+Subtitle Overlayn ja Edge Trimin tekijältä.

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Il testo nelle immagini, <em>tradotto dov’è.</em>",
+  "s1": "Clic destro su un’immagine o trascina su qualsiasi parte della pagina. Il testo originale sparisce e al suo posto c’è la traduzione.",
+  "before": "Originale",
+  "after": "Con Snap Translate",
+  "k2": "Direttamente dalla pagina",
+  "h2": "Clic destro. <em>Tradotto.</em>",
+  "s2": "Scegli <q>Traduci immagine</q> su qualsiasi immagine. La traduzione prende colore, dimensione e spessore dell’originale, e un clic su <q>Elenco</q> la mostra come testo.",
+  "k3": "Qualsiasi parte della pagina",
+  "h3": "Oppure trascina su <em>tutto ciò che vedi.</em>",
+  "s3": "Premi <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> o il pulsante nel popup e trascina sul testo. Anche su fotogrammi video, sfondi e canvas.",
+  "k4": "Oppure come elenco",
+  "h4": "Ogni riga, <em>pronta da copiare.</em>",
+  "s4": "Ogni testo con la sua traduzione, in una scheda accanto all’immagine. Clicca una riga per copiarla, o copiale tutte insieme.",
+  "k5": "Scegli il traduttore",
+  "h5": "Gratis da subito. <em>Più bravo con l’IA.</em>",
+  "s5": "Rapido non ha bisogno di chiavi: legge l’immagine sul tuo computer e Google Traduttore traduce il testo. Gemini, Claude o un modello locale leggono anche meme, scrittura a mano e qualsiasi lingua.",
+  "promises": [
+    [
+      "Gratis, senza pubblicità",
+      "Nessun account"
+    ],
+    [
+      "L’immagine resta qui",
+      "Rapido invia solo il testo"
+    ],
+    [
+      "Open source",
+      "Ogni riga su GitHub"
+    ],
+    [
+      "31 lingue",
+      "Italiano, inglese, giapponese…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Locali",
+      "Guide",
+      "Mappa"
+    ],
+    "title": "Dove mangiare sushi nel Distretto 1",
+    "meta": "Guida al cibo · 5 min di lettura"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Locali",
+      "Guide",
+      "Mappa"
+    ],
+    "title": "Colazione nel quartiere vecchio",
+    "meta": "Diario di viaggio · Hanoi"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Tekst i bilder, <em>oversatt der den står.</em>",
+  "s1": "Høyreklikk på et bilde, eller dra over en hvilken som helst del av siden. Originalteksten forsvinner, og oversettelsen står på plassen dens.",
+  "before": "Original",
+  "after": "Med Snap Translate",
+  "k2": "Rett fra siden",
+  "h2": "Høyreklikk. <em>Oversatt.</em>",
+  "s2": "Velg <q>Oversett bilde</q> på et hvilket som helst bilde. Oversettelsen får originalens farge, størrelse og tykkelse, og et klikk på <q>Liste</q> viser den som tekst.",
+  "k3": "Hvilken som helst del av siden",
+  "h3": "Eller dra over <em>alt du ser.</em>",
+  "s3": "Trykk <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> eller knappen i popupen, og dra over teksten. Også på videobilder, bakgrunner og canvas.",
+  "k4": "Eller som liste",
+  "h4": "Hver linje, <em>klar til å kopiere.</em>",
+  "s4": "Hver tekst med oversettelsen sin, i et kort ved siden av bildet. Klikk på en linje for å kopiere den, eller kopier alle på en gang.",
+  "k5": "Velg oversetter",
+  "h5": "Gratis fra start. <em>Smartere med KI.</em>",
+  "s5": "Rask trenger ingen nøkkel: bildet leses på datamaskinen din, og Google Oversetter oversetter teksten. Gemini, Claude eller en lokal modell leser også memer, håndskrift og alle språk.",
+  "promises": [
+    [
+      "Gratis, ingen reklame",
+      "Ingen konto"
+    ],
+    [
+      "Bildet ditt blir her",
+      "Rask sender bare teksten"
+    ],
+    [
+      "Åpen kildekode",
+      "Hver linje på GitHub"
+    ],
+    [
+      "31 språk",
+      "Norsk, engelsk, japansk…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Steder",
+      "Guider",
+      "Kart"
+    ],
+    "title": "Hvor du spiser sushi i Distrikt 1",
+    "meta": "Matguide · 5 min lesing"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Steder",
+      "Guider",
+      "Kart"
+    ],
+    "title": "Frokost i gamlebyen",
+    "meta": "Reisedagbok · Hanoi"
+  }
+}

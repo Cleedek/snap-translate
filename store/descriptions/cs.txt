@@ -1,0 +1,53 @@
+Přelož text v obrázcích přímo tam, kde jsou na stránce.
+
+Už žádné screenshoty, ukládání, nahrávání do AI, čtení a návrat zpátky. Klikni pravým na obrázek nebo táhni přes jakoukoli část stránky a Snap Translate z obrázku smaže původní text a na jeho místo vysází překlad, ve stejné barvě, velikosti i tloušťce. Obrázek pak vypadá, jako by vznikl v tvém jazyce.
+
+★ TO HLAVNÍ
+★ Klikni pravým na obrázek a zvol "Přeložit obrázek", nebo táhni přes jakoukoli část stránky
+★ Překlad jde přímo do obrázku, tam, kde byl původní text
+★ Raději seznam? Uvidíš každý řádek vedle obrázku a kliknutím ho zkopíruješ
+★ Překládá do 31 jazyků
+★ Zdarma od prvního kliknutí: bez klíče, bez účtu, obrázek zůstane na tvém počítači
+★ Chytřejší s AI, když chceš: Gemini, Claude, lokální model nebo jakékoli API kompatibilní s OpenAI
+★ I snímky z videa, pozadí a plátna: cokoli, co na stránce vidíš
+★ Zdarma a open source: bez reklam, bez účtu, bez sledování
+
+━━━━━━━━━━━━━━━━━━━━
+
+DVA ZPŮSOBY, JAK ZAČÍT
+• Klikni pravým na obrázek a zvol "Přeložit obrázek"
+• Nebo stiskni Alt + Shift + T (⌥ ⇧ T na Macu), klikni pravým na stránku a zvol "Přeložit oblast…", případně použij tlačítko v popupu, a pak táhni přes text, který chceš přeložit. Funguje to i na snímcích z videa, pozadích a plátnech
+• Esc výběr zruší; jinou zkratku nastavíš v nastavení zkratek Chromu
+
+V OBRÁZKU, NEBO V SEZNAMU
+• V obrázku (výchozí): původní text zmizí z obrázku a na jeho místě je překlad, s barvou, velikostí, tloušťkou a zarovnáním změřenými z obrázku. Všechno se to děje na tvém počítači a nic to nestojí
+• Překlad, který se na své místo nevejde, dostane místo toho malou bublinu vedle, s čarou k originálu
+• Seznam: každý text s překladem v kartě vedle obrázku. Kliknutím řádek zkopíruješ, nebo zkopíruješ všechny naráz
+• Jména, ceny a text, který už je ve tvém jazyce, zůstanou, jak jsou
+
+VYBER SI PŘEKLADAČ
+• Rychlý (výchozí): zdarma, bez klíče. Přečte vietnamský a anglický text na tvém počítači a pak ho přeloží Google Translate. Nejlíp funguje na čistém textu, jako jsou jídelní lístky, příspěvky a screenshoty
+• Gemini: klíč zdarma z Google AI Studia, s denními limity. Memy, rukopis a ozdobná písma v jakémkoli jazyce přečte mnohem líp
+• Claude: placený podle použití, s tvým vlastním API klíčem
+• Lokální: zdarma a offline s Ollamou nebo LM Studiem a modelem, který vidí obrázky
+• Jiné: jakékoli API kompatibilní s OpenAI, třeba OpenRouter
+• Překládá do: vietnamštiny, češtiny, angličtiny, slovenštiny, němčiny, francouzštiny, španělštiny, italštiny, portugalštiny, polštiny, maďarštiny, ukrajinštiny, nizozemštiny, švédštiny, dánštiny, norštiny, finštiny, řečtiny, turečtiny, rumunštiny, chorvatštiny, čínštiny (zjednodušené i tradiční), japonštiny, korejštiny, thajštiny, indonéštiny, malajštiny, filipínštiny, hindštiny a arabštiny
+
+ROZHRANÍ V 31 JAZYCÍCH
+Popup i všechno, co Snap Translate ukáže na stránce, je ve všech 31 jazycích, do kterých jde překládat, včetně arabštiny (zprava doleva). Řídí se prohlížečem, nebo si jazyk vyber v "Jazyk a vzhled". Tmavý nebo světlý vzhled, případně podle prohlížeče.
+
+SOUKROMÍ
+Dokud nepožádáš o překlad, nic neopustí tvůj prohlížeč. S Rychlým zůstane obrázek na tvém počítači a do Google Translate jde jen text, který se v něm najde. S AI překladačem jde tomu poskytovateli screenshot jen té oblasti, kterou jsi vybral, s tvým API klíčem. Klíče se ukládají jen v tomhle zařízení. Žádná analytika, žádné účty. Rozšíření běží jen v kartě, kde překlad spustíš, nikdy na všech webech. Když mi napíšeš přes "Problém nebo nápad?", zpráva mi přijde e-mailem a nic se neodešle, dokud nestiskneš Odeslat.
+
+PROBLÉM NEBO NÁPAD?
+Klikni na "Problém nebo nápad?" dole v popupu a napiš mi. Čtu každou zprávu.
+
+OPEN SOURCE
+Celé rozšíření je open source (GPL-3.0), takže si kdokoli může ověřit, co přesně dělá: github.com/Cleedek/snap-translate. Jestli se ti líbí, hvězdička na GitHubu pomůže, aby ho našli i další.
+
+PODPOŘ AUTORA
+Snap Translate je zdarma a bez reklam. Jestli ti ušetří pár screenshotů denně, v popupu je stránka "Podpořit autora" s Ko-fi a dalšími způsoby platby. Úplně dobrovolné, a děkuju!
+
+S 💜 ve Vietnamu vytváří Cleedek.
+
+Od autora Subtitle Overlay a Edge Trim.

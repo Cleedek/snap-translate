@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Teks dalam gambar, <em>diterjemah di tempatnya.</em>",
+  "s1": "Klik kanan pada gambar atau seret di mana-mana bahagian halaman. Teks asal dipadam dan terjemahan diletakkan di tempatnya.",
+  "before": "Asal",
+  "after": "Dengan Snap Translate",
+  "k2": "Terus dari halaman",
+  "h2": "Klik kanan. <em>Diterjemah.</em>",
+  "s2": "Pilih <q>Terjemah gambar</q> pada mana-mana gambar. Terjemahan mengikut warna, saiz dan ketebalan teks asal, dan klik <q>Senarai</q> memaparkannya sebagai teks.",
+  "k3": "Mana-mana bahagian halaman",
+  "h3": "Atau seret di atas <em>apa sahaja yang anda lihat.</em>",
+  "s3": "Tekan <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> atau butang dalam popup, kemudian seret di atas teks. Juga pada bingkai video, latar belakang dan kanvas.",
+  "k4": "Atau sebagai senarai",
+  "h4": "Setiap baris, <em>sedia untuk disalin.</em>",
+  "s4": "Setiap teks bersama terjemahannya, dalam kad di sebelah gambar. Klik satu baris untuk menyalinnya, atau salin semuanya sekali gus.",
+  "k5": "Pilih penterjemah anda",
+  "h5": "Percuma dari awal. <em>Lebih bijak dengan AI.</em>",
+  "s5": "Pantas tidak perlukan kunci: gambar dibaca pada komputer anda dan Google Terjemah menterjemah teksnya. Gemini, Claude atau model tempatan juga membaca meme, tulisan tangan dan apa-apa bahasa.",
+  "promises": [
+    [
+      "Percuma, tanpa iklan",
+      "Tanpa akaun"
+    ],
+    [
+      "Gambar anda kekal di sini",
+      "Pantas hanya menghantar teks"
+    ],
+    [
+      "Sumber terbuka",
+      "Setiap baris di GitHub"
+    ],
+    [
+      "31 bahasa",
+      "Melayu, Inggeris, Jepun…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Tempat",
+      "Panduan",
+      "Peta"
+    ],
+    "title": "Tempat makan sushi di Daerah 1",
+    "meta": "Panduan makanan · 5 minit bacaan"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Tempat",
+      "Panduan",
+      "Peta"
+    ],
+    "title": "Sarapan di Kawasan Lama",
+    "meta": "Diari perjalanan · Hanoi"
+  }
+}

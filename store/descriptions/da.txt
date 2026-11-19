@@ -1,0 +1,53 @@
+Oversæt teksten i billeder lige der, hvor de står på siden.
+
+Slut med skærmbillede, gem, upload til en AI, læs og gå tilbage. Højreklik på et billede, eller træk hen over en hvilken som helst del af siden, så fjerner Snap Translate den oprindelige tekst fra billedet og sætter oversættelsen på dens plads, i samme farve, størrelse og tykkelse. Billedet læses, som om det var lavet på dit sprog.
+
+★ HØJDEPUNKTERNE
+★ Højreklik på et billede og vælg "Oversæt billede", eller træk hen over en hvilken som helst del af siden
+★ Oversættelsen havner direkte på billedet, hvor den oprindelige tekst stod
+★ Hellere en liste? Se hver linje ved siden af billedet, og klik for at kopiere den
+★ Oversætter til 31 sprog
+★ Gratis fra første klik: ingen nøgle, ingen konto, billedet bliver på din computer
+★ Klogere med AI, hvis du vil: Gemini, Claude, en lokal model eller enhver OpenAI-kompatibel API
+★ Også videobilleder, baggrunde og canvas: alt, du ser på siden
+★ Gratis og open source: ingen reklamer, ingen konto, ingen sporing
+
+━━━━━━━━━━━━━━━━━━━━
+
+TO MÅDER AT STARTE PÅ
+• Højreklik på et billede og vælg "Oversæt billede"
+• Eller tryk på Alt + Shift + T (⌥ ⇧ T på en Mac), højreklik på siden og vælg "Oversæt et område…", eller brug knappen i popuppen, og træk så hen over den tekst, du vil have oversat. Virker også på videobilleder, baggrunde og canvas
+• Esc annullerer; en anden genvej indstiller du i Chromes indstillinger for tastaturgenveje
+
+PÅ BILLEDET ELLER I EN LISTE
+• På billedet (standard): den oprindelige tekst fjernes fra billedet, og oversættelsen sættes på dens plads, med farve, størrelse, tykkelse og justering målt fra billedet. Det hele sker på din computer og koster intet
+• En oversættelse, der er for lang til sin plads, får i stedet en lille taleboble ved siden af, med en streg til originalen
+• Liste: hver tekst med sin oversættelse på et kort ved siden af billedet. Klik på en linje for at kopiere den, eller kopiér dem alle på én gang
+• Navne, priser og tekst, der allerede er på dit sprog, forbliver, som de er
+
+VÆLG DIN OVERSÆTTER
+• Hurtig (standard): gratis, ingen nøgle. Læser vietnamesisk og engelsk tekst på din computer, og så oversætter Google Oversæt den. Virker bedst på tydelig tekst som menuer, opslag og skærmbilleder
+• Gemini: en gratis nøgle fra Google AI Studio, med daglige grænser. Læser memes, håndskrift og dekorative skrifttyper på alle sprog meget bedre
+• Claude: betales efter forbrug, med din egen API-nøgle
+• Lokal: gratis og offline med Ollama eller LM Studio og en model, der kan se billeder
+• Anden: enhver OpenAI-kompatibel API, for eksempel OpenRouter
+• Oversætter til: vietnamesisk, tjekkisk, engelsk, slovakisk, tysk, fransk, spansk, italiensk, portugisisk, polsk, ungarsk, ukrainsk, nederlandsk, svensk, dansk, norsk, finsk, græsk, tyrkisk, rumænsk, kroatisk, kinesisk (forenklet og traditionelt), japansk, koreansk, thai, indonesisk, malajisk, filippinsk, hindi, arabisk
+
+BRUGERFLADE PÅ 31 SPROG
+Popuppen og alt, hvad Snap Translate viser på siden, findes på alle 31 sprog, det oversætter til, også arabisk (fra højre mod venstre). Det følger din browser, eller vælg under "Sprog og udseende". Mørkt eller lyst udseende, eller det samme som browseren.
+
+PRIVATLIV
+Intet forlader din browser, før du beder om en oversættelse. Med Hurtig bliver billedet på din computer, og kun den tekst, der findes i det, sendes til Google Oversæt. Med en AI-oversætter sendes et skærmbillede af kun det valgte område til den udbyder, med din API-nøgle. Nøgler gemmes kun på denne enhed. Ingen analyse, ingen konti. Udvidelsen kører kun i den fane, hvor du starter en oversættelse, aldrig på alle websteder. Hvis du skriver til mig via "Problem eller idé?", når beskeden mig på e-mail, og intet sendes, før du trykker på Send.
+
+PROBLEM ELLER IDÉ?
+Klik på "Problem eller idé?" nederst i popuppen, og skriv til mig. Jeg læser hver besked.
+
+OPEN SOURCE
+Hele udvidelsen er open source (GPL-3.0), så alle kan tjekke præcis, hvad den gør: github.com/Cleedek/snap-translate. Kan du lide den, hjælper en stjerne på GitHub andre med at finde den.
+
+STØT SKABEREN
+Snap Translate er gratis og uden reklamer. Hvis den sparer dig for et par skærmbilleder om dagen, har popuppen en side "Støt skaberen" med Ko-fi og et par andre måder at betale på. Helt frivilligt, og tak!
+
+Skabt med 💜 af Cleedek i Vietnam.
+
+Fra skaberen af Subtitle Overlay og Edge Trim.

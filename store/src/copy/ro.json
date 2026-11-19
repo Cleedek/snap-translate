@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Textul din imagini, <em>tradus chiar acolo.</em>",
+  "s1": "Dă clic dreapta pe o imagine sau trage peste orice parte a paginii. Textul original dispare, iar traducerea îi ia locul.",
+  "before": "Original",
+  "after": "Cu Snap Translate",
+  "k2": "Direct din pagină",
+  "h2": "Clic dreapta. <em>Tradus.</em>",
+  "s2": "Alege <q>Tradu imaginea</q> pe orice imagine. Traducerea preia culoarea, mărimea și grosimea originalului, iar un clic pe <q>Listă</q> o arată ca text.",
+  "k3": "Orice parte a paginii",
+  "h3": "Sau trage peste <em>orice vezi.</em>",
+  "s3": "Apasă <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> sau butonul din popup și trage peste text. Merge și pe cadre video, fundaluri și canvas.",
+  "k4": "Sau ca listă",
+  "h4": "Fiecare rând, <em>gata de copiat.</em>",
+  "s4": "Fiecare text cu traducerea lui, într-un card lângă imagine. Dă clic pe un rând ca să-l copiezi, sau copiază-le pe toate deodată.",
+  "k5": "Alege traducătorul",
+  "h5": "Gratuit din prima clipă. <em>Mai isteț cu AI.</em>",
+  "s5": "Rapid nu are nevoie de cheie: citește imaginea pe calculatorul tău, iar Google Traducere traduce textul. Gemini, Claude sau un model local citesc și meme, scris de mână și orice limbă.",
+  "promises": [
+    [
+      "Gratuit, fără reclame",
+      "Fără cont"
+    ],
+    [
+      "Imaginea rămâne la tine",
+      "Rapid trimite doar textul"
+    ],
+    [
+      "Open source",
+      "Fiecare rând pe GitHub"
+    ],
+    [
+      "31 de limbi",
+      "Română, engleză, japoneză…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Locuri",
+      "Ghiduri",
+      "Hartă"
+    ],
+    "title": "Unde mănânci sushi în Districtul 1",
+    "meta": "Ghid culinar · 5 min de citit"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Locuri",
+      "Ghiduri",
+      "Hartă"
+    ],
+    "title": "Micul dejun în Cartierul Vechi",
+    "meta": "Jurnal de călătorie · Hanoi"
+  }
+}

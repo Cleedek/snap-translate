@@ -1,0 +1,57 @@
+{
+  "k1": "Snap Translate",
+  "h1": "Tekst i billeder, <em>oversat hvor den står.</em>",
+  "s1": "Højreklik på et billede, eller træk hen over en hvilken som helst del af siden. Den oprindelige tekst forsvinder, og oversættelsen står på dens plads.",
+  "before": "Original",
+  "after": "Med Snap Translate",
+  "k2": "Direkte på siden",
+  "h2": "Højreklik. <em>Oversat.</em>",
+  "s2": "Vælg <q>Oversæt billede</q> på et hvilket som helst billede. Oversættelsen får originalens farve, størrelse og tykkelse, og et klik på <q>Liste</q> viser den som tekst.",
+  "k3": "Enhver del af siden",
+  "h3": "Eller træk hen over <em>alt, du ser.</em>",
+  "s3": "Tryk på <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd> eller knappen i popuppen, og træk hen over teksten. Også på videobilleder, baggrunde og canvas.",
+  "k4": "Eller som liste",
+  "h4": "Hver linje, <em>klar til at kopiere.</em>",
+  "s4": "Hver tekst med sin oversættelse på et kort ved siden af billedet. Klik på en linje for at kopiere den, eller kopiér dem alle på én gang.",
+  "k5": "Vælg din oversætter",
+  "h5": "Gratis fra start. <em>Klogere med AI.</em>",
+  "s5": "Hurtig kræver ingen nøgle: billedet læses på din computer, og Google Oversæt oversætter teksten. Gemini, Claude eller en lokal model læser også memes, håndskrift og alle sprog.",
+  "promises": [
+    [
+      "Gratis, ingen reklamer",
+      "Ingen konto"
+    ],
+    [
+      "Dit billede bliver her",
+      "Hurtig sender kun teksten"
+    ],
+    [
+      "Open source",
+      "Hver linje på GitHub"
+    ],
+    [
+      "31 sprog",
+      "Dansk, engelsk, japansk…"
+    ]
+  ],
+  "page_poster": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Steder",
+      "Guides",
+      "Kort"
+    ],
+    "title": "Hvor man spiser sushi i Distrikt 1",
+    "meta": "Madguide · 5 min læsning"
+  },
+  "page_menu": {
+    "site": "Saigon Eats",
+    "nav": [
+      "Steder",
+      "Guides",
+      "Kort"
+    ],
+    "title": "Morgenmad i den gamle bydel",
+    "meta": "Rejsedagbog · Hanoi"
+  }
+}
